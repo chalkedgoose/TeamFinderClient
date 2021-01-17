@@ -1,0 +1,28 @@
+.DMWindowDiv {
+  position: fixed;
+  border-radius: 5px;
+  border: 1px solid black;
+  background: white;
+  padding: 10px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.DMWindowHeader {
+  /* background-color: #aaa;*/
+  /* background-color: rgb(130, 224, 255); */
+  /* background-color: #eee; */
+  font-weight: bold;
+}
+
+.DMInputElement { 
+  outline: none; 
+  border-radius: 5px; 
+  border: 1px solid black; 
+  padding: 3px; 
+  width: 90%; 
+  margin-right: .5%; 
+  height: 33px; 
+}
+.DMul {
+  list-style-type: none;
+}

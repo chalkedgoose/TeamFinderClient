@@ -1,17 +1,27 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-
+import Animation from './Animation'
+import {useState, useEffect} from 'react'
+import Hero from '../images/Hero.png'
 const Home = () => {
   return (
     <div className="welcome-cont">
+        <Animation/>
+
       <h1 className="welcome">
         {" "}
         The best way to find and connect <br></br>with other NBA 2K fanatics.{" "}
       </h1>
-      <button className="getStarted" href="find">
+      <div className="getStartedCont">
+      <a className="getStarted" href="find">
         {" "}
         Get Started
-      </button>
+      </a>
+      </div>
+      <div className="heroCont">
+<img src={Hero}/>
+
+      </div>
     </div>
   );
 };

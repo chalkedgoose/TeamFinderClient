@@ -7,22 +7,108 @@
 nav {
 
 }
+.infos{
+}
 button{
     cursor: pointer;
 
 }
-html {
-  background-color: rgb(17, 15, 15);
+.Gamertag,.Archetype,.Overall,.Position,.Winpercentage,.PlayStyle{
+    font-family: 'Poppins', sans-serif;
+
+}
+.Archetype,.Overall,.Position,.Winpercentage,.PlayStyle{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: -5rem;
+
+}
+
+
+
+.Gamertag{
+  position: relative;
+  top:-6rem;
+  left: 1rem;
+
+}
+.Win{
+  position: relative;
+  bottom:6rem
+}
+.range{
+  overflow: hidden;
+}
+
+
+.range::-webkit-slider-thumb{
+    --webkit-appearance:none;
+width:15px;
+height: 15px;
+background-color:rgb(0, 255, 149);
+cursor: pointer;
+box-shadow: -407px 0 0 400px rgb(0, 255, 149);
+}
+
+
+  #rangeValue{
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 6em;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+  }
+
+
+
+.range {
+  -webkit-appearance: none;
+  width: 35%;
+  height: 10px;
+  outline: none;
+  background-color:rgb(255, 255, 255)
+}
+
+
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+
+.Overall{
+  font-size: 14px;
+  position: relative;
+  bottom: 2rem;
+
+}
+
+
+
+
+
+
+.Gamertag{
+  font-size: 20px;
+
+}
+
+html,body,App {
+  background-color: #000000;
   font-family: 'Poppins', sans-serif;
   background-repeat:no-repeat;
   background-size:cover;
-
 }
 .logo-cont {
   display:flex;
   justify-content:flex-start;
   position: relative;
-  left: 380px;
+  left: 320px;
   top: 20px;
 
 
@@ -48,7 +134,7 @@ html {
   font-family: 'Poppins', sans-serif;
   right: 290px;
   font-size: 20px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .App-logo {
@@ -63,7 +149,7 @@ html {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -85,20 +171,21 @@ html {
   }
 }
 
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(182, 182, 182);
+.search::-webkit-input-placeholder {
+  color: rgb(255, 255, 255);
   opacity: 1; /* Firefox */
+  font-size:10px;
+  font-family: 'Poppins', sans-serif;
+
+}
+::-webkit-input-placeholder{
+  color: rgb(255, 255, 255);
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgb(182, 182, 182);
+input{
+  outline: none;
+  border:none
 }
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgb(182, 182, 182);
-}
-
 
 .search {
 /* position: relative;
@@ -133,24 +220,30 @@ color: white;
 }
 
 .Playstation {
-  background-color: rgb(0, 128, 255);
+  background-color: rgb(0, 153, 255);
   text-align: left;
-  width: 3vw;
+  width: 4vw;
   color: rgb(255, 255, 255);
   margin: 0;
+  text-align: left;
+  font-size:16px;
   padding: 20px;
+  border-radius: 10px 0px 10px 0px;
 }
 .Playstation p{
     position: relative;
      left: -8px;
 }
 .XBOX {
-  background-color: rgb(0, 255, 34);
+  background-color: rgb(0, 255, 119);
   text-align: left;
-  width: 3vw;
-  color: rgb(255, 255, 255);
+  width: 4vw;
+  color: rgb(0, 0, 0);
   margin: 0;
+  text-align: left;
+  font-size:20px;
   padding: 20px;
+  border-radius: 10px 0px 10px 0px;
 }
 
 .system {
@@ -174,7 +267,7 @@ color: white;
   bottom: 10%;
 }
 .offline {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 0, 0);
   height: 20px;
   width: 20px;
   position: relative;
@@ -199,22 +292,21 @@ color: white;
   justify-content: center;
   flex-direction: column;
   position: relative;
-  right: 30px;
+  right: 0rem;
 
 }
 nav a {
 text-decoration: none;
-margin: 10px;
-color:rgb(255, 255, 255);
+color: rgb(255, 255, 255);
 position: relative;
 margin-top:40px;
 text-align: left;
 position: relative;
-left: 60px;
+left: 6rem;
 font-family: 'Poppins', sans-serif;
 width:100px;
-padding:1px;
-top: 20px;
+top: 0rem;
+z-index: 5;
 
 
   
@@ -231,6 +323,8 @@ top: 20px;
 .XBOX{
   position: relative;
   width:42px;
+   border-radius: 3%;
+
 }
 
 
@@ -265,177 +359,294 @@ ul{
   font-weight:bolder;
   font-size:45px;
 font-family: 'Poppins', sans-serif;
+width:59rem;
+margin:auto;
+left: 4rem;
 
 }
 
 
 
 
-  form{
-    position: absolute;
-    top: 30rem;
-    left: 30rem;
-      display:flex;
-  justify-content:center;
-  flex-direction: column;
-  }
 
-  form input ,button{
-          display:flex;
-  justify-content:center;
-  flex-direction: column;
-   position: relative;
-  left: 30rem;
-  }
   .Superstar{
     background-image: url('./images/superstar.png');
-    height: 100px;
-    width: 100px;  
+    height: 140px;
+    width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    left: 155px;
-    bottom:30px;
-    margin-bottom:40px;
-  }
+    bottom:5rem;
+    margin-bottom:2rem;
+    background-size:120px;
 
+  }
+.repCont{
+ display: flex;
+ justify-content: center 
+}
     .Elite{
     background-image: url('./images/Elite.png');
-    height: 100px;
-    width: 100px;  
+    height: 140px;
+    width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    left: 155px;
-    bottom:30px;
-    margin-bottom:40px;
+    bottom:4rem;
+    margin-bottom:2rem;
+    background-size:100px;
+  }
+  input:active{
+    background-color: black;
   }
 
     .Pro{
     background-image: url('./images/Pro.png');
-    height: 100px;
-    width: 100px;  
+    height: 140px;
+    width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    left: 155px;
-    bottom:30px;
-    margin-bottom:40px;
+    bottom:4rem;
+    margin-bottom:2rem;
+    background-size:100px;
   }
+
 
     .Allstar{
     background-image: url('./images/Allstar.png');
-    height: 100px;
-    width: 100px;  
+    height: 140px;
+    width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    left: 155px;
-    bottom:30px;
-    margin-bottom:40px;
+    bottom:4rem;
+    margin-bottom:2rem;
+    background-size:100px;
   }
 
   
     .Legend{
     background-image: url('./images/Legend.png');
-    height: 100px;
-    width: 100px;  
+    height: 140px;
+    width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    left: 155px;
-    bottom:30px;
-    margin-bottom:40px;
+    bottom:5rem;
+    margin-bottom:2rem;
+    background-size:120px;
   }
 
   .infoCont.my{
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    width:80%;
-    height: 60%;
+    width:50rem;
+    height: 40rem;
   }
 
    #my {
     position: relative;
     left: 30%;
     }
-    .auth{
-      position:absolute;
-      top: 40%;
-      width:20px;
-    }
+ 
 .searchCont{
   display:flex;
   justify-content:center;
-  position: relative;
-  top: 20rem;
-  flex-wrap: wrap;
+  
+}
+.getStartedCont{
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  top: 22rem;
 }
     .getStarted{
-    
+      margin: 1rem;
+  background-color:rgb(32, 32, 32);
+  border: none;outline: none;
+  color: rgb(0, 255, 136);
+  padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
       position: absolute;
-      top: 40%;
-      left: 46%;
-      background-color: orangered;
+      background-color: rgb(0, 255, 136);
       border: none;
+      width:15rem;
       outline: none;
-      padding-right: 50px;
-      padding-left: 50px;
-      padding-top:20px;
-      padding-bottom:20px;
-      color: white;
-      border-radius: 10%;
+      color: rgb(0, 0, 0);
       text-align: center;
+      font-size:25px
     }
+    
 @media(min-width:1300px){
+
+
+
       .infoCont {
-  background-color:orangered;
+  background-color:#0a0a0a;;
   width: 25rem;
   margin-right: 100px;
   margin-top: 70px;
   height: 28rem;
   position: relative;
-  left: 14rem;
   user-select: none;
   color: rgb(255, 255, 255);
  z-index: 20;  
-  box-shadow: 1px 2px 10px 10px orangered;
+ border-radius: 3%;
 }
+
+
+.searchCont{
+ 
+  position: fixed;
+  top: 20rem;
+  display:flex;
+  left: 0.5rem;
+  flex-direction: column;
+  
+}
+
+.homeCont2{
+  position: absolute;
+  right: 8rem;
+  top: 10.5rem;
+  color: rgb(0, 89, 255);
+  margin: 0;
+  padding:0;
+}
+.homeCont4{
+  position: absolute;
+  right: 8rem;
+  top: 18.5rem;
+  color: rgb(0, 89, 255);
+  margin: 0;
+  padding:0
+}
+.homeCont3{
+  position: absolute;
+  right: 8rem;
+  top: 14.5rem;
+  color: rgb(0, 89, 255);
+  margin: 0;
+  padding:0
+}
+.homeCont1{
+  position: absolute;
+  right: 8rem;
+  top: 6rem;
+  color: rgb(0, 89, 255);
+  margin: 0;
+  padding:0
+}
+.searchCont svg{
+  padding:5px;
+  border-radius:28%
+}
+.searchimg{ 
+  width:3%;
+position: relative;
+top:0.5rem;
+left: 2rem;
+  z-index: 300;
+}
+
+.home{
+width:8%;
+position: relative;
+left: 4rem;
+top: 5rem;
+  z-index: 300;
+} 
+
+
+.search{
+  width:10rem;
+  height: 4rem;
+  background:#000000;
+  position: relative;
+  top: 3rem;
+  left: 3rem;
+
+
+}
+
 .logo{
   position: relative;
   top: 1rem;
 }
 nav{
-  background-color:rgb(47, 47, 47);
+  background-color:#000000;
   position: fixed;
-  width:20rem;
+  width:5rem;
   height: 100rem;
+  z-index: 2;
+  left: -1px;
 }
+.searchCont{
+    z-index: 2;
 
+}
 }
     @media(max-width:1300px){
-
+      .Playstation{
+        width:4rem
+      }
+    .XBOX{
+     width:4rem
+    }
 .searchCont{
-  z-index: 300;
- 
+  position: relative;
+  top: 3rem;
+  
 }
-      nav{
+nav svg{
+
+}
+.logo{
+  display:none
+}
+nav{
+  position: relative;
+  right: 5rem;
+  top: 4rem;
+}
+ 
+      .infoCont {
+  background-color:#0f0f0f;
+  width: 25rem;
+  margin-top: 70px;
+  height: 28rem;
+  position: relative;
+  left: 0rem;
+  color: rgb(255, 255, 255);
+ z-index: 20;  
+ border-radius: 3%;
+}
+.infoCont.my{ 
+  position: relative;
+  right: 10rem;
+  z-index: 0;
+}
+h1{display:none}
+
+.searchCont svg{
+  position: relative;
+  right: 3rem;
+  display:none
+}
+
+
+
+    nav{
         
 
       }
       .logo{
         position: relative;
-        right: 20rem;
+        right: 10rem;
       }
     
-.infoCont {
-  background-color:orangered;
-  width:25rem;
-  margin-top: 10rem;
-  color: rgb(255, 255, 255);
-  box-shadow: 1px 2px 10px 10px orangered;
-}
+
 
   nav a{
 font-size: 12px;
 position: relative;
-
+color: rgb(255, 255, 255);
+z-index: 5;
   }
   .logo-cont h1{
     display:none
@@ -449,24 +660,18 @@ position: relative;
 
 }
 
-  .search{
-   background:rgb(15, 15, 15);
-   color: white;
-  border: none;
-  outline: none;
-  width:11%;
+.search{
+  width:1.2rem;
+  height: 4rem;
   position: relative;
-  left: 1rem;
+  top: 3rem;
+  left: 2rem;
+  margin: 1rem;
 
-
-  }
-    }
-
-
-        @media(max-width:700px){
+}
           .search{
-   background:rgb(15, 15, 15);
-   color: white;
+  background:rgb(0, 0, 0);
+  color: white;
   border: none;
   outline: none;
   width:16%;
@@ -475,4 +680,210 @@ position: relative;
 
 
   }
+
+}
+
+                                  
+        @media(max-width:700px){
+          .infoCont.my{ 
+  position: relative;
+  right: 10rem;
+  
+}
+          .search{
+  background:rgb(0, 0, 0);
+  color: white;
+  border: none;
+  outline: none;
+  width:4rem;
+  height: 2rem;
+  position: relative;
+  left: 0rem;
+  margin:1em
+
+
+  }
         }
+.cont.my{
+  position: relative;
+  top: 5rem;
+}
+
+
+.find{
+  color: rgb(0, 255, 179);
+}
+
+.Animation{
+  width:100vw;
+  height: 100vh;
+  position: fixed;
+  right: 0rem;
+  bottom: 0rem;
+  background-color: rgb(0, 0, 0);
+  z-index: 800;
+}
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: 23rem;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(0, 255, 136);
+  border-color: rgb(0, 255, 136) transparent rgb(0, 255, 136) transparent;
+  animation: lds-dual-ring 1s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 255, 179);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+}
+a{
+   color:white;
+}
+.EditContainer{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ position: relative;
+ top: 5rem;
+ z-index: 1;
+
+}
+form{
+    display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+   width:50%;
+   flex-direction: column;
+  
+
+}
+
+.EditContainer input,select,button{
+  margin: 1rem;
+  background-color:rgb(32, 32, 32);
+  border: none;outline: none;
+  color: rgb(0, 255, 136);
+  padding: 20px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.EditContainer button{
+  background-color:rgb(0, 255, 149);
+  color: black;
+  font-family: Poppins;
+}
+.EditContainer .range{
+  padding:0;
+  color: white;
+
+}
+.EditContainer .range::-webkit-slider-thumb{
+    --webkit-appearance:none;
+width:15px;
+height: 15px;
+background-color:rgb(255, 72, 0);
+cursor: pointer;
+box-shadow: -407px 0 0 400px rgb(0, 255, 149);
+}
+
+.EditContainer {
+  padding:0;
+  color: white;
+}
+.Sucessfully.Updated{
+  background-color:rgb(0, 255, 0);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.info.validation.failed{
+    background-color:rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
+}
+
+.auth-cont{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+.auth-cont form{ 
+  position: relative;
+  top: 3rem;
+  display:flex;
+  justify-content:center;
+  color: white;
+}
+
+.auth-cont input{
+  margin:1rem;
+  height: 1rem;
+  color: rgb(0, 255, 136);
+  padding:1rem;
+  background-color:rgb(17, 17, 17)
+}
+.login-cont,.login-cont a{
+  position: relative;
+  margin: 1rem;
+}
+.authSubmit{
+  background-color:rgb(0, 255, 136);
+  color: rgb(0, 0, 0);
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  
+
+  
+}
+.Sucessfully.updated{
+  background-color:rgb(0, 255, 0);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.heroCont{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 35rem;
+}
+.heroCont img{
+ width: 80rem;
+ position:absolute;
+}

@@ -18,14 +18,23 @@ const Login = (props) => {
     return <Redirect to="/" />;
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    axiosWithAuth()
+    try{
+ axiosWithAuth()
       .post("/login", state)
       .then((res) => {
         window.localStorage.setItem("token", res.data.token);
         window.location.reload();
-      });
+      })
+      .catch(err=>{
+         console.log(err)
+      })
+    }
+    catch{
+      console.log('err')
+    }
+   
   };
 
   const handleChange = (e) => {
@@ -38,13 +47,13 @@ const Login = (props) => {
   console.log(state);
 
   return (
-    <div>
+    <div className='login-cont'>
         <div className="auth-cont">
          
-          <h4> Welcome login!</h4>
+          {/* <h4> Welcome login!</h4> */}
 
-          <div className="LoginPage">
             <form className="Login" onSubmit={handleSubmit}>
+              <h4> Welcome Login To Team Finder</h4>
               <input
                 id="email"
                 placeholder="email"
@@ -58,20 +67,17 @@ const Login = (props) => {
                 placeholder="Password"
                 onChange={handleChange}
               />
+                <a className = 'authSubmit'  onClick={handleSubmit}>
+                Login
+              </a>
+
+                <Link className = 'authLinks' to = '/signup'> dont have an account signup</Link>
             </form>
 
-            <div className="auth">
-              <button className="login" onClick={handleSubmit}>
-                Login
-              </button>
-
-              <button className="signup-button">
-                <Link to = '/signup'>SignUp</Link>
-              </button>
-            </div>
+            
           </div>
+          
         </div>
-      </div>
   );
 };
 

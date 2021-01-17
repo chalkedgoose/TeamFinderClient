@@ -16,6 +16,10 @@ import {connect} from 'react-redux'
 import PrivateRoute from './PrivateRoute'
 import {getId} from './actions/postActions'
 import Nav from './Nav'
+import Animation from './Components/Animation'
+import Edit from './Edit'
+
+
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const App = (props)=> {
@@ -24,16 +28,15 @@ const App = (props)=> {
    useEffect(()=>{
 
     props.getId();
-
+  console.log(props.One)
    },[])
+
 
    const Cred = {
     Status:"online"
    } 
 
-   const CredOff = {
-    Status:'offline'
-   }
+   
      useEffect(()=>{
 
    if(token!== ''){
@@ -60,7 +63,8 @@ const App = (props)=> {
   <Route path = '/Login' exact component = {Login} />
   <Route path = '/Signup' exact component = {Signup} />
   <PrivateRoute path = '/myPlayer/:id' exact component = {MyPlayer} />
-     
+  <PrivateRoute path = '/edit/:id' exact component = {Edit} />
+
 
 
 

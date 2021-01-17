@@ -39,20 +39,17 @@ const Signup = (props) => {
   console.log(state);
 
   return (
-    <div>
+  <div className='login-cont'>
+        <div className="auth-cont">
+                     <form className="Login" onSubmit={handleSubmit}>
+                   <h4> Welcome Welcome Create A Team Finder Account</h4>
 
-          <div className="LoginPage">
-                        <h1> Welcome Signup!</h1>
-
-            <form className="Login" onSubmit={handleSubmit}>
-
-                <input
+                  <input
                 id="name"
-                placeholder="Gamer Tag"
+                placeholder="name"
                 value={state.name}
                 onChange={handleChange}
               />
-
               <input
                 id="email"
                 placeholder="email"
@@ -66,20 +63,14 @@ const Signup = (props) => {
                 placeholder="Password"
                 onChange={handleChange}
               />
+                <a className = 'authSubmit' onClick={handleSubmit}>
+                Signup
+              </a>
+
+                <Link className = 'authLinks' to = '/login'> Have an account login</Link>
             </form>
-
-            <div className="auth">
-              <button className="login" onClick={handleSubmit}>
-                Login
-              </button>
-
-              <button className="signup-button">
-                <Link to = '/login'>Login</Link>
-              </button>
-            </div>
           </div>
         </div>
-   
   );
 };
 

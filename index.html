@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1> Socket io</h1>
+<form class="userForm">
+    <label> username </label>
+    <input class = 'text2'>
+
+    </input>
+    <button> submit </button>
+</form>
+<form class="form" >
+
+    <label> Messages</label>
+    <input class = 'text'> </input>
+
+
+    <label> to who </label>
+    <input class = 'text3'>
+
+    </input>
+
+    <div class="chat">
+
+    </div>
+    <button class = 'sub'> Submit </button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+    let sub = document.querySelector('.form')
+        let userForm = document.querySelector('.userForm')
+
+    
+        let chat = document.querySelector('.chat')
+        let text = document.querySelector('.text')
+        let text2 = document.querySelector('.text2')
+        let text3 = document.querySelector('.text3')
+
+        const socket = io();
+
+   
+// sub.addEventListener('submit',(e)=>{
+//                 e.preventDefault()
+//                 // socket.emit('chat message',text.value,'ahmed')
+//                 socket.emit('DM','ahmed',text.value)
+//                 // console.log(text.value)
+// })
+
+sub.addEventListener('submit',(e)=>{
+                e.preventDefault()
+                // socket.emit('chat message',text.value,'ahmed')
+                socket.emit('DM',text3.value,text.value)
+
+                // console.log(text.value)
+})
+
+userForm.addEventListener('submit',(e)=>{
+                e.preventDefault()
+                socket.emit('whose online add',text2.value)
+})
+    socket.on('update whose online now',function(nick){
+        console.log(nick )
+                 
+        })
+
+
+        // socket.on('chat message',function(data,nick){
+        //     chat.append(`${data} `)
+        // })
+
+
+          socket.on('DM received', function(thisGuyID,toWhoID, msg){
+    console.log('dm received! from: ' + thisGuyID + ' to: ' + toWhoID + ' containing msg: ' + msg);
+   
+   
+// if(toWhoID === text2.value){
+//      chat.append(`${toWhoID} ${msg} `)
+
+// }
+
+console.log('one')
+    //                 console.log('0ne')
+  });
+
+          socket.on('DM received', function(thisGuy, toWhoID, msg){
+    console.log('dm received! from: ' + thisGuy + ' to: ' + toWhoID + ' containing msg: ' + msg);
+   
+   
+// if(toWhoID === text2.value){
+//      chat.append(`${toWhoID} ${msg} `)
+
+// }
+    //    
+                 console.log('two')
+  });
+
+
+              socket.on('connection', function(thisGuyID,toWhoID, msg){
+              
+            
+            })
+            
+
+        
+
+    </script>
+</body>
+</html>

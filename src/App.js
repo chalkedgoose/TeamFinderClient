@@ -58,12 +58,12 @@ const App = (props)=> {
 
 <Nav/>
 
-  <PrivateRoute path = '/find'  exact component = {PlayerCard} />
+  {/* <PrivateRoute path = '/find'  exact component = {PlayerCard} /> */}
   <Route path = '/' exact component = {Home} />
-  <Route path = '/Login' exact component = {Login} />
+  {/* <Route path = '/Login' exact component = {Login} /> */}
   <Route path = '/Signup' exact component = {Signup} />
-  <PrivateRoute path = '/myPlayer/:id' exact component = {MyPlayer} />
-  <PrivateRoute path = '/edit/:id' exact component = {Edit} />
+  {/* <PrivateRoute path = '/myPlayer/:id' exact component = {MyPlayer} />
+  <PrivateRoute path = '/edit/:id' exact component = {Edit} /> */}
 
 
 

@@ -87,7 +87,7 @@ window.location.href === 'http://localhost:3000/find'? setActive3('find'):setAct
  
             {/* <Link to = {( `/myPlayer/${props.One._id}`)}>My Player</Link> */}
                         <div  className="homeCont2">
-
+{/* 
             <a className={active2}  href={`/myPlayer/${props.One._id}`}> 
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="1" stroke={color2} fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -95,31 +95,31 @@ window.location.href === 'http://localhost:3000/find'? setActive3('find'):setAct
   <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
 </svg>
             
-            </a>
+            </a> */}
 </div>
 
                         <div  className="homeCont3">
 
-            <a className={active3} href="/find"> 
+            {/* <a className={active3} href="/find"> 
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rocket" width="30" height="30" viewBox="0 0 24 24" stroke-width="1" stroke={color3} fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
   <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
   <circle cx="15" cy="9" r="1" />
 </svg>
-             </a>
+             </a> */}
 </div>
 
 
        <div  className="homeCont4">
-      <a  href="/login" onClick={Logout}>
+      {/* <a  href="/login" onClick={Logout}>
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="30" height="30" viewBox="0 0 24 24" stroke-width="1" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
   <path d="M7 12h14l-3 -3m0 6l3 -3" />
 </svg>
 
-            </a>
+            </a> */}
 </div>
           </div>
         </nav>

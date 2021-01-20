@@ -118,7 +118,6 @@ console.log(playerInfo)
                 <p className="system"> {info.System} </p>
               </div>
 
-              <div className={info.Status}></div>
               <div className="repCont">
               <div id = 'repImage' className={info.Rep}></div>
               </div>
@@ -126,7 +125,7 @@ console.log(playerInfo)
             <div className="Win">
             <input  className="range" type="range" value ={info.Overall}   min = '0' max = '100'/> {info.Overall}
            </div>
-   <div className="Win">
+           <div className="Win">
             <input  className="range" type="range" value ={info.Winpercentage}   min = '0' max = '100'/> {info.Winpercentage}
            </div>
               <p className = 'Archetype'> Archetype {info.Archetype}</p>

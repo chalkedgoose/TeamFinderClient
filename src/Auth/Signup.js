@@ -10,6 +10,13 @@ const Signup = (props) => {
     email: "",
     password: ""
   });
+  const[reserved,setReserved] = useState(
+
+
+
+    
+  )
+  const[classe,setClasse] = useState('')
 
   const [submitted, setSubmitted] = useState();
 
@@ -24,10 +31,25 @@ const Signup = (props) => {
     axiosWithAuth()
       .post("/signup", state)
       .then((res) => {
-        window.localStorage.setItem("token", res.data.token);
-        window.location.reload();
-      });
+        // window.localStorage.setItem("token", res.data.token);
+        // window.location.reload();
+        console.log(res)
+        setClasse('none')
+        setReserved(
+          <div className="Reserved">
+            <h1> Reserved </h1>
+            <p> Thanks for reserving your Team Finder Account</p>
+            <p className="p2">Well send you an email when Team Finder is live</p>
+          </div>
+
+        )
+        
+      })
+      .catch((err)=>{
+       console.log(err)
+      })
   };
+
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -39,10 +61,25 @@ const Signup = (props) => {
   console.log(state);
 
   return (
+    <div> 
+    <div className = 'center'>
+      <div className = 'reservee'>
+{reserved}
+
+      </div>
+    </div>
+
+    <div className = {classe}>
+      <div className = 'cont2'> 
   <div className='login-cont'>
+          
+
         <div className="auth-cont">
+          
                      <form className="Login" onSubmit={handleSubmit}>
-                   <h4> Welcome Welcome Create A Team Finder Account</h4>
+                   {/* <h4> Welcome Welcome Create A Team Finder Account</h4> */}
+              
+                   <h4> Welcome Reserve your Team Finder Account</h4>
 
                   <input
                 id="name"
@@ -67,10 +104,13 @@ const Signup = (props) => {
                 Signup
               </a>
 
-                <Link className = 'authLinks' to = '/login'> Have an account login</Link>
+                {/* <Link className = 'authLinks' to = '/login'> Have an account login</Link> */}
             </form>
           </div>
         </div>
+            </div>
+    </div>
+    </div>
   );
 };
 

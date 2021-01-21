@@ -39,7 +39,7 @@ const App = (props)=> {
    
      useEffect(()=>{
 
-   if(token!== ''){
+   if(token!== '' || token!== null){
   axiosWithAuth().patch(`/player/{ _id: ${props.One._id}, __v: 0 }`,Cred)
   .then(res=>{
   }) 

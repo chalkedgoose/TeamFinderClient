@@ -39,7 +39,7 @@ const App = (props)=> {
    window.localStorage.removeItem('token')
      useEffect(()=>{
 
-   if(token!== '' && token !== null){
+   if(token!== ''){
   axiosWithAuth().patch(`/player/{ _id: ${props.One._id}, __v: 0 }`,Cred)
   .then(res=>{
   }) 

@@ -36,10 +36,10 @@ const App = (props)=> {
     Status:"online"
    } 
 
-   
+   window.localStorage.removeItem('token')
      useEffect(()=>{
 
-   if(token!== '' || token!== null){
+   if(token!== '' && token !== null){
   axiosWithAuth().patch(`/player/{ _id: ${props.One._id}, __v: 0 }`,Cred)
   .then(res=>{
   }) 

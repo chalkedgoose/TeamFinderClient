@@ -22,7 +22,7 @@ const Signup = (props) => {
 
   let history = useHistory();
   const token = window.localStorage.getItem("token");
-  if (token !== "") {
+  if ( token !== null && token!== '') {
     return <Redirect to="/" />;
   }
 

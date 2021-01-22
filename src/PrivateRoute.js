@@ -5,7 +5,7 @@ const token = window.localStorage.getItem('token')
 const PrivateRoute = ({ component: Component, ...rest }) => (
 
     <Route {...rest} render={(props) => (
-      token !== '' ||  token !== null  ? (<Component {...props} /> 
+      token !== null  ? (<Component {...props} /> 
       ):
       (<Redirect to='/login' />)
  

@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter,Route,withRouter,Link,useHistory} from 'react-router-dom';
+import {BrowserRouter,Route,withRouter,Link,useHistory,Switch} from 'react-router-dom';
 import PlayerCard from './Components/PlayerCard'
 import {browserHistory} from "react-router"
 import logo from './images/Logo.png'
@@ -18,7 +18,7 @@ import {getId} from './actions/postActions'
 import Nav from './Nav'
 import Animation from './Components/Animation'
 import Edit from './Edit'
-
+import NotFound from './NotFound'
 
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
@@ -28,7 +28,7 @@ const App = (props)=> {
    useEffect(()=>{
 
     props.getId();
-  console.log(props.One)
+  // console.log(props.One)
    },[])
 
 
@@ -39,7 +39,7 @@ const App = (props)=> {
    window.localStorage.removeItem('token')
      useEffect(()=>{
 
-   if(token!== ''){
+   if(token!== null){
   axiosWithAuth().patch(`/player/{ _id: ${props.One._id}, __v: 0 }`,Cred)
   .then(res=>{
   }) 
@@ -57,17 +57,16 @@ const App = (props)=> {
 <BrowserRouter>
 
 <Nav/>
-
+<Switch>
   {/* <PrivateRoute path = '/find'  exact component = {PlayerCard} /> */}
-  <Route path = '/' exact component = {Home} />
+  <Route exact path = '/' exact component = {Home} />
   {/* <Route path = '/Login' exact component = {Login} /> */}
-  <Route path = '/Signup' exact component = {Signup} />
+  <Route exact path = '/Signup' exact component = {Signup} />
   {/* <PrivateRoute path = '/myPlayer/:id' exact component = {MyPlayer} />
   <PrivateRoute path = '/edit/:id' exact component = {Edit} /> */}
 
-
-
-
+      <Route component={NotFound} />
+</Switch>
 
 </BrowserRouter>
 
@@ -75,9 +74,6 @@ const App = (props)=> {
 
   );
 }
-// const mapStateToProps =  state=>({
-//     One:state.getId.UserId
-// })
 
 const mapStateToProps =  state=>({
     One:state.getId.UserId

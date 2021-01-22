@@ -39,7 +39,6 @@ const PlayerCard = (props) => {
 
 
 
-  // console.log(j)  
   
   const Change = (e) => {
     setSearchQuery(e.target.value.toLowerCase());
@@ -67,7 +66,6 @@ item.Winpercentage.toLowerCase().includes(searchQuery5)
 )
 
   let s = j.sort((a, b) => {return a.Status.length - b.Status.length;})
-console.log(playerInfo)
 
   return (
     <div>

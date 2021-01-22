@@ -33,7 +33,7 @@ const Signup = (props) => {
       .then((res) => {
         // window.localStorage.setItem("token", res.data.token);
         // window.location.reload();
-        console.log(res)
+        // console.log(res)
         setClasse('none')
         setReserved(
           <div className="Reserved">
@@ -46,7 +46,7 @@ const Signup = (props) => {
         
       })
       .catch((err)=>{
-       console.log(err)
+      //  console.log(err)
       })
   };
 
@@ -58,7 +58,7 @@ const Signup = (props) => {
       [id]: value,
     }));
   };
-  console.log(state);
+  // console.log(state);
 
   return (
     <div> 

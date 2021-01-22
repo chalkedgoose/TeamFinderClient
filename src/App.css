@@ -954,3 +954,18 @@ input:-webkit-autofill:active  {
 input:-webkit-autofill {
     -webkit-text-fill-color: rgb(0, 216, 144) !important;
 }
+
+.NotFound{
+  color: white;
+  position: absolute;
+  left: 45rem;
+  top: 1rem;
+}
+.NotFound h1{
+    font-size: 15rem;
+
+}
+.NotFound p{
+
+
+}

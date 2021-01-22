@@ -31,7 +31,7 @@ const Nav = (props) => {
     e.preventDefault()
     try{
        axiosWithAuth().patch(`/player/{ _id: ${props.One._id}, __v: 0 }`,CredOff)
-  .then(window.localStorage.setItem("token", "")).then(window.location.reload())
+  .then(window.localStorage.setItem("token", null)).then(window.location.reload())
 }
  catch(err){
    console.log(err)
@@ -85,10 +85,10 @@ window.location.href === 'http://localhost:3000/find'? setActive3('find'):setAct
  </div>
 
  
-            {/* <Link to = {( `/myPlayer/${props.One._id}`)}>My Player</Link> */}
+            <Link to = {( `/myPlayer/${props.One._id}`)}></Link>
                         <div  className="homeCont2">
-{/* 
-            <a className={active2}  href={`/myPlayer/${props.One._id}`}> 
+
+            {/* <a className={active2}  href={`/myPlayer/${props.One._id}`}> 
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="1" stroke={color2} fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <circle cx="12" cy="7" r="4" />

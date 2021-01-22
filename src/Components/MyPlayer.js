@@ -48,11 +48,9 @@ const MyPlayer = (props) => {
     e.preventDefault();
     axiosWithAuth().post("/player", state)
       .then((res) => {
-        console.log(res);
       setAlert(res.data._message)
       setAlert(res.data._message)
       });
-      console.log('clicked')
   };
 
   const onChange = (e) => {
@@ -63,7 +61,6 @@ const MyPlayer = (props) => {
         [e.target.name]: e.target.value,
       }));
     }
-    console.log(state);
   };
   const onChange2 = (e) => {
     let name = e.target.value;
@@ -72,7 +69,6 @@ const MyPlayer = (props) => {
       [e.target.name]: e.target.value,
     }));
 
-    console.log(state);
   };
 
   const SelectChange = (e) => {
@@ -81,7 +77,6 @@ const MyPlayer = (props) => {
       [e.target.name]: e.target[e.target.selectedIndex].value,
     }));
 
-    console.log(state);
   };
 
   const Form = () => {

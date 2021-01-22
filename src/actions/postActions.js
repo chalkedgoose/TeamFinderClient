@@ -4,7 +4,7 @@ import {useEffect} from 'react'
  const token = window.localStorage.getItem("token");
 export const getId = () => dispatch =>{
 
-  if(token!== ''){
+  if(token!== null){
         axios.get("https://jobs-xmmtw.ondigitalocean.app/login", {
             headers: {
               authorization: token,

@@ -833,16 +833,15 @@ box-shadow: -407px 0 0 400px rgb(0, 255, 149);
 }
 .auth-cont form h4{ 
 font-size: 20px;
-position: relative;
-bottom:2rem
+position: absolute;
+top:-4rem;
+left: 3rem;
 }
 .auth-cont form{ 
   position: relative;
-  top: 0rem;
   display:flex;
   justify-content:center;
   color: white;
-  background-color:rgb(12, 12, 12);
   padding:5rem
 }
 
@@ -852,7 +851,8 @@ bottom:2rem
   color: rgb(98, 207, 156);
   border-radius: 10px 10px 10px 10px;
   padding:1rem;
-  background-color:rgb(15, 15, 15);
+  background-color:rgb(0, 0, 0);
+  
 
   
 }
@@ -980,6 +980,10 @@ top: 20rem;
 
 
 }
+.signup-welcome{ 
+  position: absolute;
+  right: 3rem;
+}
 .getStartedCont{
   display:flex;
   justify-content:center;
@@ -998,12 +1002,14 @@ top: 20rem;
 
   .auth-cont input{ 
     position: relative;
-    right: 2rem;
+    right: 3rem;
+    background:rgb(7, 7, 7);
   }
 
   .authSubmit{ 
     position: relative;
-    right: 2rem;
+    right: 3rem;
+    width:18rem
   }
 
     select,
@@ -1011,3 +1017,55 @@ top: 20rem;
   input {
     font-size: 16px;
   }
+
+
+    @media (max-width:414px){
+          .auth-cont input{ 
+    position: relative;
+    right: 4rem;
+    background:rgb(7, 7, 7);
+  }
+
+  .authSubmit{ 
+    position: relative;
+    right: 4rem;
+    width:18rem
+  }
+    }
+  @media (max-width:375px){
+      .auth-cont input{ 
+    position: relative;
+    right: 5rem;
+    background:rgb(7, 7, 7);
+  }
+
+  .authSubmit{ 
+    position: relative;
+    right: 5rem;
+    width:18rem
+  }
+
+  }
+        @media (max-width:320px){
+         
+          .auth-cont input{ 
+    position: relative;
+    right: 5.2rem;
+    width:15rem;
+    background:rgb(7, 7, 7);
+    
+  }
+
+  .authSubmit{ 
+    position: relative;
+    right: 4rem;
+    width:15rem
+  }
+
+  .auth-cont form h4{ 
+font-size: 16px;
+position: absolute;
+top:-4rem;
+left: 3rem;
+}
+    }

@@ -79,7 +79,7 @@ const Signup = (props) => {
                      <form className="Login" onSubmit={handleSubmit}>
                    {/* <h4> Welcome Welcome Create A Team Finder Account</h4> */}
               
-                   <h4> Welcome Reserve your Team Finder Account</h4>
+                   <h4 className = 'signup-welcome'> Welcome Reserve your Team Finder Account</h4>
 
                   <input
                 id="name"

@@ -34,13 +34,13 @@ const Nav = (props) => {
   .then(window.localStorage.setItem("token", null)).then(window.location.reload())
 }
  catch(err){
-   console.log(err)
-   console.log('didnt work')
+  //  console.log(err)
+  //  console.log('didnt work')
  }
   };
 
 
-console.log(window.location.href)
+// console.log(window.location.href)
 useEffect(() => {
 window.location.href === 'http://localhost:3000/'? setActive1('find'):setActive1('')
 })

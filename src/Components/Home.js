@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Animation from './Animation';
 import {useState, useEffect} from 'react';
+import Mobile from '../images/mobile.png'
 import Hero from '../images/Hero.png'
 const Home = () => {
   return (
@@ -20,6 +21,11 @@ const Home = () => {
       </div>
       <div className="heroCont">
 <img class="hero " src={Hero}/>
+
+      </div>
+
+            <div className="mobileCont">
+<img class="mobile " src={Mobile}/>
 
       </div>
     </div>

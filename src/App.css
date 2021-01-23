@@ -518,7 +518,7 @@ margin:auto;
   top: 6rem;
   color: rgb(0, 89, 255);
   margin: 0;
-  padding:0
+  padding:0;
 }
 .searchCont svg{
   padding:5px;
@@ -670,9 +670,28 @@ z-index: 5;
   }
 
 }
+        @media(min-width:950px){
+                     .mobile{
+  display:none
+}
+        }
+                @media(max-width:950px){
 
+    .mobileCont{
+          display: flex;
+          justify-content:center;
+          position: absolute;
+          left: 1rem;
+          top: 25rem;
+          }
+          .mobile{
+            width:120%
+          }
+        }
                                   
         @media(max-width:700px){
+
+      
           .infoCont.my{ 
   position: relative;
   right: 10rem;
@@ -963,6 +982,7 @@ input:-webkit-autofill {
 }
 
 @media(min-width:950px){
+
   .hero{
   display: flex;
 justify-content: center;
@@ -975,6 +995,9 @@ top: 20rem;
 
 @media(max-width:950px){
 
+  .hero{
+    display:none
+  }
 .welcome{
   font-size:1rem;
 
@@ -994,6 +1017,11 @@ top: 20rem;
   width:8rem;
   height: 2rem;
   font-size: 20px;
+}
+
+.homeCont1{
+position: relative;
+left: 2rem;
 }
 
 }

@@ -682,10 +682,12 @@ z-index: 5;
           justify-content:center;
           position: absolute;
           left: 1rem;
-          top: 25rem;
+          top: 20rem;
+          width:100%;
           }
           .mobile{
-            width:120%
+            width:350px;
+            height: 300px;
           }
         }
                                   

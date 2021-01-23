@@ -50,6 +50,7 @@ const App = (props)=> {
  
   let history = useHistory();
 
+console.log = console.warn = console.error = () => {};
 
 
   return (

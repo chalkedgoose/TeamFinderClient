@@ -20,8 +20,6 @@ import Animation from './Components/Animation'
 import Edit from './Edit'
 import NotFound from './NotFound'
 
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
 const App = (props)=> {
   const token = window.localStorage.getItem('token')
    const [user,setUser]=useState([])

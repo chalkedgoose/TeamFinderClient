@@ -337,18 +337,10 @@ ul{
 }
 .welcome-cont{
   display:flex;
-  justify-content:center
+  justify-content:center;
   
 }
-.hero{
-  position: absolute;
- 
-    top:20rem ;
-  left: 21rem;
-  width:60%;
 
-  
-}
 .welcome{
   color: rgb(255, 255, 255);
   position: relative;
@@ -358,7 +350,6 @@ ul{
 font-family: 'Poppins', sans-serif;
 width:59rem;
 margin:auto;
-left: 4rem;
 
 }
 
@@ -619,7 +610,6 @@ nav{
   right: 10rem;
   z-index: 0;
 }
-h1{display:none}
 
 .searchCont svg{
   position: relative;
@@ -923,14 +913,16 @@ bottom:2rem
 }
 
 .heroCont{
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 35rem;
+display: flex;
+justify-content: center;
+position:absolute;
+top:20rem;
+z-index: -22
 }
-.heroCont img{
- width: 80rem;
- position:absolute;
+.hero{
+  display: flex;
+justify-content: center;
+width:29rem
 }
 
 #repImage{
@@ -969,3 +961,53 @@ input:-webkit-autofill {
 
 
 }
+
+@media(min-width:950px){
+  .hero{
+  display: flex;
+justify-content: center;
+width:60rem;
+position: relative;
+top: 20rem;
+}
+
+}
+
+@media(max-width:950px){
+
+.welcome{
+  font-size:1rem;
+
+
+}
+.getStartedCont{
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  top: 14rem;
+}
+.getStarted{
+  width:8rem;
+  height: 2rem;
+  font-size: 20px;
+}
+
+}
+
+
+
+  .auth-cont input{ 
+    position: relative;
+    right: 2rem;
+  }
+
+  .authSubmit{ 
+    position: relative;
+    right: 2rem;
+  }
+
+    select,
+  textarea,
+  input {
+    font-size: 16px;
+  }

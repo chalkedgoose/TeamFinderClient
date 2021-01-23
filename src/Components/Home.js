@@ -19,7 +19,7 @@ const Home = () => {
       </a>
       </div>
       <div className="heroCont">
-<img src={Hero}/>
+<img class="hero " src={Hero}/>
 
       </div>
     </div>

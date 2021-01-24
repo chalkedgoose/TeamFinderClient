@@ -28,11 +28,11 @@ const Login = (props) => {
         window.location.reload();
       })
       .catch(err=>{
-         console.log(err)
+        //  console.log(err)
       })
     }
     catch{
-      console.log('err')
+      // console.log('err')
     }
    
   };
@@ -44,7 +44,7 @@ const Login = (props) => {
       [id]: value,
     }));
   };
-  console.log(state);
+  // console.log(state);
 
   return (
     <div className='login-cont'>

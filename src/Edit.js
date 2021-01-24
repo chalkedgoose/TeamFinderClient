@@ -28,7 +28,12 @@ const Edit = (props) => {
     Gamertag:"",
     Status:"online"
   });
+
+
+  
   //   "http://https://jobs-xmmtw.ondigitalocean.app//player/{ _id: 5fd9811cc0cd184690c65f07, __v: 0 }"
+
+
   useEffect(() => {
     props.getId();
   },[]);
@@ -36,14 +41,14 @@ const Edit = (props) => {
     e.preventDefault();
     axiosWithAuth().put(`/player/{ _id: ${props.One._id}, __v: 0 }`, state)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
       setAlert(res.data._message)
       setAlert(res.data._message)
   
       })
       .catch((err) => {
       
-      console.log(err)
+      // console.log(err)
       })
 
   };
@@ -56,7 +61,7 @@ const Edit = (props) => {
         [e.target.name]: e.target.value,
       }));
     }
-    console.log(state);
+    // console.log(state);
   };
   const onChange2 = (e) => {
     let name = e.target.value;
@@ -65,7 +70,6 @@ const Edit = (props) => {
       [e.target.name]: e.target.value,
     }));
 
-    console.log(state);
   };
 
   const SelectChange = (e) => {
@@ -74,7 +78,6 @@ const Edit = (props) => {
       [e.target.name]: e.target[e.target.selectedIndex].value,
     }));
 
-    console.log(state);
   };
 
   const overallRanges = (e) => {

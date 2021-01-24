@@ -48,7 +48,7 @@ const Login = (props) => {
 
   return (
     <div className='login-cont'>
-        <div className="auth-cont">
+        <div className="auth-cont two">
          
           {/* <h4> Welcome login!</h4> */}
 

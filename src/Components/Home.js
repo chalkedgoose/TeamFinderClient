@@ -24,10 +24,7 @@ const Home = () => {
 
       </div>
 
-            <div className="mobileCont">
-<img class="mobile " src={Mobile}/>
 
-      </div>
     </div>
   );
 };

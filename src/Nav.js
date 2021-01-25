@@ -87,7 +87,6 @@ window.location.href === 'http://localhost:3000/find'? setActive3('find'):setAct
  
             <Link to = {( `/myPlayer/${props.One._id}`)}></Link>
                         {/* <div  className="homeCont2">
-
             <a className={active2}  href={`/myPlayer/${props.One._id}`}> 
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="1" stroke={color2} fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -99,7 +98,6 @@ window.location.href === 'http://localhost:3000/find'? setActive3('find'):setAct
 </div> */}
 
                         {/* <div  className="homeCont3">
-
             <a className={active3} href="/find"> 
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rocket" width="30" height="30" viewBox="0 0 24 24" stroke-width="1" stroke={color3} fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -118,7 +116,6 @@ window.location.href === 'http://localhost:3000/find'? setActive3('find'):setAct
   <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
   <path d="M7 12h14l-3 -3m0 6l3 -3" />
 </svg>
-
             </a>
 </div> */}
           </div>

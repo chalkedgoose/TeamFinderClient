@@ -15,7 +15,7 @@ const Login = (props) => {
   let history = useHistory();
   const token = window.localStorage.getItem("token");
   if ( token !== null) {
-    return <Redirect to="/" />;
+    return <Redirect to="/find" />;
   }
 
   const handleSubmit = async(e) => {
@@ -25,16 +25,13 @@ const Login = (props) => {
       .post("/login", state)
       .then((res) => {
         window.localStorage.setItem("token", res.data.token);
-        window.location.reload();
-      })
-      .catch(err=>{
-        //  console.log(err)
+        console.log(res )
       })
     }
     catch{
-      // console.log('err')
+      
     }
-   
+    
   };
 
   const handleChange = (e) => {

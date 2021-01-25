@@ -669,6 +669,24 @@ z-index: 5;
 
   }
 
+  .homeCont1{
+position: relative;
+left: 0rem;
+}
+
+.homeCont2{
+position: relative;
+right: 5rem;
+}
+.homeCont3{
+position: relative;
+right: 4rem;
+}
+.homeCont4{
+position: relative;
+right: 3rem;
+}
+
 }
         @media(min-width:950px){
                      .mobile{
@@ -1029,23 +1047,7 @@ top: 20rem;
   font-size: 20px;
 }
 
-.homeCont1{
-position: relative;
-left: 0rem;
-}
 
-.homeCont2{
-position: relative;
-right: 5rem;
-}
-.homeCont3{
-position: relative;
-right: 4rem;
-}
-.homeCont4{
-position: relative;
-right: 3rem;
-}
 }
 
 

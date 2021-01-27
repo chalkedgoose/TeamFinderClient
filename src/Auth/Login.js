@@ -1,81 +1,86 @@
-import React from "react";
-import { axiosWithAuth } from "../Components/axiosWithAuth";
-import { Link, Redirect, useHistory } from "react-router-dom";
-import axios from "axios";
-import { useState, useEffect, useReducer, withRouter } from "react";
+import React from 'react'
+import { axiosWithAuth } from '../Components/axiosWithAuth'
+import { Link, Redirect, useHistory } from 'react-router-dom'
+import axios from 'axios'
+import { useState, useEffect, useReducer, withRouter } from 'react'
 
 const Login = (props) => {
-  const [state, setState] = useState({
-    email: "",
-    password: "",
-  });
+    const [state, setState] = useState({
+        email: '',
+        password: '',
+    })
 
-  const [submitted, setSubmitted] = useState();
+    const [submitted, setSubmitted] = useState()
 
-  let history = useHistory();
-  const token = window.localStorage.getItem("token");
-  if ( token !== null) {
-    return <Redirect to="/find" />;
-  }
-
-  const handleSubmit = async(e) => {
-    e.preventDefault();
-    try{
- axiosWithAuth()
-      .post("/login", state)
-      .then((res) => {
-        window.localStorage.setItem("token", res.data.token);
-        console.log(res )
-      })
+    let history = useHistory()
+    const token = window.localStorage.getItem('token')
+    if (token !== '' && token !== null) {
+        return <Redirect to="/" />
     }
-    catch{
-      
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        axiosWithAuth()
+            .post('/login', state)
+            .then((res) => {
+                window.localStorage.setItem('token', res.data.token)
+                console.log(res)
+                window.location.reload()
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
-    
-  };
 
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setState((state) => ({
-      ...state,
-      [id]: value,
-    }));
-  };
-  // console.log(state);
+    const handleChange = (e) => {
+        const { id, value } = e.target
+        setState((state) => ({
+            ...state,
+            [id]: value.toLowerCase(),
+        }))
+    }
 
-  return (
-    <div className='login-cont'>
-        <div className="auth-cont two">
-         
-          {/* <h4> Welcome login!</h4> */}
+    const handleChange2 = (e) => {
+        const { id, value } = e.target
+        setState((state) => ({
+            ...state,
+            [id]: value,
+        }))
+    }
+    console.log(state)
 
-            <form className="Login" onSubmit={handleSubmit}>
-              <h4> Welcome Login To Team Finder</h4>
-              <input
-                id="email"
-                placeholder="email"
-                value={state.email}
-                onChange={handleChange}
-              />
-              <input
-                type="password"
-                value={state.password}
-                id="password"
-                placeholder="Password"
-                onChange={handleChange}
-              />
-                <a className = 'authSubmit'  onClick={handleSubmit}>
-                Login
-              </a>
+    return (
+        <div className="login-cont login">
+            <div className="auth-cont">
+                {/* <h4> Welcome login!</h4> */}
 
-                <Link className = 'authLinks' to = '/signup'> dont have an account signup</Link>
-            </form>
+                <form className="Login" onSubmit={handleSubmit}>
+                    <h4> Welcome Login To Team Finder</h4>
+                    <input
+                        id="email"
+                        placeholder="email"
+                        value={state.email}
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="password"
+                        value={state.password}
+                        id="password"
+                        placeholder="Password"
+                        onChange={handleChange2}
+                    />
+                    <a className="authSubmit" onClick={handleSubmit}>
+                        Login
+                    </a>
 
-            
-          </div>
-          
+                    <Link className="authLinks" to="/signup">
+                        {' '}
+                        dont have an account signup
+                    </Link>
+                </form>
+            </div>
         </div>
-  );
-};
+    )
+}
 
-export default Login;
+export default Login

@@ -20,7 +20,7 @@ button{
     font-family: 'Poppins', sans-serif;
     position: relative;
     top: -5rem;
-    font-size: 21px;
+    font-size: 15px;
 
 }
 
@@ -30,7 +30,7 @@ button{
   position: relative;
   top:-6rem;
   left: 1rem;
-  font-size: 20px;
+  font-size: 15px;
 }
 .Win{
   position: relative;
@@ -100,6 +100,7 @@ html,body,App {
   font-family: 'Poppins', sans-serif;
   background-repeat:no-repeat;
   background-size:cover;
+  color: white;
 }
 .logo-cont {
   display:flex;
@@ -421,10 +422,7 @@ margin:auto;
     background-size:120px;
   }
 
-  .infoCont.my{
-    width:50rem;
-    height: 40rem;
-  }
+
 
    #my {
     position: relative;
@@ -434,6 +432,7 @@ margin:auto;
 .searchCont{
   display:flex;
   justify-content:center;
+  flex-wrap: wrap;
   
 }
 .getStartedCont{
@@ -464,24 +463,22 @@ margin:auto;
 
 
 
-      .infoCont {
-  background-color:#0a0a0a;;
+  .infoCont {
+  background-color:#0a0a0a;
   width: 32rem;
-  margin-right: 20px;
-  margin-top: 70px;
-  height: 35rem;
+  margin: 20px;
+  height: 41rem;
   position: relative;
-  user-select: none;
   color: rgb(255, 255, 255);
- z-index: 20;  
- border-radius: 3%;
-}
+  z-index: 20;  
+  border-radius: 3%;
+ }
 
 
 .searchCont{
  
   position: fixed;
-  top: 20rem;
+  top: 23.5rem;
   display:flex;
   left: 0.5rem;
   flex-direction: column;
@@ -490,7 +487,7 @@ margin:auto;
 
 .homeCont2{
   position: absolute;
-  right: 8rem;
+  right: 6rem;
   top: 10.5rem;
   color: rgb(0, 89, 255);
   margin: 0;
@@ -498,7 +495,7 @@ margin:auto;
 }
 .homeCont4{
   position: absolute;
-  right: 8rem;
+  right: 7.5rem;
   top: 18.5rem;
   color: rgb(0, 89, 255);
   margin: 0;
@@ -506,22 +503,54 @@ margin:auto;
 }
 .homeCont3{
   position: absolute;
-  right: 8rem;
+  right: 7.5rem;
   top: 14.5rem;
   color: rgb(0, 89, 255);
   margin: 0;
   padding:0
 }
+
+.homeCont1 p{
+  position: relative;
+  left: 9.5rem;
+  bottom: 3rem;
+  color: white;
+}
+
+.homeCont2 p{
+  position: relative;
+  left: 11rem;
+  bottom: 3rem;
+  width:100px;
+  color: white;
+}
+
+.homeCont3 p{
+  position: relative;
+  left: 10rem;
+  bottom: 3rem;
+  color: white;
+}
+
+.homeCont4 p{
+  position: relative;
+  left: 10rem;
+  bottom: 3rem;
+  color: white;
+}
+
 .homeCont1{
   position: absolute;
-  right: 8rem;
-  top: 6rem;
+  right: 7.5rem;
+  top: 6.5rem;
   color: rgb(0, 89, 255);
   margin: 0;
   padding:0;
 }
 .searchCont svg{
   padding:5px;
+  position: relative;
+  top: 1rem;
   border-radius:28%
 }
 .searchimg{ 
@@ -543,13 +572,13 @@ top: 5rem;
 
 .search{
   width:10rem;
-  height: 4rem;
+  height: 2rem;
   background:#000000;
   position: relative;
   top: 3rem;
   left: 3rem;
   font-size: 20px;
-
+  z-index: 900;
 
 }
 
@@ -571,16 +600,34 @@ nav{
 }
 }
     @media(max-width:1300px){
+
+
+      
+      .infoCont{
+        background-color:#0f0f0f;
+        margin: 0px;
+        height: 40rem;
+        position: relative;
+        color: rgb(255, 255, 255);
+        z-index: 20;  
+        border-radius: 3%;
+        top: 32rem;
+      }
       .Playstation{
-        width:4rem
+     width:3rem;
+     font-size: 14px;      }
+      .getStarted{
+        position: relative;
+        top: 3rem;
       }
     .XBOX{
-     width:4rem
+     width:3rem;
+     font-size: 14px;
     }
-.searchCont{
-  position: relative;
-  top: 3rem;
-  
+
+
+.welcome{
+  display:none;
 }
 nav svg{
 
@@ -593,23 +640,8 @@ nav{
   right: 5rem;
   top: 4rem;
 }
- 
-      .infoCont {
-  background-color:#0f0f0f;
-  width: 25rem;
-  margin-top: 70px;
-  height: 28rem;
-  position: relative;
-  left: 0rem;
-  color: rgb(255, 255, 255);
- z-index: 20;  
- border-radius: 3%;
-}
-.infoCont.my{ 
-  position: relative;
-  right: 10rem;
-  z-index: 0;
-}
+
+
 
 .searchCont svg{
   position: relative;
@@ -644,34 +676,34 @@ z-index: 5;
   display: flex;
   justify-content: center;
   flex-direction: row;
+
+
   
 
 }
 
-.search{
-  width:1.2rem;
-  height: 4rem;
-  position: relative;
-  top: 3rem;
-  left: 2rem;
-  margin: 1rem;
-
-}
           .search{
-  background:rgb(0, 0, 0);
+  background:rgb(34, 34, 34);
   color: white;
   border: none;
   outline: none;
-  width:16%;
+  width:80%;
+  height: 2rem;
+display: flex;
+justify-content: center;
+  padding:15px;
+  margin: 1rem;
   position: relative;
-  left: 1rem;
+  top: 5rem;
+    z-index: 400;
+
 
 
   }
 
   .homeCont1{
 position: relative;
-left: 0rem;
+right: 1rem;
 }
 
 .homeCont2{
@@ -680,11 +712,35 @@ right: 5rem;
 }
 .homeCont3{
 position: relative;
-right: 4rem;
+right: 3rem;
 }
 .homeCont4{
 position: relative;
-right: 3rem;
+right: 1rem;
+}
+
+.homeCont1 p{
+  position: relative;
+  left: 6rem;
+
+}
+
+.homeCont2 p{
+  position: relative;
+  left: 6rem;
+ 
+}
+
+.homeCont3 p{
+  position: relative;
+  left: 6rem;
+
+}
+
+.homeCont4 p{
+  position: relative;
+  left: 6rem;
+
 }
 
 }
@@ -709,31 +765,10 @@ right: 3rem;
           }
         }
                                   
-        @media(max-width:700px){
 
-      
-          .infoCont.my{ 
-  position: relative;
-  right: 10rem;
-  
-}
-          .search{
-  background:rgb(0, 0, 0);
-  color: white;
-  border: none;
-  outline: none;
-  width:4rem;
-  height: 2rem;
-  position: relative;
-  left: 0rem;
-  margin:1em
-
-
-  }
-        }
 .cont.my{
-  position: relative;
-  top: 5rem;
+  top: 15rem;
+  height: 55rem;
 }
 
 
@@ -802,10 +837,9 @@ a{
 .EditContainer{
   display:flex;
   justify-content: center;
-  flex-wrap: wrap;
  position: relative;
  top: 5rem;
- right:6rem;
+ right:5rem;
  z-index: 1;
 
 }
@@ -819,6 +853,7 @@ form{
 
 }
 
+
 .EditContainer input,select,button{
   margin: 1rem;
   background-color:rgb(32, 32, 32);
@@ -830,7 +865,6 @@ form{
 }
 
 .EditContainer input{
-  width:23rem
 }
 .EditContainer button{
   background-color:rgb(0, 255, 149);
@@ -838,7 +872,7 @@ form{
   font-family: Poppins;
 }
 .EditContainer .range{
-  padding:0;
+  padding:10px;
   color: white;
 
 }
@@ -905,6 +939,13 @@ left: 3rem;
 .login-cont,.login-cont a{
   position: relative;
   margin: 1rem;
+  right: 2rem;
+ 
+}
+.login-cont.login{
+    position: relative;
+  margin: 1rem;
+  top: 12rem;
 }
 .authSubmit{
   background-color:rgb(0, 255, 136);
@@ -1126,3 +1167,132 @@ left: 3rem;
       position: relative;
       top: 12rem;
     }
+
+    .BadgeGrindersCont{
+      position: relative;
+      top: 5rem;
+      font-size:2rem;
+      width:100%;
+      display:flex;
+      justify-content: center;
+
+    }
+    
+        .BadgeGrindersCont h1{
+          position: absolute;
+        }
+
+    .infoCont img {
+     border-radius: 50%;
+     width:10rem;
+     position: absolute;
+     top: 1rem;
+     left: 9rem;
+     height: 10rem;
+     
+
+    }
+        .infoCont a {
+          color: black;
+          position: relative;
+          top: 2rem;
+          text-decoration: none;
+        }
+
+        .infoCont.one div{
+        font-size: 20px;
+        position: relative;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        color: black;
+        text-align: center;
+        width:80%;
+        height: 12rem;
+        background-color:white;
+        left: 3rem;
+        top: 5rem;
+        }
+    .infoCont.one{
+      background-color:rgb(0, 255, 119);
+      display:flex;
+      justify-content: center;
+      height: 25rem;
+      width:30rem;
+      position: relative;
+      top:13rem ;
+      color: black;
+      flex-direction: column;
+    }
+
+.bio{
+background-color:rgb(20, 20, 20);
+color: white;
+  margin: 1rem;
+  background-color:rgb(32, 32, 32);
+  border: none;outline: none;
+  color: rgb(0, 255, 136);
+  padding: 20px;
+    font-family: 'Poppins', sans-serif;
+
+
+
+}
+.bioView{
+  background-color:rgb(111, 0, 255);
+  border: none;outline: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mediaCont{
+  position: absolute;
+  top: 1rem;
+  left: 80%;
+}
+.icon-tabler-brand-youtube{
+  fill: red;
+  stroke: rgb(20, 20, 20);
+    margin: 0.5rem;
+       position: relative;
+    bottom:2rem;
+
+
+
+}
+.icon-tabler-brand-instagram{
+    fill: rgb(255, 196, 0);
+  stroke: rgb(20, 20, 20);
+    margin: 0.5rem;
+       position: relative;
+    bottom:2rem;
+
+}
+.icon-tabler-brand-twitter{
+      fill: rgb(0, 140, 255);
+  stroke: rgb(20, 20, 20);
+    margin: 0.5rem;
+       position: relative;
+    bottom:2rem
+}
+.icon-tabler-brand-twitch{
+        fill: rgb(132, 0, 255);
+  stroke:rgb(20, 20, 20);
+    margin: 0.5rem;
+    position: relative;
+    bottom:2rem
+}
+.mediaCont{
+display: flex;
+flex-direction: column;
+position: absolute;
+z-index: 700;
+background-color:rgb(20, 20, 20);
+}
+.undefined{
+  display: none;
+}
+.noneview{
+  display:none
+}

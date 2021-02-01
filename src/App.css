@@ -29,9 +29,17 @@ button{
 .Gamertag{
   position: relative;
   top:-6rem;
-  left: 1rem;
   font-size: 15px;
+padding:20px
+
 }
+
+.Gamertag p{
+background-color:rgb(22, 22, 22);
+color: rgb(255, 255, 255);
+padding:20px;
+}
+
 .Win{
   position: relative;
   bottom:6rem
@@ -209,7 +217,7 @@ color: white;
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  top: 38%;
+  top: 21%;
   left: 10%;
    z-index: 20;  
    justify-content: center;
@@ -217,32 +225,7 @@ color: white;
 
 }
 
-.Playstation {
-  background-color: rgb(0, 153, 255);
-  text-align: left;
-  width: 4vw;
-  color: rgb(255, 255, 255);
-  margin: 0;
-  text-align: left;
-  font-size:16px;
-  padding: 20px;
-  border-radius: 10px 0px 10px 0px;
-}
-.Playstation p{
-    position: relative;
-     left: -8px;
-}
-.XBOX {
-  background-color: rgb(0, 255, 119);
-  text-align: left;
-  width: 4vw;
-  color: rgb(0, 0, 0);
-  margin: 0;
-  text-align: left;
-  font-size:20px;
-  padding: 20px;
-  border-radius: 10px 0px 10px 0px;
-}
+
 
 .system {
   margin: 0;
@@ -290,7 +273,7 @@ color: white;
   justify-content: center;
   flex-direction: column;
   position: relative;
-  right: 0rem;
+  right: -1rem;
 
 }
 nav a {
@@ -310,27 +293,11 @@ z-index: 5;
   
 }
 
-@media(max-width:600px){
 
-
-.PS4{
-  position: relative;
-  width:42px;
+.welcomes{
+  position: absolute;
+  top: 6rem;
 }
-
-.XBOX{
-  position: relative;
-  width:42px;
-   border-radius: 3%;
-
-}
-
-
- 
- 
-}
-
-
 
 ul{
     position: relative;
@@ -405,7 +372,7 @@ margin:auto;
     width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    bottom:4rem;
+    bottom:2rem;
     margin-bottom:2rem;
     background-size:100px;
   }
@@ -459,26 +426,42 @@ margin:auto;
       font-size:25px
     }
     
+
+
+
 @media(min-width:1300px){
 
+.blue{
+  position: relative;
+  left: 0.2rem;
+  top: 1rem;
+}
+.searchContainer{
+   display: none;
 
+}
+
+
+.cont{
+    display: flex;
+  justify-content: flex-start;
+}
 
   .infoCont {
-  background-color:#0a0a0a;
-  width: 32rem;
+  background-color:#ff5e00;
+  width: 28rem;
   margin: 20px;
-  height: 41rem;
+  margin-top:12rem;
   position: relative;
   color: rgb(255, 255, 255);
   z-index: 20;  
-  border-radius: 3%;
  }
 
 
 .searchCont{
  
   position: fixed;
-  top: 23.5rem;
+  top: 20.5rem;
   display:flex;
   left: 0.5rem;
   flex-direction: column;
@@ -499,7 +482,7 @@ margin:auto;
   top: 18.5rem;
   color: rgb(0, 89, 255);
   margin: 0;
-  padding:0
+  padding:0;
 }
 .homeCont3{
   position: absolute;
@@ -512,14 +495,14 @@ margin:auto;
 
 .homeCont1 p{
   position: relative;
-  left: 9.5rem;
+  left: 3.5rem;
   bottom: 3rem;
   color: white;
 }
 
 .homeCont2 p{
   position: relative;
-  left: 11rem;
+  left: 3.5rem;
   bottom: 3rem;
   width:100px;
   color: white;
@@ -527,14 +510,14 @@ margin:auto;
 
 .homeCont3 p{
   position: relative;
-  left: 10rem;
+  left: 4rem;
   bottom: 3rem;
   color: white;
 }
 
 .homeCont4 p{
   position: relative;
-  left: 10rem;
+  left: 3.5rem;
   bottom: 3rem;
   color: white;
 }
@@ -599,157 +582,26 @@ nav{
 
 }
 }
-    @media(max-width:1300px){
-
-
-      
-      .infoCont{
-        background-color:#0f0f0f;
-        margin: 0px;
-        height: 40rem;
-        position: relative;
-        color: rgb(255, 255, 255);
-        z-index: 20;  
-        border-radius: 3%;
-        top: 32rem;
-      }
-      .Playstation{
-     width:3rem;
-     font-size: 14px;      }
-      .getStarted{
-        position: relative;
-        top: 3rem;
-      }
-    .XBOX{
-     width:3rem;
-     font-size: 14px;
-    }
-
-
-.welcome{
-  display:none;
-}
-nav svg{
-
-}
-.logo{
-  display:none
-}
-nav{
-  position: relative;
-  right: 5rem;
-  top: 4rem;
-}
-
-
-
-.searchCont svg{
-  position: relative;
-  right: 3rem;
-  display:none
-}
-
-
-
-    nav{
-        
-
-      }
-      .logo{
-        position: relative;
-        right: 10rem;
-      }
-    
-
-
-  nav a{
-font-size: 12px;
-position: relative;
-color: rgb(255, 255, 255);
-z-index: 5;
-  }
-  .logo-cont h1{
-    display:none
-
-  }
-.navCont {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-
-
-  
-
-}
-
-          .search{
-  background:rgb(34, 34, 34);
-  color: white;
-  border: none;
-  outline: none;
-  width:80%;
-  height: 2rem;
-display: flex;
-justify-content: center;
-  padding:15px;
-  margin: 1rem;
-  position: relative;
-  top: 5rem;
-    z-index: 400;
-
-
-
-  }
-
-  .homeCont1{
-position: relative;
-right: 1rem;
-}
-
-.homeCont2{
-position: relative;
-right: 5rem;
-}
-.homeCont3{
-position: relative;
-right: 3rem;
-}
-.homeCont4{
-position: relative;
-right: 1rem;
-}
-
-.homeCont1 p{
-  position: relative;
-  left: 6rem;
-
-}
-
-.homeCont2 p{
-  position: relative;
-  left: 6rem;
- 
-}
-
-.homeCont3 p{
-  position: relative;
-  left: 6rem;
-
-}
-
-.homeCont4 p{
-  position: relative;
-  left: 6rem;
-
-}
-
-}
         @media(min-width:950px){
-                     .mobile{
-  display:none
+          .mobile{
+           display:none
+           }
+
+      }
+          .cont.my{
+  display: flex;
+  justify-content:center;
+  top: 2rem;
+  height: 52rem;
 }
-        }
-                @media(max-width:950px){
+    @media(max-width:950px){
+   .login-cont.login {
+     font-size: 12px;
+     position: relative;
+     bottom:4rem;
+     width: 90%;
+     font-weight: 400;
+   }
 
     .mobileCont{
           display: flex;
@@ -765,12 +617,21 @@ right: 1rem;
           }
         }
                                   
+.edit{
+height: 2rem;
+margin:0;
+position: relative;
+top: 0rem;
+padding:10px
 
-.cont.my{
-  top: 15rem;
-  height: 55rem;
+  
 }
+.edit a{
+  color: rgb(0, 0, 0);
+  font-size:25px;
+  text-decoration: none
 
+}
 
 .find{
   color: rgb(0, 255, 179);
@@ -835,28 +696,23 @@ a{
    color:white;
 }
 .EditContainer{
-  display:flex;
-  justify-content: center;
- position: relative;
- top: 5rem;
- right:5rem;
- z-index: 1;
+display: flex;
+justify-content:center;
+position: relative;
+bottom:6rem
 
 }
-form{
-    display:flex;
-  justify-content: center;
-  flex-wrap: wrap;
-   width:50%;
-   flex-direction: column;
-  
 
+.EditContainer form{
+  display: flex;
+  flex-direction: column;
+  width:30rem
 }
 
 
 .EditContainer input,select,button{
   margin: 1rem;
-  background-color:rgb(32, 32, 32);
+  background-color:rgb(0, 0, 0);
   border: none;outline: none;
   color: rgb(0, 255, 136);
   padding: 20px;
@@ -890,7 +746,7 @@ box-shadow: -407px 0 0 400px rgb(0, 255, 149);
   color: white;
 }
 .Sucessfully.Updated{
-  background-color:rgb(0, 255, 0);
+  background-color:rgb(0, 255, 136);
   color: rgb(0, 0, 0);
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
@@ -901,61 +757,52 @@ box-shadow: -407px 0 0 400px rgb(0, 255, 149);
   font-family: 'Poppins', sans-serif;
 }
 
-.auth-cont{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
- 
-}
-.auth-cont form h4{ 
-font-size: 20px;
-position: absolute;
-top:-4rem;
-left: 3rem;
-}
-.auth-cont form{ 
-  position: relative;
-  display:flex;
-  justify-content:center;
-  color: white;
-  padding:5rem
-}
 
-.auth-cont input{
-  margin:1rem;
-  height: 1rem;
-  color: rgb(98, 207, 156);
-  border-radius: 10px 10px 10px 10px;
-  padding:1rem;
-  background-color:rgb(0, 0, 0);
-  
 
-  
-}
+
+
 .cont2{
     position: relative;
     top: -8rem;
 }
-.login-cont,.login-cont a{
-  position: relative;
-  margin: 1rem;
-  right: 2rem;
- 
+
+.auth-cont{
+  display: flex;
+  justify-content: center;
 }
 .login-cont.login{
-    position: relative;
-  margin: 1rem;
-  top: 12rem;
+   
+width:100%;
+  
+  
 }
 .authSubmit{
-  background-color:rgb(0, 255, 136);
-  color: rgb(0, 0, 0);
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  
-
-  
+background-color:#00ff6a;
+color:black;
+position: relative;
+top: 0rem;
+margin: 1.5rem;
+padding:20px;
+border-radius:2%;
+cursor: pointer;
 }
+.login p{
+  text-align:left;
+  position: relative;
+  font-weight: bold;
+  font-size: 15px;
+  left: 2rem;
+}
+.login-cont.login form{
+  display: flex;
+  width: 48rem;
+  flex-direction: column;
+}
+.login-cont.login input{
+    margin:20px;
+
+}
+
 .center{
   display: flex;
   justify-content: center;
@@ -982,7 +829,7 @@ left: 3rem;
 .p2{
 }
 .Sucessfully.updated{
-  background-color:rgb(0, 255, 0);
+  background-color:rgb(0, 255, 136);
   color: black;
   font-family: 'Poppins', sans-serif;
 }
@@ -1010,12 +857,12 @@ width:29rem
 
 #repImage{
   position: relative;
-  left: 1.5rem;
+  left: 0rem;
   margin-top:2rem
 }
 
 .none{
-  display: none
+  display: none;
 }
 
 /* Change the white to any color ;) */
@@ -1023,12 +870,29 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px rgb(19, 19, 19) inset !important;
+    -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
+    
 }
 /*Change text in autofill textbox*/
 input:-webkit-autofill {
-    -webkit-text-fill-color: rgb(0, 216, 144) !important;
+    -webkit-text-fill-color: rgb(0, 255, 106) ;
 }
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color:  rgb(0, 255, 106) ;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 
 .NotFound{
   color: white;
@@ -1050,14 +914,22 @@ input:-webkit-autofill {
   .hero{
   display: flex;
 justify-content: center;
-width:80rem;
+width:65rem;
 position: relative;
 top: 20rem;
 }
 
+
+.EditContainer form{
+  display: flex;
+  flex-direction: column;
+  width:70rem
+}
 }
 
 @media(max-width:950px){
+
+
   .heroCont{
     position: absolute;
     top: 25rem;
@@ -1072,10 +944,7 @@ top: 20rem;
 
 
 }
-.signup-welcome{ 
-  position: absolute;
-  right: 3rem;
-}
+
 .getStartedCont{
   display:flex;
   justify-content:center;
@@ -1093,17 +962,6 @@ top: 20rem;
 
 
 
-  .auth-cont input{ 
-    position: relative;
-    right: 3rem;
-    background:rgb(7, 7, 7);
-  }
-
-  .authSubmit{ 
-    position: relative;
-    right: 3rem;
-    width:18rem
-  }
 
     select,
   textarea,
@@ -1112,61 +970,10 @@ top: 20rem;
   }
 
 
-    @media (max-width:414px){
-          .auth-cont input{ 
-    position: relative;
-    right: 4rem;
-    background:rgb(7, 7, 7);
-  }
 
-  .authSubmit{ 
-    position: relative;
-    right: 4rem;
-    width:18rem
-  }
-    }
-  @media (max-width:375px){
-      .auth-cont input{ 
-    position: relative;
-    right: 5rem;
-    background:rgb(7, 7, 7);
-  }
+ 
 
-  .authSubmit{ 
-    position: relative;
-    right: 5rem;
-    width:18rem
-  }
-
-  }
-        @media (max-width:320px){
-         
-          .auth-cont input{ 
-    position: relative;
-    right: 5.2rem;
-    width:15rem;
-    background:rgb(7, 7, 7);
-    
-  }
-
-  .authSubmit{ 
-    position: relative;
-    right: 4rem;
-    width:15rem
-  }
-
-  .auth-cont form h4{ 
-font-size: 16px;
-position: absolute;
-top:-4rem;
-left: 3rem;
-}
-    }
-
-    .auth-cont.two{
-      position: relative;
-      top: 12rem;
-    }
+  
 
     .BadgeGrindersCont{
       position: relative;
@@ -1225,30 +1032,42 @@ left: 3rem;
     }
 
 .bio{
-background-color:rgb(20, 20, 20);
+background-color:rgb(12, 12, 12);
 color: white;
   margin: 1rem;
-  background-color:rgb(32, 32, 32);
   border: none;outline: none;
   color: rgb(0, 255, 136);
   padding: 20px;
     font-family: 'Poppins', sans-serif;
+width:17rem;
+max-width:17rem ;
+min-width: 17rem;
 
+height:10rem;
+max-height:10rem ;
+min-height: 10rem;
 
 
 }
 .bioView{
-  background-color:rgb(111, 0, 255);
+background-color:rgb(111, 0, 255);
   border: none;outline: none;
   color: rgb(255, 255, 255);
   font-size: 18px;
+  max-width: 40rem;
   padding: 25px;
     font-family: 'Poppins', sans-serif;
+    word-wrap: break-word;
+    text-align: left;
+    position: relative;
+    top: 1.2rem;
+    height: 20rem;
+    
 }
 
 .mediaCont{
   position: absolute;
-  top: 1rem;
+  top: 4rem;
   left: 80%;
 }
 .icon-tabler-brand-youtube{
@@ -1256,7 +1075,7 @@ color: white;
   stroke: rgb(20, 20, 20);
     margin: 0.5rem;
        position: relative;
-    bottom:2rem;
+    bottom:0rem;
 
 
 
@@ -1266,7 +1085,7 @@ color: white;
   stroke: rgb(20, 20, 20);
     margin: 0.5rem;
        position: relative;
-    bottom:2rem;
+    bottom:0rem;
 
 }
 .icon-tabler-brand-twitter{
@@ -1274,25 +1093,270 @@ color: white;
   stroke: rgb(20, 20, 20);
     margin: 0.5rem;
        position: relative;
-    bottom:2rem
 }
 .icon-tabler-brand-twitch{
         fill: rgb(132, 0, 255);
   stroke:rgb(20, 20, 20);
     margin: 0.5rem;
     position: relative;
-    bottom:2rem
 }
 .mediaCont{
 display: flex;
 flex-direction: column;
 position: absolute;
 z-index: 700;
-background-color:rgb(20, 20, 20);
 }
 .undefined{
   display: none;
 }
 .noneview{
   display:none
+}
+
+form{
+  position: relative;
+  top: 10rem;
+}
+form input{
+  background-color:rgb(0, 0, 0);
+  padding:10px;
+  height: 2rem;
+  border-bottom: 2px solid rgb(85, 85, 85);
+  border-radius: 0px;
+  color: white;
+}
+.expired{
+  position: absolute;
+  font-size:3rem;
+  top: 5rem;
+}
+.Sucessfully.Updated.reset{
+padding:60px;
+height: 2rem;
+}
+
+
+
+
+
+
+.error{
+  background-color:red;
+  padding:20px
+}
+.playerInfoCont{
+  width:45rem;
+  display:flex;
+  flex-direction: column;
+  position: relative;
+  background-color:#ff5e00;
+}
+
+.XBOX.SERIES{
+background-image:url('./images/Xboxseies.png');
+height: 10rem;
+background-repeat: no-repeat
+}
+
+.XBOX.ONE{
+background-image:url('./images/Xboxone.png');
+height: 10rem;
+background-repeat: no-repeat
+}
+
+.PS5{
+background-image:url('./images/Ps5.png');
+height: 10rem;
+background-repeat: no-repeat
+}
+
+.PS4{
+background-image:url('./images/Ps4.png');
+height: 10rem;
+background-repeat: no-repeat
+}
+
+
+    @media(max-width:1300px){
+               .cont.my{
+  display: flex;
+  justify-content:center;
+  top: 12rem;
+  height: 52rem;
+}
+input{
+    margin: 2rem;
+
+
+}
+
+.searchContainer{
+   display: flex;
+   background-color:rgb(0, 0, 0);
+  color: white;
+  width:100%;
+  height: 13rem;
+  position: relative;
+  top: 5rem;
+  justify-content: center;
+
+}
+.SearchInput input{
+  display: flex;
+  flex-direction: column;
+  color: white;
+    position: relative;
+    margin: 0;
+    margin-top: 2rem;
+    padding:0;
+    z-index: 222;
+  background-color:rgb(0, 0, 0);
+  border-bottom: 2px solid white;
+  
+
+}
+.SearchInput{
+  height: 15rem;
+  width:12rem;
+  padding:5px
+
+}
+      
+      .infoCont{
+  background-color:#ff5e00;
+  width: 28rem;
+  margin: 20px;
+  margin-top:12rem;
+  position: relative;
+  top: 8rem;
+  color: rgb(255, 255, 255);
+  z-index: 20;  
+      }
+
+      .getStarted{
+        position: relative;
+        top: 3rem;
+      }
+ 
+
+
+.logo{
+  display:none
+}
+nav{
+  position: relative;
+  right: 5rem;
+  top: 2rem;
+}
+
+
+
+.searchCont{
+  display:none
+}
+
+
+
+      .logo{
+        position: relative;
+        right: 10rem;
+      }
+    
+
+
+  nav a{
+font-size: 12px;
+position: relative;
+color: rgb(255, 255, 255);
+z-index: 5;
+  }
+  .logo-cont h1{
+    display:none
+
+  }
+.navCont {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+
+  
+
+}
+
+
+
+  .homeCont1{
+position: relative;
+right: 4rem;
+}
+
+.homeCont2{
+position: relative;
+right: 2rem;
+}
+.homeCont3{
+position: relative;
+right: 0.5rem;
+}
+.homeCont4{
+position: relative;
+right: -1rem;
+}
+}
+
+
+
+
+.Passwordreset{
+  width: 100rem;
+  display: flex;
+justify-content: center;
+flex-direction:column;
+}
+.Passwordreset form{
+background-color:rgb(15, 15, 15);
+display: flex;
+flex-direction:column;
+width: 50rem;
+}
+
+.none {
+  display: none;
+}
+
+
+
+.blue{
+  color:rgb(0, 255, 106);
+  text-decoration: none;
+  position: relative;
+  right: 6rem;
+  margin-bottom: 5rem;
+}
+
+.alert{
+  background-color:red;
+  padding:20px
+}
+
+.forgotCont{
+  display: flex;
+  justify-content:center;
+
+}
+
+.forgot form{
+  display: flex;
+  flex-direction: column;
+}
+.forgot button{
+  color: black;
+  font-size: 1rem;
+  background-color: #00ff6a;
+}
+
+.linkSent{
+  position: relative;
+  top: 12rem;
 }

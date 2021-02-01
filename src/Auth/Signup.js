@@ -11,7 +11,7 @@ const Signup = (props) => {
         password: '',
     })
     const [reserved, setReserved] = useState()
-    const [classe, setClasse] = useState('')
+    const [alert, setAlert] = useState('')
 
     const [submitted, setSubmitted] = useState()
 
@@ -26,22 +26,17 @@ const Signup = (props) => {
         axiosWithAuth()
             .post('/signup', state)
             .then((res) => {
-                // window.localStorage.setItem("token", res.data.token);
-                // window.location.reload();
-                // console.log(res)
-                setClasse('none')
-                setReserved(
-                    <div className="Reserved">
-                        <h1> Reserved </h1>
-                        <p> Thanks for reserving your Team Finder Account</p>
-                        <p className="p2">
-                            Well send you an email when Team Finder is live
-                        </p>
-                    </div>
-                )
+                window.localStorage.setItem('token', res.data.token)
+                console.log(res)
+                window.location.reload()
             })
             .catch((err) => {
-                //  console.log(err)
+                setAlert(
+                    <div className="alert">
+                        Make sure you fill out all feilds and this email isnt
+                        registered
+                    </div>
+                )
             })
     }
 
@@ -63,57 +58,45 @@ const Signup = (props) => {
     // console.log(state);
 
     return (
-        <div>
-            <div className="center">
-                <div className="reservee">{reserved}</div>
-            </div>
+        <div className="login-cont login">
+            <div className="auth-cont">
+                <form className="Login" onSubmit={handleSubmit}>
+                    {/* <h4> Welcome Welcome Create A Team Finder Account</h4> */}
 
-            <div className={classe}>
-                <div className="cont2">
-                    <div className="login-cont">
-                        <div className="auth-cont">
-                            <form className="Login" onSubmit={handleSubmit}>
-                                {/* <h4> Welcome Welcome Create A Team Finder Account</h4> */}
+                    <h4> Welcome Create your Team Finder Account</h4>
+                    {alert}
+                    <input
+                        id="name"
+                        placeholder="name"
+                        value={state.name}
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="email"
+                        placeholder="email"
+                        value={state.email}
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="password"
+                        value={state.password}
+                        id="password"
+                        placeholder="Password"
+                        onChange={handleChange2}
+                    />
 
-                                <h4 className="signup-welcome">
-                                    {' '}
-                                    Welcome Reserve your Team Finder Account
-                                </h4>
-
-                                <input
-                                    id="name"
-                                    placeholder="name"
-                                    value={state.name}
-                                    onChange={handleChange}
-                                />
-                                <input
-                                    id="email"
-                                    placeholder="email"
-                                    value={state.email}
-                                    onChange={handleChange}
-                                />
-                                <input
-                                    type="password"
-                                    value={state.password}
-                                    id="password"
-                                    placeholder="Password"
-                                    onChange={handleChange2}
-                                />
-                                <a
-                                    className="authSubmit"
-                                    onClick={handleSubmit}
-                                >
-                                    Signup
-                                </a>
-
-                                <Link className="authLinks" to="/login">
-                                    {' '}
-                                    Have an account login
-                                </Link>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                    <Link className="blue" to="/forgot">
+                        {' '}
+                        Forgot Password ?
+                    </Link>
+                    <Link className="authLinks" to="/login">
+                        {' '}
+                        Have an account login
+                    </Link>
+                    <a className="authSubmit" onClick={handleSubmit}>
+                        Signup
+                    </a>
+                </form>
             </div>
         </div>
     )

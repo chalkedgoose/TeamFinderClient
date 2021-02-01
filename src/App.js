@@ -27,7 +27,8 @@ import Animation from './Components/Animation'
 import Edit from './Edit'
 import NotFound from './NotFound'
 import BadgeGrinders from './Components/BadgeGrinders'
-
+import ForgotPassword from './Components/ForgotPassword'
+import Reset from './Components/Reset'
 const App = (props) => {
     const token = window.localStorage.getItem('token')
     const [user, setUser] = useState([])
@@ -73,6 +74,9 @@ const App = (props) => {
                         exact
                         component={BadgeGrinders}
                     />
+                    <Route path="/forgot" exact component={ForgotPassword} />
+                    <Route path="/Reset/:id/:token" exact component={Reset} />
+
                     <Route component={NotFound} />
                 </Switch>
             </BrowserRouter>

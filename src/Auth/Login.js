@@ -10,7 +10,7 @@ const Login = (props) => {
         password: '',
     })
 
-    const [submitted, setSubmitted] = useState()
+    const [alert, setAlert] = useState()
 
     let history = useHistory()
     const token = window.localStorage.getItem('token')
@@ -28,7 +28,11 @@ const Login = (props) => {
                 window.location.reload()
             })
             .catch((err) => {
-                console.log(err)
+                setAlert(
+                    <div className="alert">
+                        'Either your email or password is incorrect'
+                    </div>
+                )
             })
     }
 
@@ -55,7 +59,8 @@ const Login = (props) => {
                 {/* <h4> Welcome login!</h4> */}
 
                 <form className="Login" onSubmit={handleSubmit}>
-                    <h4> Welcome Login To Team Finder</h4>
+                    <p> Login To Team Finder</p>
+                    {alert}
                     <input
                         id="email"
                         placeholder="email"
@@ -69,14 +74,15 @@ const Login = (props) => {
                         placeholder="Password"
                         onChange={handleChange2}
                     />
+                    <Link className="blue" to="/forgot">
+                        {' '}
+                        Forgot Password ?
+                    </Link>
+                    <Link to="/signup"> dont have an account signup</Link>
+
                     <a className="authSubmit" onClick={handleSubmit}>
                         Login
                     </a>
-
-                    <Link className="authLinks" to="/signup">
-                        {' '}
-                        dont have an account signup
-                    </Link>
                 </form>
             </div>
         </div>

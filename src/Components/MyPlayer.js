@@ -8,7 +8,6 @@ import Animation from './Animation'
 import { Link } from 'react-router-dom'
 
 const MyPlayer = (props) => {
-    const token = window.localStorage.getItem('token')
     const [myPlayer, setMyPlayer] = useState([])
     const [state, setState] = useState({
         Archetype: '',
@@ -24,9 +23,11 @@ const MyPlayer = (props) => {
         Instagram: '',
         Twitter: '',
         Twitch: '',
+        Status: 'online',
     })
 
     const [overallRange, setOverallRange] = useState()
+    const [userInfo, setUserInfo] = useState()
     const [wpRange, setWpRange] = useState()
     const [alert, setAlert] = useState('')
     //   "http://https://jobs-xmmtw.ondigitalocean.app//player/{ _id: 5fd9811cc0cd184690c65f07, __v: 0 }"
@@ -34,14 +35,9 @@ const MyPlayer = (props) => {
         props.getId()
     }, [])
     useEffect(() => {
-        axios
+        axiosWithAuth()
             .get(
-                `https://jobs-xmmtw.ondigitalocean.app/player/{ _id: ${props.match.params.id}, __v: 0 }`,
-                {
-                    headers: {
-                        authorization: token,
-                    },
-                }
+                `https://jobs-xmmtw.ondigitalocean.app/player/{ _id: ${props.match.params.id}, __v: 0 }`
             )
             .then((res) => {
                 setMyPlayer(res.data)
@@ -49,15 +45,26 @@ const MyPlayer = (props) => {
             .catch((err) => {})
     }, [])
 
+    useEffect(() => {
+        axiosWithAuth()
+            .get('/login')
+            .then((res) => {
+                setUserInfo(res.data)
+            })
+    }, [])
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         axiosWithAuth()
             .post('/player', state)
             .then((res) => {
-                setAlert(res.data._message)
-                setAlert(res.data._message)
+                window.location.replace('/find')
+            })
+            .catch((err) => {
+                setAlert('fill out all required feilds')
             })
     }
+    console.log(userInfo)
 
     const onChange = (e) => {
         let name = e.target.value
@@ -78,11 +85,9 @@ const MyPlayer = (props) => {
         }
     }
 
-    console.log(myPlayer)
-
     const onChange3 = (e) => {
         let name = e.target.value
-        if (name.length < 300) {
+        if (name.length < 200) {
             setState((state) => ({
                 ...state,
                 [e.target.name]: e.target.value,
@@ -101,10 +106,9 @@ const MyPlayer = (props) => {
             return (
                 <div className="cont my">
                     <Animation />
-                    <div className="">
-                        <div className={myPlayer.System}>
-                            <p className="system"> {myPlayer.System} </p>
-                        </div>
+
+                    <div className="playerInfoCont">
+                        <div className={myPlayer.System}></div>
                         <div className="mediaCont">
                             <a href={myPlayer.Youtube} target="_blank">
                                 <svg
@@ -218,11 +222,16 @@ const MyPlayer = (props) => {
                             </div>
                         </div>
 
-                        <div className={myPlayer.Status}></div>
                         <div className="repCont">
                             <div id="repImage" className={myPlayer.Rep}></div>
                         </div>
-                        <p className="Gamertag"> {myPlayer.Gamertag}</p>
+
+                        <p className="Gamertag">
+                            <Link to="/forgot"> Change your password</Link>
+                            <p>Gamer Tage: {myPlayer.Gamertag} </p>
+                            <p>Email: {props.One.email} </p>
+                            <p>Name : {props.One.name} </p>
+                        </p>
                         <div className="Win">
                             <input
                                 className="range"
@@ -231,7 +240,7 @@ const MyPlayer = (props) => {
                                 min="0"
                                 max="100"
                             />{' '}
-                            {myPlayer.Overall}
+                            {myPlayer.Overall} OVR
                         </div>
                         <div className="Win">
                             <input
@@ -241,7 +250,7 @@ const MyPlayer = (props) => {
                                 min="0"
                                 max="100"
                             />{' '}
-                            {myPlayer.Winpercentage}
+                            {myPlayer.Winpercentage} WP%
                         </div>
                         <p className="Archetype">
                             {' '}
@@ -252,9 +261,13 @@ const MyPlayer = (props) => {
                             Position {myPlayer.Position}
                         </p>
                         <p className="PlayStyle"> PlayStyle {myPlayer.Type}</p>
-                        <p className="bioView"> Bio {myPlayer.Bio}</p>
-
-                        <Link to={`/edit/${props.One._id}`}>Edit</Link>
+                        <div className="edit">
+                            <Link to={`/edit/${props.One._id}`}>Edit</Link>
+                        </div>
+                        <p className="bioView">
+                            {' '}
+                            Bio <br></br> {myPlayer.Bio}
+                        </p>
                     </div>
                 </div>
             )
@@ -300,8 +313,10 @@ const MyPlayer = (props) => {
                         </select>
                         <select name="System" onChange={SelectChange}>
                             <option> What console are you on? </option>
-                            <option> Playstation </option>
-                            <option> XBOX </option>
+                            <option> PS5 </option>
+                            <option> PS4 </option>
+                            <option> XBOX SERIES </option>
+                            <option> XBOX ONE </option>
                         </select>
                         <select name="Position" onChange={SelectChange}>
                             <option> What position do you play?</option>

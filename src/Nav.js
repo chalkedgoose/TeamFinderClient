@@ -17,6 +17,7 @@ const Nav = (props) => {
     const [color2, setColor2] = useState('')
     const [color3, setColor3] = useState('')
     const [color4, setColor4] = useState('')
+    const [view, setView] = useState('')
 
     const [active1, setActive1] = useState('')
     const [active2, setActive2] = useState('')
@@ -38,39 +39,45 @@ const Nav = (props) => {
             //  console.log('didnt work')
         }
     }
+    const token = window.localStorage.getItem('token')
+    useEffect(() => {
+        if (token == null || token === '') {
+            setView('none')
+        } else {
+            setView('homeCont4')
+        }
+    })
 
     // console.log(window.location.href)
     useEffect(() => {
-        window.location.href === 'http://localhost:3000/'
+        window.location.href === 'teamfinder.team/'
             ? setActive1('find')
             : setActive1('')
     })
     useEffect(() => {
-        window.location.href === 'http://localhost:3000/'
+        window.location.href === 'teamfinder.team/'
             ? setColor1('rgb(0, 255, 179)')
             : setColor1('#fff')
     })
 
     useEffect(() => {
-        window.location.href ===
-        'http://localhost:3000/myPlayer/' + props.One._id
+        window.location.href === 'teamfinder.team/myPlayer/' + props.One._id
             ? setActive2('find')
             : setActive2('')
     })
     useEffect(() => {
-        window.location.href ===
-        'http://localhost:3000/myPlayer/' + props.One._id
+        window.location.href === 'teamfinder.team/myPlayer/' + props.One._id
             ? setColor2('rgb(0, 255, 179)')
             : setColor2('#fff')
     })
 
     useEffect(() => {
-        window.location.href === 'http://localhost:3000/find'
+        window.location.href === 'teamfinder.team/find'
             ? setColor3('rgb(0, 255, 179)')
             : setColor3('#fff')
     })
     useEffect(() => {
-        window.location.href === 'http://localhost:3000/find'
+        window.location.href === 'teamfinder.team/find'
             ? setActive3('find')
             : setActive3('')
     })
@@ -107,11 +114,47 @@ const Nav = (props) => {
                                     <rect x="10" y="12" width="4" height="4" />
                                 </svg>
                             </a>
-                            <p> Home </p>
+                            <p>
+                                {' '}
+                                <a className={active1} href="/">
+                                    Home
+                                </a>{' '}
+                            </p>
                         </div>
 
-                        <Link to={`/myPlayer/${props.One._id}`}></Link>
                         <div className="homeCont2">
+                            <a className={active3} href="/find">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-rocket"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1"
+                                    stroke={color3}
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        stroke="none"
+                                        d="M0 0h24v24H0z"
+                                        fill="none"
+                                    />
+                                    <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+                                    <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+                                    <circle cx="15" cy="9" r="1" />
+                                </svg>
+                            </a>
+                            <p>
+                                <a className={active3} href="/find">
+                                    {' '}
+                                    Explore{' '}
+                                </a>{' '}
+                            </p>
+                        </div>
+
+                        <div className="homeCont3">
                             <a
                                 className={active2}
                                 href={`/myPlayer/${props.One._id}`}
@@ -137,37 +180,18 @@ const Nav = (props) => {
                                     <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                                 </svg>
                             </a>
-                            <p> Player Card </p>
-                        </div>
-
-                        <div className="homeCont3">
-                            <a className={active3} href="/find">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-rocket"
-                                    width="30"
-                                    height="30"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1"
-                                    stroke={color3}
-                                    fill="none"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                            <p>
+                                {' '}
+                                <a
+                                    className={active2}
+                                    href={`/myPlayer/${props.One._id}`}
                                 >
-                                    <path
-                                        stroke="none"
-                                        d="M0 0h24v24H0z"
-                                        fill="none"
-                                    />
-                                    <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
-                                    <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
-                                    <circle cx="15" cy="9" r="1" />
-                                </svg>
-                            </a>
-                            <p> Explore</p>
+                                    Account
+                                </a>{' '}
+                            </p>
                         </div>
 
-                        <div className="homeCont4">
+                        <div className={view}>
                             <a href="/login" onClick={Logout}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +215,12 @@ const Nav = (props) => {
                                 </svg>
                             </a>
 
-                            <p> Logout </p>
+                            <p>
+                                <a href="/login" onClick={Logout}>
+                                    {' '}
+                                    Logout{' '}
+                                </a>{' '}
+                            </p>
                         </div>
                     </div>
                 </nav>

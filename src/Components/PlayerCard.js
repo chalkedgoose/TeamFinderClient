@@ -19,6 +19,7 @@ const PlayerCard = (props) => {
     const [searchQuery4, setSearchQuery4] = useState([])
     const [searchQuery5, setSearchQuery5] = useState([])
     const [searchQuery6, setSearchQuery6] = useState([])
+    const [searchQuery7, setSearchQuery7] = useState([])
 
     const token = window.localStorage.getItem('token')
 
@@ -56,6 +57,10 @@ const PlayerCard = (props) => {
         setSearchQuery6(e.target.value.toLowerCase())
     }
 
+    const Change7 = (e) => {
+        setSearchQuery7(e.target.value.toLowerCase())
+    }
+
     const j = playerInfo.filter(
         (item) =>
             item.Archetype.toLowerCase().includes(searchQuery) &&
@@ -63,7 +68,8 @@ const PlayerCard = (props) => {
             item.Rep.toLowerCase().includes(searchQuery3) &&
             item.Position.toLowerCase().includes(searchQuery4) &&
             item.Winpercentage.toLowerCase().includes(searchQuery5) &&
-            item.Type.toLowerCase().includes(searchQuery6)
+            item.Type.toLowerCase().includes(searchQuery6) &&
+            item.System.toLowerCase().includes(searchQuery7)
     )
 
     let s = j.sort((a, b) => {
@@ -73,7 +79,6 @@ const PlayerCard = (props) => {
     return (
         <div>
             <Animation />
-            <h1 className="welcome"> Find the perfect teammate </h1>
 
             <div className="searchCont">
                 <input
@@ -209,16 +214,86 @@ const PlayerCard = (props) => {
                     <circle cx="10" cy="10" r="7" />
                     <line x1="21" y1="21" x2="15" y2="15" />
                 </svg>
+
+                <input
+                    className="search"
+                    placeholder="System"
+                    onChange={Change7}
+                    value={searchQuery7}
+                />
+                <svg
+                    xmlns="http://www.w3.org/3000/svg"
+                    class="icon icon-tabler icon-tabler-search"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    stroke-width="1"
+                    stroke="rgb(0, 255, 179)"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
             </div>
 
             {/* <Search/> */}
+            <div className="searchContainer">
+                <div className="SearchInput">
+                    <input
+                        placeholder="Archetype"
+                        onChange={Change}
+                        value={searchQuery}
+                    />
+
+                    <input
+                        placeholder="Overall"
+                        onChange={Change2}
+                        value={searchQuery2}
+                    />
+
+                    <input
+                        placeholder="Rep"
+                        onChange={Change3}
+                        value={searchQuery3}
+                    />
+                </div>
+
+                <div className="SearchInput">
+                    <input
+                        placeholder="Position"
+                        onChange={Change4}
+                        value={searchQuery4}
+                    />
+
+                    <input
+                        placeholder="WP%"
+                        onChange={Change5}
+                        value={searchQuery5}
+                    />
+
+                    <input
+                        placeholder="Play Style"
+                        onChange={Change6}
+                        value={searchQuery6}
+                    />
+
+                    <input
+                        placeholder="System"
+                        onChange={Change7}
+                        value={searchQuery7}
+                    />
+                </div>
+            </div>
+            <h2> Find the Perfect teammate</h2>
+
             <div className="cont">
                 {j.map((info) => {
                     return (
                         <div key={info.id} className={`infoCont`}>
-                            <div className={info.System}>
-                                <p className="system"> {info.System} </p>
-                            </div>
+                            <div className={info.System}></div>
 
                             <div className="mediaCont">
                                 <a
@@ -362,16 +437,19 @@ const PlayerCard = (props) => {
                             <div className="repCont">
                                 <div id="repImage" className={info.Rep}></div>
                             </div>
-                            <p className="Gamertag"> {info.Gamertag}</p>
+                            <p className="Gamertag">
+                                Gamertag: {info.Gamertag}
+                            </p>
                             <div className="Win">
                                 <input
                                     className="range"
                                     type="range"
                                     value={info.Overall}
+                                    OVR
                                     min="0"
                                     max="100"
                                 />{' '}
-                                {info.Overall}
+                                {info.Overall} OVR
                             </div>
                             <div className="Win">
                                 <input
@@ -381,7 +459,7 @@ const PlayerCard = (props) => {
                                     min="0"
                                     max="100"
                                 />{' '}
-                                {info.Winpercentage}
+                                {info.Winpercentage} WP%
                             </div>
                             <p className="Archetype">
                                 {' '}
@@ -393,7 +471,11 @@ const PlayerCard = (props) => {
                             </p>
                             <p className="PlayStyle"> PlayStyle {info.Type}</p>
 
-                            <p className="bioView"> Bio {info.Bio}</p>
+                            <p className="bioView">
+                                {' '}
+                                Bio <br></br>
+                                {info.Bio}
+                            </p>
                         </div>
                     )
                 })}

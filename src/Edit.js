@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import { axiosWithAuth } from './Components/axiosWithAuth'
 import { getId } from './actions/postActions'
 import Animation from './Components/Animation'
-import { Redirect } from 'react-router-dom'
 const Edit = (props) => {
     const token = window.localStorage.getItem('token')
     const [overallRange, setOverallRange] = useState()
@@ -15,12 +14,28 @@ const Edit = (props) => {
 
     const [myPlayer, setMyPlayer] = useState('')
     const [saved, setSaved] = useState('')
+    const [state, setState] = useState({
+        Archetype: '',
+        Overall: '',
+        Position: '',
+        Rep: '',
+        System: '',
+        Type: '',
+        Winpercentage: '',
+        Gamertag: '',
+        Bio: '',
+        Youtube: '',
+        Instagram: '',
+        Twitter: '',
+        Twitch: '',
+        Status: 'online',
+    })
 
     //   "http://https://jobs-xmmtw.ondigitalocean.app//player/{ _id: 5fd9811cc0cd184690c65f07, __v: 0 }"
 
-    useEffect(() => {
-        axios
-            .get(
+    useEffect(async () => {
+        try {
+            const one = await axios.get(
                 `https://jobs-xmmtw.ondigitalocean.app/player/{ _id: ${props.match.params.id}, __v: 0 }`,
                 {
                     headers: {
@@ -28,44 +43,24 @@ const Edit = (props) => {
                     },
                 }
             )
-            .then((res) => {
-                setMyPlayer(res.data)
-            })
-            .catch((err) => {})
+            setMyPlayer(one.data)
+        } catch (err) {}
     }, [])
-
-    const [state, setState] = useState({
-        Archetype: myPlayer.Archetype,
-        Overall: myPlayer.Overall,
-        Position: myPlayer.Position,
-        Rep: myPlayer.Rep,
-        System: myPlayer.System,
-        Type: myPlayer.Type,
-        Winpercentage: myPlayer.Winpercentage,
-        Gamertag: myPlayer.Gamertag,
-        Bio: myPlayer.Bio,
-        Youtube: myPlayer.Youtube,
-        Instagram: myPlayer.Instagram,
-        Twitter: myPlayer.Twitter,
-        Twitch: myPlayer.Twitch,
-        Status: 'online',
-    })
-
     useEffect(() => {
         props.getId()
     }, [])
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         axiosWithAuth()
             .put(`/player/{ _id: ${props.One._id}, __v: 0 }`, state)
             .then((res) => {
-                // console.log(res);
                 setAlert(res.data._message)
-                window.location.replace('/find')
+                if (alert !== 'info validation failed') {
+                    window.location.replace('/find')
+                }
             })
-            .catch((err) => {
-                // console.log(err)
-            })
+            .catch((err) => {})
     }
 
     const onChange = (e) => {
@@ -76,7 +71,6 @@ const Edit = (props) => {
                 [e.target.name]: e.target.value,
             }))
         }
-        // console.log(state);
     }
     const onChange2 = (e) => {
         let name = e.target.value
@@ -89,10 +83,12 @@ const Edit = (props) => {
     }
     const onChange3 = (e) => {
         let name = e.target.value
-        setState((state) => ({
-            ...state,
-            [e.target.name]: e.target.value,
-        }))
+        if (name.length < 200) {
+            setState((state) => ({
+                ...state,
+                [e.target.name]: e.target.value,
+            }))
+        }
     }
     const SelectChange = (e) => {
         setState((state) => ({
@@ -116,10 +112,10 @@ const Edit = (props) => {
             Winpercentage: e.target.value,
         }))
     }
-    console.log(myPlayer)
     return (
         <div className="EditContainer">
             <form onSubmit={handleSubmit}>
+                <h2> Edit your Player Card</h2>
                 <div className={alert}>
                     <p> {alert}</p>
                 </div>
@@ -140,8 +136,10 @@ const Edit = (props) => {
                 </select>
                 <select name="System" onChange={SelectChange}>
                     <option> What console are you on? </option>
-                    <option> Playstation </option>
-                    <option> XBOX </option>
+                    <option> PS5 </option>
+                    <option> PS4 </option>
+                    <option> XBOX SERIES </option>
+                    <option> XBOX ONE </option>
                 </select>
                 <select name="Position" onChange={SelectChange}>
                     <option> What position do you play?</option>
@@ -166,10 +164,10 @@ const Edit = (props) => {
 
                 <textarea
                     className="bio"
+                    placeholder="Bio"
                     value={state.Bio}
                     name="Bio"
                     onChange={onChange3}
-                    placeholder="Bio"
                 />
 
                 <input

@@ -40,7 +40,7 @@ const Login = (props) => {
         const { id, value } = e.target
         setState((state) => ({
             ...state,
-            [id]: value.toLowerCase(),
+            [id]: value,
         }))
     }
 

@@ -110,7 +110,13 @@ const MyPlayer = (props) => {
                     <div className="playerInfoCont">
                         <div className={myPlayer.System}></div>
                         <div className="mediaCont">
-                            <a href={myPlayer.Youtube} target="_blank">
+                            <a
+                                className={`noneview${myPlayer.Youtube}`}
+                                href={myPlayer.Youtube}
+                                target="_blank"
+                            >
+                                {' '}
+                                className={`noneview${myPlayer.Youtube}`}
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     class="icon icon-tabler icon-tabler-brand-youtube"
@@ -139,7 +145,11 @@ const MyPlayer = (props) => {
                                 </svg>{' '}
                             </a>
 
-                            <a href={myPlayer.Instagram} target="_blank">
+                            <a
+                                className={`noneview${myPlayer.Youtube}`}
+                                href={myPlayer.Instagram}
+                                target="_blank"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     class="icon icon-tabler icon-tabler-brand-instagram"
@@ -174,7 +184,11 @@ const MyPlayer = (props) => {
                                 </svg>
                             </a>
 
-                            <a href={myPlayer.Twitter} target="_blank">
+                            <a
+                                className={`noneview${myPlayer.Youtube}`}
+                                href={myPlayer.Twitter}
+                                target="_blank"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     class="icon icon-tabler icon-tabler-brand-twitter"
@@ -196,7 +210,11 @@ const MyPlayer = (props) => {
                                 </svg>
                             </a>
                             <div>
-                                <a href={myPlayer.Twitch} target="_blank">
+                                <a
+                                    className={`noneview${myPlayer.Youtube}`}
+                                    href={myPlayer.Twitch}
+                                    target="_blank"
+                                >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-brand-twitch"
@@ -350,28 +368,28 @@ const MyPlayer = (props) => {
                             value={state.Twitter}
                             name="Twitter"
                             onChange={onChange3}
-                            placeholder="Your Twitter Link * optional "
+                            placeholder="*optional Twitter Make sure you have https:// in front of the link "
                         />
 
                         <input
                             value={state.Instagram}
                             name="Instagram"
                             onChange={onChange3}
-                            placeholder="Your Instagram Link * optional "
+                            placeholder="*optional Instagram Make sure you have https:// in front of the link  "
                         />
 
                         <input
                             value={state.Youtube}
                             name="Youtube"
                             onChange={onChange3}
-                            placeholder=" Your Youtube Link * optional "
+                            placeholder="*optional Youtube Make sure you have https:// in front of the link "
                         />
 
                         <input
                             value={state.Twitch}
                             name="Twitch"
                             onChange={onChange3}
-                            placeholder=" Your Twitch Link * optional "
+                            placeholder=" *optional Twitch Make sure you have https:// in front of the link  "
                         />
 
                         <div>

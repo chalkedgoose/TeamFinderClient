@@ -59,7 +59,7 @@ const Login = (props) => {
                 {/* <h4> Welcome login!</h4> */}
 
                 <form className="Login" onSubmit={handleSubmit}>
-                    <p> Login To Team Finder</p>
+                    <p> Login to team finder</p>
                     {alert}
                     <input
                         id="email"
@@ -76,7 +76,7 @@ const Login = (props) => {
                     />
                     <Link className="blue" to="/forgot">
                         {' '}
-                        Forgot Password ?
+                        forgot password ?
                     </Link>
                     <Link to="/signup"> dont have an account signup</Link>
 

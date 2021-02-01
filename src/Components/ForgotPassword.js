@@ -39,7 +39,7 @@ const ForgotPassword = () => {
     }
 
     const Change = (e) => {
-        setEmail(e.target.value)
+        setEmail(e.target.value.toLowerCase())
     }
 
     return (

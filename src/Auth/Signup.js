@@ -44,7 +44,7 @@ const Signup = (props) => {
         const { id, value } = e.target
         setState((state) => ({
             ...state,
-            [id]: value,
+            [id]: value.toLowerCase(),
         }))
     }
 

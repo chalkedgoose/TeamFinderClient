@@ -448,7 +448,7 @@ margin:auto;
 }
 
   .infoCont {
-  background-color:#ff5e00;
+  background-color:#0c0c0c;
   width: 28rem;
   margin: 20px;
   margin-top:12rem;
@@ -618,6 +618,7 @@ nav{
         }
                                   
 .edit{
+background-color:rgb(0, 255, 136);
 height: 2rem;
 margin:0;
 position: relative;
@@ -1050,11 +1051,10 @@ min-height: 10rem;
 
 }
 .bioView{
-background-color:rgb(111, 0, 255);
+background-color:rgb(42, 42, 42);
   border: none;outline: none;
   color: rgb(255, 255, 255);
   font-size: 18px;
-  max-width: 40rem;
   padding: 25px;
     font-family: 'Poppins', sans-serif;
     word-wrap: break-word;
@@ -1149,7 +1149,7 @@ height: 2rem;
   display:flex;
   flex-direction: column;
   position: relative;
-  background-color:#ff5e00;
+  background-color:rgb(12, 12, 12);
 }
 
 .XBOX.SERIES{
@@ -1223,7 +1223,7 @@ input{
 }
       
       .infoCont{
-  background-color:#ff5e00;
+  background-color:#0c0c0c;
   width: 28rem;
   margin: 20px;
   margin-top:12rem;

@@ -186,7 +186,7 @@ const Nav = (props) => {
                                     className={active2}
                                     href={`/myPlayer/${props.One._id}`}
                                 >
-                                    Player Card
+                                    My.stats
                                 </a>{' '}
                             </p>
                         </div>

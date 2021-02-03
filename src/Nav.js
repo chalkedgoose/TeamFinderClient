@@ -83,7 +83,7 @@ const Nav = (props) => {
     })
 
     return (
-        <div>
+        <div className="navi">
             <BrowserRouter>
                 <nav>
                     <div className="navCont">
@@ -186,7 +186,7 @@ const Nav = (props) => {
                                     className={active2}
                                     href={`/myPlayer/${props.One._id}`}
                                 >
-                                    My.stats
+                                    My Stats
                                 </a>{' '}
                             </p>
                         </div>

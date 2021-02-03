@@ -18,44 +18,29 @@ button{
 }
 .Archetype,.Overall,.Position,.Winpercentage,.PlayStyle{
     font-family: 'Poppins', sans-serif;
-    position: relative;
-    top: -5rem;
-    font-size: 15px;
-
 }
 
 
 
-.Gamertag{
-  position: relative;
-  top:-6rem;
-  font-size: 15px;
-padding:20px
 
-}
 
-.Gamertag p{
-background-color:rgb(22, 22, 22);
-color: rgb(255, 255, 255);
-padding:20px;
-}
 
-.Win{
-  position: relative;
-  bottom:6rem
-}
+
 .range{
   overflow: hidden;
+  margin: 0;
+
 }
 
 
 .range::-webkit-slider-thumb{
     --webkit-appearance:none;
 width:15px;
+margin: 0;
 height: 15px;
 background-color:rgb(0, 255, 149);
 cursor: pointer;
-box-shadow: -407px 0 0 400px rgb(0, 255, 149);
+box-shadow: -407px 0 0 400px rgb(0, 255, 136);
 }
 
 
@@ -66,13 +51,17 @@ box-shadow: -407px 0 0 400px rgb(0, 255, 149);
     font-size: 6em;
     color: rgb(255, 255, 255);
     font-weight: 400;
+    
   }
 
 
 
 .range {
   -webkit-appearance: none;
-  width: 35%;
+  width: 100px;
+  border-radius:20px 20px 20px 20px;
+  padding:5px;
+
   height: 10px;
   outline: none;
   background-color:rgb(255, 255, 255)
@@ -213,17 +202,6 @@ color: white;
 }
 
 
-.cont {
-  display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  top: 21%;
-  left: 10%;
-   z-index: 20;  
-   justify-content: center;
-   width:80%
-
-}
 
 
 
@@ -243,10 +221,7 @@ color: white;
   display: none;
 }
 
-.infoCont p {
-  position: relative;
-  bottom: 10%;
-}
+
 .offline {
   background-color: rgb(255, 0, 0);
   height: 20px;
@@ -273,6 +248,7 @@ color: white;
   justify-content: center;
   flex-direction: column;
   position: relative;
+  
   right: -1rem;
 
 }
@@ -331,14 +307,50 @@ margin:auto;
     width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    bottom:5rem;
+    bottom:0rem;
     margin-bottom:2rem;
-    background-size:120px;
+    background-size:100px;
 
+  }
+  .reps{
+     display: flex;
+ justify-content: center ;
   }
 .repCont{
  display: flex;
- justify-content: center 
+ justify-content: center ;
+ position: relative;
+ top: 6rem;
+ width:100px;
+ padding:2rem;
+ border-radius: 50%;
+ height: 100px;
+
+}
+.repCont.XBOX.ONEs{
+background:rgb(0, 197, 76)
+}
+.repCont.XBOX.SERIESs{
+background:rgb(0, 197, 76)
+}
+.repCont.PS5s{
+background:rgb(0, 68, 255)
+}
+
+.repCont.PS4s{
+background:rgb(0, 68, 255)
+}
+.bioView.XBOX.ONEs{
+background:rgb(0, 197, 76)
+}
+.bioView.XBOX.SERIESs{
+background:rgb(0, 197, 76)
+}
+.bioView.PS5s{
+background:rgb(0, 68, 255)
+}
+.bioView.PS4s{
+background:rgb(0, 68, 255)
 }
     .Elite{
     background-image: url('./images/Elite.png');
@@ -346,7 +358,7 @@ margin:auto;
     width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    bottom:4rem;
+    bottom:0rem;
     margin-bottom:2rem;
     background-size:100px;
   }
@@ -360,7 +372,7 @@ margin:auto;
     width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    bottom:4rem;
+    bottom:0rem;
     margin-bottom:2rem;
     background-size:100px;
   }
@@ -372,7 +384,7 @@ margin:auto;
     width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    bottom:2rem;
+    bottom:0rem;
     margin-bottom:2rem;
     background-size:100px;
   }
@@ -384,9 +396,9 @@ margin:auto;
     width: 120px;  
     background-repeat: no-repeat;
     position: relative;
-    bottom:5rem;
+    bottom:0rem;
     margin-bottom:2rem;
-    background-size:120px;
+    background-size:100px;
   }
 
 
@@ -413,17 +425,18 @@ margin:auto;
   background-color:rgb(32, 32, 32);
   border: none;outline: none;
   color: rgb(0, 255, 136);
-  padding: 12px;
+  padding: 8px;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
       position: absolute;
       background-color: rgb(0, 255, 136);
       border: none;
-      width:15rem;
+      width:12rem;
       outline: none;
       color: rgb(0, 0, 0);
       text-align: center;
-      font-size:25px
+      font-size:18px;
+      border-radius: 10px 10px 10px 10px;
     }
     
 
@@ -442,20 +455,6 @@ margin:auto;
 }
 
 
-.cont{
-    display: flex;
-  justify-content: flex-start;
-}
-
-  .infoCont {
-  background-color:#0c0c0c;
-  width: 28rem;
-  margin: 20px;
-  margin-top:12rem;
-  position: relative;
-  color: rgb(255, 255, 255);
-  z-index: 20;  
- }
 
 
 .searchCont{
@@ -486,7 +485,7 @@ margin:auto;
 }
 .homeCont3{
   position: absolute;
-  right: 7.5rem;
+  right: 6.8rem;
   top: 14.5rem;
   color: rgb(0, 89, 255);
   margin: 0;
@@ -512,6 +511,7 @@ margin:auto;
   position: relative;
   left: 4rem;
   bottom: 3rem;
+  width:5rem;
   color: white;
 }
 
@@ -570,7 +570,6 @@ top: 5rem;
   top: 1rem;
 }
 nav{
-  background-color:#000000;
   position: fixed;
   width:5rem;
   height: 100rem;
@@ -588,12 +587,7 @@ nav{
            }
 
       }
-          .cont.my{
-  display: flex;
-  justify-content:center;
-  top: 2rem;
-  height: 52rem;
-}
+ 
     @media(max-width:950px){
    .login-cont.login {
      font-size: 12px;
@@ -618,7 +612,7 @@ nav{
         }
                                   
 .edit{
-background-color:rgb(0, 255, 136);
+
 height: 2rem;
 margin:0;
 position: relative;
@@ -628,7 +622,7 @@ padding:10px
   
 }
 .edit a{
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size:25px;
   text-decoration: none
 
@@ -762,10 +756,6 @@ box-shadow: -407px 0 0 400px rgb(0, 255, 149);
 
 
 
-.cont2{
-    position: relative;
-    top: -8rem;
-}
 
 .auth-cont{
   display: flex;
@@ -843,18 +833,6 @@ cursor: pointer;
 
 }
 
-.heroCont{
-display: flex;
-justify-content: center;
-position:absolute;
-top:20rem;
-z-index: -22
-}
-.hero{
-  display: flex;
-justify-content: center;
-width:29rem
-}
 
 #repImage{
   position: relative;
@@ -912,13 +890,6 @@ select:-webkit-autofill:focus {
 
 @media(min-width:950px){
 
-  .hero{
-  display: flex;
-justify-content: center;
-width:65rem;
-position: relative;
-top: 20rem;
-}
 
 
 .EditContainer form{
@@ -930,20 +901,8 @@ top: 20rem;
 
 @media(max-width:950px){
 
-
-  .heroCont{
-    position: absolute;
-    top: 25rem;
-  }
-
-  .hero{
-   width:400px;
-   height: 300px;
-  }
 .welcome{
   font-size:1rem;
-
-
 }
 
 .getStartedCont{
@@ -990,47 +949,8 @@ top: 20rem;
           position: absolute;
         }
 
-    .infoCont img {
-     border-radius: 50%;
-     width:10rem;
-     position: absolute;
-     top: 1rem;
-     left: 9rem;
-     height: 10rem;
-     
 
-    }
-        .infoCont a {
-          color: black;
-          position: relative;
-          top: 2rem;
-          text-decoration: none;
-        }
 
-        .infoCont.one div{
-        font-size: 20px;
-        position: relative;
-        text-decoration: none;
-        font-family: 'Poppins', sans-serif;
-        color: black;
-        text-align: center;
-        width:80%;
-        height: 12rem;
-        background-color:white;
-        left: 3rem;
-        top: 5rem;
-        }
-    .infoCont.one{
-      background-color:rgb(0, 255, 119);
-      display:flex;
-      justify-content: center;
-      height: 25rem;
-      width:30rem;
-      position: relative;
-      top:13rem ;
-      color: black;
-      flex-direction: column;
-    }
 
 .bio{
 background-color:rgb(12, 12, 12);
@@ -1050,18 +970,19 @@ min-height: 10rem;
 
 
 }
+.bioCont{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 2rem;
+}
 .bioView{
-background-color:rgb(42, 42, 42);
-  border: none;outline: none;
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-  padding: 25px;
-    font-family: 'Poppins', sans-serif;
-    word-wrap: break-word;
-    text-align: left;
-    position: relative;
-    top: 1.2rem;
-    height: 20rem;
+ height: 12rem;
+ width: 100%;
+ padding:10px;
+   border-radius: 5%;
+
+
     
 }
 
@@ -1144,46 +1065,48 @@ height: 2rem;
   background-color:red;
   padding:20px
 }
-.playerInfoCont{
-  width:45rem;
-  display:flex;
-  flex-direction: column;
-  position: relative;
-  background-color:rgb(12, 12, 12);
-}
 
 .XBOX.SERIES{
 background-image:url('./images/Xboxseies.png');
-height: 10rem;
-background-repeat: no-repeat
+height: 5rem;
+width:14rem;
+background-repeat: no-repeat;
+border-radius: 10px
+
 }
 
 .XBOX.ONE{
 background-image:url('./images/Xboxone.png');
-height: 10rem;
-background-repeat: no-repeat
+height: 5rem;
+width:14rem;
+background-repeat: no-repeat;
+border-radius: 10px
+
 }
 
 .PS5{
 background-image:url('./images/Ps5.png');
-height: 10rem;
-background-repeat: no-repeat
+height: 5rem;
+width:14rem;
+background-repeat: no-repeat;
+border-radius: 10px
+
 }
 
 .PS4{
 background-image:url('./images/Ps4.png');
-height: 10rem;
-background-repeat: no-repeat
+height: 5rem;
+width:14rem;
+background-repeat: no-repeat;
+border-radius: 10px
 }
 
 
     @media(max-width:1300px){
-               .cont.my{
-  display: flex;
-  justify-content:center;
-  top: 12rem;
-  height: 52rem;
-}
+      .welcomess{
+        display:none
+      }
+
 input{
     margin: 2rem;
 
@@ -1192,7 +1115,6 @@ input{
 
 .searchContainer{
    display: flex;
-   background-color:rgb(0, 0, 0);
   color: white;
   width:100%;
   height: 13rem;
@@ -1202,36 +1124,24 @@ input{
 
 }
 .SearchInput input{
-  display: flex;
-  flex-direction: column;
-  color: white;
-    position: relative;
-    margin: 0;
-    margin-top: 2rem;
-    padding:0;
-    z-index: 222;
-  background-color:rgb(0, 0, 0);
-  border-bottom: 2px solid white;
-  
+display: flex;
+flex-direction: column;
+position: relative;
+right: 1rem;
+width:8rem;
+  background-color:rgb(17, 17, 17)
 
 }
 .SearchInput{
-  height: 15rem;
-  width:12rem;
-  padding:5px
+  height: 17rem;
+  width:11.5rem;
+  position: relative;
+  right: 0rem;
+  background-color:rgb(17, 17, 17)
 
 }
       
-      .infoCont{
-  background-color:#0c0c0c;
-  width: 28rem;
-  margin: 20px;
-  margin-top:12rem;
-  position: relative;
-  top: 8rem;
-  color: rgb(255, 255, 255);
-  z-index: 20;  
-      }
+
 
       .getStarted{
         position: relative;
@@ -1274,15 +1184,6 @@ z-index: 5;
     display:none
 
   }
-.navCont {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-
-
-  
-
-}
 
 
 
@@ -1303,6 +1204,7 @@ right: 0.5rem;
 position: relative;
 right: -1rem;
 }
+
 }
 
 
@@ -1360,3 +1262,199 @@ width: 50rem;
   position: relative;
   top: 12rem;
 }
+
+.statsCont{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ 
+}
+
+span{
+font-weight: bold;
+
+}
+
+.gameCont{
+  position: relative;
+  bottom:12rem;
+  right:0rem;
+  font-size: 1.2rem;
+  margin: 2rem;
+}
+.rangeContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+
+}
+.rangeContainer p{
+  color:rgb(160, 160, 160);
+  font-weight: bolder;
+}
+.rangeColumn{
+}
+.range{
+  width:12rem;
+  margin:0.4rem
+}
+
+@media(max-width:1300px){
+  .navCont{
+  display:flex;
+  flex-direction: row;
+
+}
+  .statsCont span{
+color: rgb(136, 135, 135);
+  margin: 2rem;
+  font-weight:bold;
+
+}
+.bioView{
+  width:54rem
+}
+
+.infoCont{
+  background-color:rgb(16, 16, 19);
+  margin-top: 5rem;
+  position: relative;
+  margin: 5rem;
+  width:100rem;
+  height: 56rem;
+  padding-bottom: 10rem;
+  top: 10rem;
+  border-radius: 5% 5% 5% 5%;
+
+
+  
+}
+}
+.cont{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+@media (min-width:1300px){
+  .statsCont span{
+color: rgb(136, 135, 135);
+  margin: 4rem;
+  font-weight:bold;
+
+}
+  .navi{
+width:16rem;
+height: 102rem;
+position: fixed;
+    background-color:rgb(16, 16, 19);
+
+
+}
+}
+
+.search{
+    background-color:rgb(16, 16, 19);
+
+}
+
+.welcomess{
+    color: rgb(255, 255, 255);
+  position: relative;
+  top: 100px;
+  font-weight:bolder;
+  font-size:45px;
+font-family: 'Poppins', sans-serif;
+margin:auto;
+left: 5rem;width:80%
+}
+
+
+@media(min-width:1300px){
+  .infoCont{
+
+    background-color:rgb(16, 16, 19);
+  margin-top: 3rem;
+  position: relative;
+  margin: 5rem;
+  width:40rem;
+  padding-bottom: 10rem;
+  left: 10rem;
+  top: 10rem;
+  height: 53rem;
+  border-radius: 5% 5% 5% 5%;
+}
+
+}
+.heroCont{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  position: absolute;
+  top: 25rem;
+}
+.hero{
+  width:500px;
+  height: 300px;
+    margin-bottom: 12rem;
+
+}
+
+@media(max-width:900px){
+  .getStarted{
+  position: relative;
+  left: 1rem;
+}
+.welcome{
+    position: relative;
+  left: 1rem;
+}
+  .bioView{
+  width:18rem
+}
+}
+@media(min-width:1300px){
+  .hero{
+  width:70rem;
+  height: 40rem;
+    margin-bottom: 12rem;
+    position: relative;
+    top: 6rem;
+
+}
+
+.EditContainer{
+  width:90%;
+  position: relative;
+  left: 9rem;
+}
+.createPlayerCard{
+  z-index: -2230;
+}
+}
+
+.videoCont{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  position: absolute;
+top: 35rem;
+
+}
+
+.black{
+  background-color:rgb(0, 0, 0);
+  z-index: 33333;
+  padding:12px;
+  height: 0px;
+  width:65px;
+  position: absolute;
+  top: 8rem;
+}
+  .video{
+position: absolute;
+width:15rem;
+left:1rem;
+height:20rem;
+display:none
+}
+

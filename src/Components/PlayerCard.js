@@ -243,6 +243,7 @@ const PlayerCard = (props) => {
             <div className="searchContainer">
                 <div className="SearchInput">
                     <input
+                        className="one"
                         placeholder="Archetype"
                         onChange={Change}
                         value={searchQuery}
@@ -287,7 +288,7 @@ const PlayerCard = (props) => {
                     />
                 </div>
             </div>
-            <h2> Find the Perfect teammate</h2>
+            <h2 className="welcomess"> Find the Perfect teammate</h2>
 
             <div className="cont">
                 {j.map((info) => {
@@ -433,49 +434,75 @@ const PlayerCard = (props) => {
                                     </a>
                                 </div>
                             </div>
+                            {/* <div className={info.Status}></div> */}
 
-                            <div className="repCont">
-                                <div id="repImage" className={info.Rep}></div>
+                            <div className="reps">
+                                <div className={`repCont ${info.System}s`}>
+                                    <div className={info.Rep}></div>
+                                </div>
                             </div>
-                            <p className="Gamertag">
-                                Gamertag: {info.Gamertag}
-                            </p>
-                            <div className="Win">
-                                <input
-                                    className="range"
-                                    type="range"
-                                    value={info.Overall}
-                                    OVR
-                                    min="0"
-                                    max="100"
-                                />{' '}
-                                {info.Overall} OVR
-                            </div>
-                            <div className="Win">
-                                <input
-                                    className="range"
-                                    type="range"
-                                    value={info.Winpercentage}
-                                    min="0"
-                                    max="100"
-                                />{' '}
-                                {info.Winpercentage} WP%
-                            </div>
-                            <p className="Archetype">
-                                {' '}
-                                Archetype {info.Archetype}
-                            </p>
-                            <p className="Position">
-                                {' '}
-                                Position {info.Position}
-                            </p>
-                            <p className="PlayStyle"> PlayStyle {info.Type}</p>
 
-                            <p className="bioView">
-                                {' '}
-                                Bio <br></br>
-                                {info.Bio}
-                            </p>
+                            <div className="gameCont">
+                                <p>
+                                    Gamertag
+                                    <br></br>
+                                    <span>{info.Gamertag}</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div className="statsCont">
+                                    <p>
+                                        {' '}
+                                        <span>Archetype</span>
+                                        <br></br> {info.Archetype}
+                                    </p>
+                                    <p>
+                                        {' '}
+                                        <span>Position</span> <br></br>{' '}
+                                        {info.Position}
+                                    </p>
+                                    <p>
+                                        {' '}
+                                        <span>PlayStyle</span>
+                                        <br></br> {info.Type}
+                                    </p>
+                                </div>
+
+                                <div className="rangeContainer">
+                                    <div className="rangeColumn">
+                                        <p>Overall</p>
+                                        <input
+                                            className="range"
+                                            type="range"
+                                            value={info.Overall}
+                                            OVR
+                                            min="0"
+                                            max="100"
+                                        />{' '}
+                                        {info.Overall}
+                                    </div>
+                                    <div className="rangeColumn">
+                                        <p>Winpercentage</p>
+                                        <input
+                                            className="range"
+                                            type="range"
+                                            value={info.Winpercentage}
+                                            min="0"
+                                            max="100"
+                                        />{' '}
+                                        {info.Winpercentage}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bioCont">
+                                <div className={`bioView ${info.System}s`}>
+                                    <p>
+                                        {' '}
+                                        Bio <br></br>
+                                        {info.Bio}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     )
                 })}

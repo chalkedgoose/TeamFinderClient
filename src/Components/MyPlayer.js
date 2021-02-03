@@ -107,7 +107,7 @@ const MyPlayer = (props) => {
                 <div className="cont my">
                     <Animation />
 
-                    <div className="playerInfoCont">
+                    <div className="infoCont my">
                         <div className={myPlayer.System}></div>
                         <div className="mediaCont">
                             <a
@@ -239,17 +239,22 @@ const MyPlayer = (props) => {
                                 </a>
                             </div>
                         </div>
-
-                        <div className="repCont">
-                            <div id="repImage" className={myPlayer.Rep}></div>
+                        <div className="reps">
+                            <div className={`repCont ${myPlayer.System}s`}>
+                                <div className={myPlayer.Rep}></div>
+                            </div>
                         </div>
 
-                        <p className="Gamertag">
-                            <Link to="/forgot"> Change your password</Link>
-                            <p>Gamer Tage: {myPlayer.Gamertag} </p>
-                            <p>Email: {props.One.email} </p>
-                            <p>Name : {props.One.name} </p>
-                        </p>
+                        <div className="gameCont">
+                            <p>
+                                Gamertag
+                                <br></br>
+                                <span>{myPlayer.Gamertag}</span>
+                            </p>
+                        </div>
+                        <p>Email: {props.One.email} </p>
+                        <p>Name : {props.One.name} </p>
+
                         <div className="Win">
                             <input
                                 className="range"
@@ -270,22 +275,33 @@ const MyPlayer = (props) => {
                             />{' '}
                             {myPlayer.Winpercentage} WP%
                         </div>
-                        <p className="Archetype">
-                            {' '}
-                            Archetype {myPlayer.Archetype}
-                        </p>
-                        <p className="Position">
-                            {' '}
-                            Position {myPlayer.Position}
-                        </p>
-                        <p className="PlayStyle"> PlayStyle {myPlayer.Type}</p>
+                        <div className="statsCont">
+                            <p>
+                                {' '}
+                                <span>Archetype</span>
+                                <br></br> {myPlayer.Archetype}
+                            </p>
+                            <p>
+                                {' '}
+                                <span>Position</span> <br></br>{' '}
+                                {myPlayer.Position}
+                            </p>
+                            <p>
+                                {' '}
+                                <span>PlayStyle</span>
+                                <br></br> {myPlayer.Type}
+                            </p>
+                        </div>
                         <div className="edit">
                             <Link to={`/edit/${props.One._id}`}>Edit</Link>
                         </div>
-                        <p className="bioView">
-                            {' '}
-                            Bio <br></br> {myPlayer.Bio}
-                        </p>
+                        <div className={`bioView ${myPlayer.System}s`}>
+                            <p>
+                                {' '}
+                                Bio <br></br>
+                                {myPlayer.Bio}
+                            </p>
+                        </div>
                     </div>
                 </div>
             )

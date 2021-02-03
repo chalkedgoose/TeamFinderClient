@@ -174,28 +174,28 @@ const Edit = (props) => {
                     value={state.Twitter}
                     name="Twitter"
                     onChange={onChange3}
-                    placeholder="*optional Twitter Make sure you have https:// in front of the link "
+                    placeholder="*optional Twitter link "
                 />
 
                 <input
                     value={state.Instagram}
                     name="Instagram"
                     onChange={onChange3}
-                    placeholder="*optional Instagram Make sure you have https:// in front of the link  "
+                    placeholder="*optional Instagram link  "
                 />
 
                 <input
                     value={state.Youtube}
                     name="Youtube"
                     onChange={onChange3}
-                    placeholder="*optional Youtube Make sure you have https:// in front of the link "
+                    placeholder="*optional Youtube link "
                 />
 
                 <input
                     value={state.Twitch}
                     name="Twitch"
                     onChange={onChange3}
-                    placeholder=" *optional Twitch Make sure you have https:// in front of the link  "
+                    placeholder=" *optional Twitch link  "
                 />
 
                 <div>

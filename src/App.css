@@ -1382,11 +1382,13 @@ left: 5rem;width:80%
 
 }
 .heroCont{
-  width:100%;
+  width:60%;
   display:flex;
   justify-content: center;
   position: absolute;
   top: 30rem;
+      z-index: -553px;
+
 }
 .hero{
   width:80rem;
@@ -1394,6 +1396,7 @@ left: 5rem;width:80%
     margin-bottom: 12rem;
     position: relative;
     left: 6rem;
+      z-index: -553px;
 
 }
 

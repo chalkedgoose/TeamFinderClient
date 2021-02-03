@@ -1069,7 +1069,6 @@ height: 2rem;
 .XBOX.SERIES{
 background-image:url('./images/Xboxseies.png');
 height: 5rem;
-width:14rem;
 background-repeat: no-repeat;
 border-radius: 10px
 
@@ -1078,7 +1077,6 @@ border-radius: 10px
 .XBOX.ONE{
 background-image:url('./images/Xboxone.png');
 height: 5rem;
-width:14rem;
 background-repeat: no-repeat;
 border-radius: 10px
 
@@ -1087,7 +1085,6 @@ border-radius: 10px
 .PS5{
 background-image:url('./images/Ps5.png');
 height: 5rem;
-width:14rem;
 background-repeat: no-repeat;
 border-radius: 10px
 
@@ -1096,7 +1093,6 @@ border-radius: 10px
 .PS4{
 background-image:url('./images/Ps4.png');
 height: 5rem;
-width:14rem;
 background-repeat: no-repeat;
 border-radius: 10px
 }
@@ -1390,37 +1386,46 @@ left: 5rem;width:80%
   display:flex;
   justify-content: center;
   position: absolute;
-  top: 25rem;
+  top: 30rem;
 }
 .hero{
-  width:500px;
-  height: 300px;
+  width:80rem;
+  height: 40rem;
     margin-bottom: 12rem;
+    position: relative;
+    left: 6rem;
 
 }
 
 @media(max-width:900px){
+
+  .hero{
+  width:22rem;
+  height: 13rem;
+    margin-bottom: 12rem;
+    position: relative;
+    top: 0rem;
+
+}
+.heroCont{
+  position: absolute;
+  right: 6rem;
+}
+
+
   .getStarted{
   position: relative;
-  left: 1rem;
+  left: 0em;
 }
 .welcome{
     position: relative;
-  left: 1rem;
+  left: 0rem;
 }
   .bioView{
-  width:18rem
+  width:22rem
 }
 }
 @media(min-width:1300px){
-  .hero{
-  width:70rem;
-  height: 40rem;
-    margin-bottom: 12rem;
-    position: relative;
-    top: 6rem;
-
-}
 
 .EditContainer{
   width:90%;

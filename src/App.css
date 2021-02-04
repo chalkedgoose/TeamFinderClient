@@ -236,8 +236,8 @@ color: white;
   height: 20px;
   width: 20px;
   position: relative;
-  left: 85%;
-  bottom: 30px;
+  left: 3rem;
+  top: 2rem;
   border-radius: 50px;
 }
 
@@ -988,7 +988,7 @@ min-height: 10rem;
 
 .mediaCont{
   position: absolute;
-  top: 4rem;
+  top: 6rem;
   left: 80%;
 }
 .icon-tabler-brand-youtube{

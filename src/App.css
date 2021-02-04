@@ -1465,4 +1465,6 @@ left:1rem;
 height:20rem;
 display:none
 }
-
+.EditContainer{
+  z-index: 2900;
+}

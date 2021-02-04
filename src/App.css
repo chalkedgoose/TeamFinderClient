@@ -1465,6 +1465,6 @@ left:1rem;
 height:20rem;
 display:none
 }
-.EditContainer{
+.EditContainer,.cont.my{
   z-index: 2900;
 }

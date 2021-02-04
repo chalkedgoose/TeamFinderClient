@@ -974,11 +974,11 @@ min-height: 10rem;
   display: flex;
   justify-content: center;
   position: relative;
-  top: 2rem;
+  top: 4rem;
 }
 .bioView{
  height: 12rem;
- width: 100%;
+ width: 80%;
  padding:10px;
    border-radius: 5%;
 
@@ -1120,6 +1120,7 @@ input{
 
 }
 .SearchInput input{
+  color: white;
 display: flex;
 flex-direction: column;
 position: relative;
@@ -1132,6 +1133,7 @@ width:8rem;
   height: 17rem;
   width:11.5rem;
   position: relative;
+  color: white;
   right: 0rem;
   background-color:rgb(17, 17, 17)
 
@@ -1262,7 +1264,7 @@ width: 50rem;
 .statsCont{
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
  
 }
 
@@ -1296,6 +1298,21 @@ font-weight: bold;
 }
 
 @media(max-width:1300px){
+
+    .hero{
+  width:0rem;
+  height: 13rem;
+    margin-bottom: 12rem;
+    position: relative;
+    top: 0rem;
+
+}
+.heroCont{
+  position: absolute;
+  left: 0rem;
+}
+
+
   .navCont{
   display:flex;
   flex-direction: row;
@@ -1303,7 +1320,6 @@ font-weight: bold;
 }
   .statsCont span{
 color: rgb(136, 135, 135);
-  margin: 2rem;
   font-weight:bold;
 
 }
@@ -1334,7 +1350,7 @@ color: rgb(136, 135, 135);
 @media (min-width:1300px){
   .statsCont span{
 color: rgb(136, 135, 135);
-  margin: 4rem;
+  margin: 3rem;
   font-weight:bold;
 
 }
@@ -1391,8 +1407,8 @@ left: 5rem;width:80%
 
 }
 .hero{
-  width:80rem;
-  height: 40rem;
+  width:55rem;
+  height: 30rem;
     margin-bottom: 12rem;
     position: relative;
     left: 6rem;
@@ -1402,18 +1418,7 @@ left: 5rem;width:80%
 
 @media(max-width:900px){
 
-  .hero{
-  width:22rem;
-  height: 13rem;
-    margin-bottom: 12rem;
-    position: relative;
-    top: 0rem;
 
-}
-.heroCont{
-  position: absolute;
-  right: 6rem;
-}
 
 
   .getStarted{
@@ -1424,11 +1429,13 @@ left: 5rem;width:80%
     position: relative;
   left: 0rem;
 }
-  .bioView{
-  width:22rem
-}
+
 }
 @media(min-width:1300px){
+
+
+
+
 
 .EditContainer{
   width:90%;
@@ -1467,4 +1474,36 @@ display:none
 }
 .EditContainer,.cont.my{
   z-index: 2900;
+}
+
+
+
+
+@media(max-width:1300px){
+.statsCont{
+  display: flex;
+  flex-direction: column;
+}
+    .hero{
+width:50%;
+height: 50%;
+display:flex;
+justify-content: center;
+margin-right: 11rem;
+}
+.heroCont{
+display:flex;
+justify-content: center;
+width:100%;
+
+}
+
+  .bioView{
+  width:100%;
+}
+}
+@media(max-width:700px){
+    .bioView{
+  width:21rem;
+}
 }

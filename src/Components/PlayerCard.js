@@ -455,7 +455,7 @@ const PlayerCard = (props) => {
                                     </a>
                                 </div>
                             </div>
-                            {/* <div className={info.Status}></div> */}
+                            <div className={info.Status}></div>
 
                             <div className="reps">
                                 <div className={`repCont ${info.System}s`}>

@@ -8,13 +8,15 @@ const Home = () => {
     return (
         <div className="welcome-cont">
             <Animation />
-            <div clasName="welcome">
+            <div clasName="welcomeMain">
                 <h1 className="welcome">
                     {' '}
                     Team Finder team up with like minded players{' '}
                 </h1>
-                <br></br> <br></br> <br></br> <br></br>
-                <p>team finder is free for a limited time</p>
+
+                <p className="welcome">
+                    team finder is free for a limited time
+                </p>
             </div>
             <div className="getStartedCont">
                 <a className="getStarted" href="/find">

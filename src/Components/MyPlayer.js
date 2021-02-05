@@ -107,7 +107,7 @@ const MyPlayer = (props) => {
                 <div className="cont my">
                     <Animation />
 
-                    <div className="infoCont my">
+                    <div className="infoCont">
                         <div className={myPlayer.System}></div>
                         <div className="mediaCont">
                             <a
@@ -295,12 +295,14 @@ const MyPlayer = (props) => {
                         <div className="edit">
                             <Link to={`/edit/${props.One._id}`}>Edit</Link>
                         </div>
-                        <div className={`bioView ${myPlayer.System}s`}>
-                            <p>
-                                {' '}
-                                Bio <br></br>
-                                {myPlayer.Bio}
-                            </p>
+                        <div className="bioCont my">
+                            <div className={`bioView ${myPlayer.System}s`}>
+                                <p>
+                                    {' '}
+                                    Bio <br></br>
+                                    {myPlayer.Bio}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

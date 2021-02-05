@@ -8,11 +8,14 @@ const Home = () => {
     return (
         <div className="welcome-cont">
             <Animation />
-            <h1 className="welcome">
-                {' '}
-                The best way to find and connect <br></br> with other NBA 2K
-                fanatics.{' '}
-            </h1>
+            <div clasName="welcome">
+                <h1 className="welcome">
+                    {' '}
+                    Team Finder team up with like minded players{' '}
+                </h1>
+                <br></br> <br></br> <br></br> <br></br>
+                <p>team finder is free for a limited time</p>
+            </div>
             <div className="getStartedCont">
                 <a className="getStarted" href="/find">
                     {' '}

@@ -338,19 +338,19 @@ background:rgb(0, 68, 255)
 }
 
 .repCont.PS4s{
-background:rgb(0, 68, 255)
+background:rgb(0, 68, 255);
 }
 .bioView.XBOX.ONEs{
-background:rgb(0, 197, 76)
+border:3px solid rgb(0, 197, 76)
 }
 .bioView.XBOX.SERIESs{
-background:rgb(0, 197, 76)
+border:3px solid rgb(0, 197, 76)
 }
 .bioView.PS5s{
-background:rgb(0, 68, 255)
+border:3px solid rgb(0, 68, 255)
 }
 .bioView.PS4s{
-background:rgb(0, 68, 255)
+border:3px solid rgb(0, 68, 255)
 }
     .Elite{
     background-image: url('./images/Elite.png');
@@ -443,6 +443,8 @@ background:rgb(0, 68, 255)
 
 
 @media(min-width:1300px){
+
+
 
 .blue{
   position: relative;
@@ -1392,7 +1394,7 @@ left: 5rem;width:80%
   padding-bottom: 10rem;
   left: 10rem;
   top: 10rem;
-  height: 53rem;
+  height: 45rem;
   border-radius: 5% 5% 5% 5%;
 }
 
@@ -1506,4 +1508,44 @@ width:100%;
     .bioView{
   width:21rem;
 }
+}
+
+.container{
+  position: absolute;
+  left:2rem;
+  z-index: 2222;
+  background-color:white;
+  color: black;
+}
+
+
+
+.bioView p{
+    font-family: 'Poppins', sans-serif;
+    line-height:2;
+    background-color:rgb(20, 20, 20);
+    height:100%;
+    padding:2px;
+    border-radius: 5%;
+    position: relative;
+    bottom:1.2rem
+}
+.welcome-cont h1{
+  font-size:100%
+}
+
+@media(min-width:1300px){
+
+    .rangeContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+}
+.rangeColumn{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
 }

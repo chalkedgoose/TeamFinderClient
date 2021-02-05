@@ -491,27 +491,31 @@ const PlayerCard = (props) => {
 
                                 <div className="rangeContainer">
                                     <div className="rangeColumn">
-                                        <p>Overall</p>
-                                        <input
-                                            className="range"
-                                            type="range"
-                                            value={info.Overall}
-                                            OVR
-                                            min="0"
-                                            max="100"
-                                        />{' '}
-                                        {info.Overall}
+                                        <div className="rangeConnt">
+                                            <p>Overall</p>
+                                            {info.Overall}
+                                            <input
+                                                className="range"
+                                                type="range"
+                                                value={info.Overall}
+                                                OVR
+                                                min="0"
+                                                max="100"
+                                            />{' '}
+                                        </div>
                                     </div>
                                     <div className="rangeColumn">
-                                        <p>Winpercentage</p>
-                                        <input
-                                            className="range"
-                                            type="range"
-                                            value={info.Winpercentage}
-                                            min="0"
-                                            max="100"
-                                        />{' '}
-                                        {info.Winpercentage}
+                                        <div className="rangeConnt">
+                                            <p> Winpercentage</p>
+                                            <input
+                                                className="range"
+                                                type="range"
+                                                value={info.Winpercentage}
+                                                min="0"
+                                                max="100"
+                                            />{' '}
+                                            {info.Winpercentage}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

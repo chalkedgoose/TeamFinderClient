@@ -35,8 +35,8 @@ const Nav = (props) => {
                 .then(window.localStorage.setItem('token', ''))
                 .then(window.location.reload())
         } catch (err) {
-            //  console.log(err)
-            //  console.log('didnt work')
+            //  (err)
+            //  ('didnt work')
         }
     }
     const token = window.localStorage.getItem('token')
@@ -48,7 +48,7 @@ const Nav = (props) => {
         }
     })
 
-    // console.log(window.location.href)
+    // (window.location.href)
     useEffect(() => {
         window.location.href === 'teamfinder.team/'
             ? setActive1('find')
@@ -94,15 +94,15 @@ const Nav = (props) => {
                             <a className={active1} href="/">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-home-2"
+                                    className="icon icon-tabler icon-tabler-home-2"
                                     width="30"
                                     height="30"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1"
+                                    strokeWidth="1"
                                     stroke={color1}
                                     fill="none"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 >
                                     <path
                                         stroke="none"
@@ -126,15 +126,15 @@ const Nav = (props) => {
                             <a className={active3} href="/find">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-rocket"
+                                    className="icon icon-tabler icon-tabler-rocket"
                                     width="30"
                                     height="30"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1"
+                                    strokeWidth="1"
                                     stroke={color3}
                                     fill="none"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 >
                                     <path
                                         stroke="none"
@@ -161,15 +161,15 @@ const Nav = (props) => {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-user"
+                                    className="icon icon-tabler icon-tabler-user"
                                     width="30"
                                     height="30"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1"
+                                    strokeWidth="1"
                                     stroke={color2}
                                     fill="none"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 >
                                     <path
                                         stroke="none"
@@ -182,10 +182,7 @@ const Nav = (props) => {
                             </a>
                             <p>
                                 {' '}
-                                <a
-                                    className={active2}
-                                    href={`/myPlayer/${props.One._id}`}
-                                >
+                                <a className={active2} href={`/myPlayer`}>
                                     My Stats
                                 </a>{' '}
                             </p>
@@ -195,15 +192,15 @@ const Nav = (props) => {
                             <a href="/login" onClick={Logout}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-logout"
+                                    className="icon icon-tabler icon-tabler-logout"
                                     width="30"
                                     height="30"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1"
+                                    strokeWidth="1"
                                     stroke="#fff"
                                     fill="none"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 >
                                     <path
                                         stroke="none"

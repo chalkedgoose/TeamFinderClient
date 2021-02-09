@@ -26,8 +26,7 @@ const Signup = (props) => {
         axiosWithAuth()
             .post('/signup', state)
             .then((res) => {
-                window.localStorage.setItem('token', res.data.token)
-                console.log(res)
+                window.localStorage.setItem('token', res.data.token)(res)
                 window.location.reload()
             })
             .catch((err) => {
@@ -55,7 +54,7 @@ const Signup = (props) => {
             [id]: value,
         }))
     }
-    // console.log(state);
+    // (state);
 
     return (
         <div className="login-cont login">

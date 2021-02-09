@@ -29,7 +29,7 @@ const ForgotPassword = () => {
                 )
             })
             .catch((err) => {
-                console.log(err)
+                err
                 setAlert(
                     <div className="alert">
                         Makle sure this email is connected to Team Finder

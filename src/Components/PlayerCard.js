@@ -3,15 +3,19 @@ import { useState, useEffect, useReducer } from 'react'
 import axios from 'axios'
 import Search from './Search'
 import { connect } from 'react-redux'
+import { axiosWithAuth } from './axiosWithAuth'
 import search from '../images/search.png'
 import Animation from './Animation'
 import { getId } from '../actions/postActions'
+import { Redirect } from 'react-router'
 const PlayerCard = (props) => {
     useEffect(() => {
         props.getId()
     }, [])
 
     const [playerInfo, setPlayerInfo] = useState([])
+    const [userInfo, setUserInfo] = useState()
+
     const [view, setView] = useState()
     const [searchQuery, setSearchQuery] = useState([])
     const [searchQuery2, setSearchQuery2] = useState([])
@@ -20,7 +24,7 @@ const PlayerCard = (props) => {
     const [searchQuery5, setSearchQuery5] = useState([])
     const [searchQuery6, setSearchQuery6] = useState([])
     const [searchQuery7, setSearchQuery7] = useState([])
-
+    const [playercardcreated, setPlayercardcreated] = useState(true)
     const token = window.localStorage.getItem('token')
 
     useEffect(() => {
@@ -34,6 +38,34 @@ const PlayerCard = (props) => {
                 setPlayerInfo(res.data)
             })
     }, [])
+
+    useEffect(() => {
+        axiosWithAuth()
+            .get('/login')
+            .then((res) => {
+                setUserInfo(res.data)
+            })
+    }, [])
+
+    const Info = window.localStorage.getItem('userInfo')
+    console.log(Info)
+    useEffect(() => {
+        if (token !== null && token !== '') {
+            axiosWithAuth()
+                .get(`/player/{ _id: ${Info}, __v: 0 }`)
+                .then((res) => {
+                    if (res.data === null) {
+                        setPlayercardcreated(false)
+                    }
+                })
+                .catch((err) => {})
+        }
+    })
+    // (playercardcreated)
+
+    if (playercardcreated === false) {
+        return <Redirect to={`/myPlayer`} />
+    }
 
     const Change = (e) => {
         setSearchQuery(e.target.value.toLowerCase())
@@ -107,15 +139,15 @@ const PlayerCard = (props) => {
                     Contact Me{' '}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-mail"
+                        className="icon icon-tabler icon-tabler-mail"
                         width="44"
                         height="44"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="rgb(0, 255, 128)"
                         fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                     >
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -133,15 +165,15 @@ const PlayerCard = (props) => {
                 />
                 <svg
                     xmlns="http://www.w3.org/3000/svg"
-                    class="icon icon-tabler icon-tabler-search"
+                    className="icon icon-tabler icon-tabler-search"
                     width="30"
                     height="30"
                     viewBox="0 0 24 24"
-                    stroke-width="1"
+                    strokeWidth="1"
                     stroke="rgb(0, 255, 179)"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="10" cy="10" r="7" />
@@ -155,15 +187,15 @@ const PlayerCard = (props) => {
                 />
                 <svg
                     xmlns="http://www.w3.org/3000/svg"
-                    class="icon icon-tabler icon-tabler-search"
+                    className="icon icon-tabler icon-tabler-search"
                     width="30"
                     height="30"
                     viewBox="0 0 24 24"
-                    stroke-width="1"
+                    strokeWidth="1"
                     stroke="rgb(0, 255, 179)"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="10" cy="10" r="7" />
@@ -177,15 +209,15 @@ const PlayerCard = (props) => {
                 />
                 <svg
                     xmlns="http://www.w3.org/3000/svg"
-                    class="icon icon-tabler icon-tabler-search"
+                    className="icon icon-tabler icon-tabler-search"
                     width="30"
                     height="30"
                     viewBox="0 0 24 24"
-                    stroke-width="1"
+                    strokeWidth="1"
                     stroke="rgb(0, 255, 179)"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="10" cy="10" r="7" />
@@ -199,15 +231,15 @@ const PlayerCard = (props) => {
                 />
                 <svg
                     xmlns="http://www.w3.org/3000/svg"
-                    class="icon icon-tabler icon-tabler-search"
+                    className="icon icon-tabler icon-tabler-search"
                     width="30"
                     height="30"
                     viewBox="0 0 24 24"
-                    stroke-width="1"
+                    strokeWidth="1"
                     stroke="rgb(0, 255, 179)"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="10" cy="10" r="7" />
@@ -221,15 +253,15 @@ const PlayerCard = (props) => {
                 />
                 <svg
                     xmlns="http://www.w3.org/3000/svg"
-                    class="icon icon-tabler icon-tabler-search"
+                    className="icon icon-tabler icon-tabler-search"
                     width="30"
                     height="30"
                     viewBox="0 0 24 24"
-                    stroke-width="1"
+                    strokeWidth="1"
                     stroke="rgb(0, 255, 179)"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="10" cy="10" r="7" />
@@ -244,15 +276,15 @@ const PlayerCard = (props) => {
                 />
                 <svg
                     xmlns="http://www.w3.org/3000/svg"
-                    class="icon icon-tabler icon-tabler-search"
+                    className="icon icon-tabler icon-tabler-search"
                     width="30"
                     height="30"
                     viewBox="0 0 24 24"
-                    stroke-width="1"
+                    strokeWidth="1"
                     stroke="rgb(0, 255, 179)"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="10" cy="10" r="7" />
@@ -267,15 +299,15 @@ const PlayerCard = (props) => {
                 />
                 <svg
                     xmlns="http://www.w3.org/3000/svg"
-                    class="icon icon-tabler icon-tabler-search"
+                    className="icon icon-tabler icon-tabler-search"
                     width="30"
                     height="30"
                     viewBox="0 0 24 24"
-                    stroke-width="1"
+                    strokeWidth="1"
                     stroke="rgb(0, 255, 179)"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="10" cy="10" r="7" />
@@ -347,15 +379,15 @@ const PlayerCard = (props) => {
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-brand-youtube"
+                                        className="icon icon-tabler icon-tabler-brand-youtube"
                                         width="44"
                                         height="44"
                                         viewBox="0 0 24 24"
-                                        stroke-width="0.8"
+                                        strokeWidth="0.8"
                                         stroke="white"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     >
                                         <path
                                             stroke="none"
@@ -380,15 +412,15 @@ const PlayerCard = (props) => {
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-brand-instagram"
+                                        className="icon icon-tabler icon-tabler-brand-instagram"
                                         width="44"
                                         height="44"
                                         viewBox="0 0 24 24"
-                                        stroke-width="0.8"
+                                        strokeWidth="0.8"
                                         stroke="white"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     >
                                         <path
                                             stroke="none"
@@ -419,15 +451,15 @@ const PlayerCard = (props) => {
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-brand-twitter"
+                                        className="icon icon-tabler icon-tabler-brand-twitter"
                                         width="44"
                                         height="44"
                                         viewBox="0 0 24 24"
-                                        stroke-width="0.8"
+                                        strokeWidth="0.8"
                                         stroke="white"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     >
                                         <path
                                             stroke="none"
@@ -445,15 +477,15 @@ const PlayerCard = (props) => {
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            class="icon icon-tabler icon-tabler-brand-twitch"
+                                            className="icon icon-tabler icon-tabler-brand-twitch"
                                             width="44"
                                             height="44"
                                             viewBox="0 0 24 24"
-                                            stroke-width="0.5"
+                                            strokeWidth="0.5"
                                             stroke="#ff4500"
                                             fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         >
                                             <path
                                                 stroke="none"

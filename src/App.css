@@ -1520,3 +1520,24 @@ font-size: 15px;
   position: relative;
   top: 5rem;
 }
+.noPlayer{
+  position: relative;
+  top: 20rem;
+}
+.messageCont{
+display: flex;
+width:100%;
+justify-content:center;
+
+}
+
+.Messages{
+  background-color:rgb(24, 24, 24);
+  height:40rem;
+display: flex;
+width:60%;
+position: relative;
+top: 2rem;
+justify-content:center;
+
+}

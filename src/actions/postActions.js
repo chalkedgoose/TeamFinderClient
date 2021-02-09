@@ -12,6 +12,10 @@ export const getId = () => (dispatch) => {
             })
             .then((UserId) => {
                 dispatch({ type: GET_ID, payload: UserId.data })
+                if (UserId !== null && UserId !== undefined) {
+                    const u = UserId.data._id
+                    window.localStorage.setItem('userInfo', u)
+                }
             })
             .catch((error) => {
                 window.localStorage.removeItem('token')

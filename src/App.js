@@ -8,7 +8,9 @@ import {
     Switch,
 } from 'react-router-dom'
 import PlayerCard from './Components/PlayerCard'
-import { browserHistory } from 'react-router'
+import Forum from './Components/Forum'
+
+import { browserHistory, Redirect } from 'react-router'
 import logo from './images/Logo.png'
 import Login from './Auth/Login'
 import Signup from './Auth/Signup'
@@ -28,20 +30,19 @@ import Edit from './Edit'
 import NotFound from './NotFound'
 import BadgeGrinders from './Components/BadgeGrinders'
 import ForgotPassword from './Components/ForgotPassword'
+
 import Reset from './Components/Reset'
 const App = (props) => {
     const token = window.localStorage.getItem('token')
     const [user, setUser] = useState([])
     useEffect(() => {
         props.getId()
-        // console.log(props.One)
     }, [])
 
     const Cred = {
         Status: 'online',
     }
     const userId = props.One._id
-    console.log(userId)
 
     useEffect(() => {
         if (token !== null && token !== '') {
@@ -62,19 +63,18 @@ const App = (props) => {
                     <Route exact path="/" exact component={Home} />
                     <Route path="/Login" exact component={Login} />
                     <Route exact path="/Signup" exact component={Signup} />
-                    <PrivateRoute
-                        path="/myPlayer/:id"
-                        exact
-                        component={MyPlayer}
-                    />
+                    <PrivateRoute path="/myPlayer" exact component={MyPlayer} />
                     <PrivateRoute path="/edit/:id" exact component={Edit} />
                     <PrivateRoute path="/find" exact component={PlayerCard} />
+                    <PrivateRoute path="/forum" exact component={Forum} />
+
                     <PrivateRoute
                         path="/badge"
                         exact
                         component={BadgeGrinders}
                     />
                     <Route path="/forgot" exact component={ForgotPassword} />
+
                     <Route path="/Reset/:id/:token" exact component={Reset} />
 
                     <Route component={NotFound} />

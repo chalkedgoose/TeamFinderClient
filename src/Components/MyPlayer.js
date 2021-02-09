@@ -7,8 +7,8 @@ import { getId } from '../actions/postActions'
 import Animation from './Animation'
 import { Link } from 'react-router-dom'
 
-const MyPlayer = (props) => {
-    const [myPlayer, setMyPlayer] = useState([])
+const MyPlayer = ({ One: { name, email, _id } }) => {
+    const [myPlayer, setMyPlayer] = useState(null)
     const [state, setState] = useState({
         Archetype: '',
         Overall: '',
@@ -31,19 +31,19 @@ const MyPlayer = (props) => {
     const [wpRange, setWpRange] = useState()
     const [alert, setAlert] = useState('')
     //   "http://https://jobs-xmmtw.ondigitalocean.app//player/{ _id: 5fd9811cc0cd184690c65f07, __v: 0 }"
-    useEffect(() => {
-        props.getId()
-    }, [])
+    const Info = window.localStorage.getItem('userInfo')
+
     useEffect(() => {
         axiosWithAuth()
             .get(
-                `https://jobs-xmmtw.ondigitalocean.app/player/{ _id: ${props.match.params.id}, __v: 0 }`
+                `https://jobs-xmmtw.ondigitalocean.app/player/{ _id: ${Info}, __v: 0 }`
             )
             .then((res) => {
                 setMyPlayer(res.data)
             })
             .catch((err) => {})
     }, [])
+    console.log(myPlayer)
 
     useEffect(() => {
         axiosWithAuth()
@@ -64,7 +64,6 @@ const MyPlayer = (props) => {
                 setAlert('fill out all required feilds')
             })
     }
-    console.log(userInfo)
 
     const onChange = (e) => {
         let name = e.target.value
@@ -101,12 +100,13 @@ const MyPlayer = (props) => {
             [e.target.name]: e.target[e.target.selectedIndex].value,
         }))
     }
+    const Playercardcreated = window.localStorage.getItem('Playercard')
+
     const Form = () => {
-        if (myPlayer !== null) {
+        if (myPlayer !== null && myPlayer !== undefined) {
             return (
                 <div className="cont my">
                     <Animation />
-
                     <div className="infoCont">
                         <div className={myPlayer.System}></div>
                         <div className="mediaCont">
@@ -119,15 +119,15 @@ const MyPlayer = (props) => {
                                 className={`noneview${myPlayer.Youtube}`}
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-brand-youtube"
+                                    className="icon icon-tabler icon-tabler-brand-youtube"
                                     width="44"
                                     height="44"
                                     viewBox="0 0 24 24"
-                                    stroke-width="0.8"
+                                    strokeWidth="0.8"
                                     stroke="white"
                                     fill="none"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 >
                                     <path
                                         stroke="none"
@@ -152,15 +152,15 @@ const MyPlayer = (props) => {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-brand-instagram"
+                                    className="icon icon-tabler icon-tabler-brand-instagram"
                                     width="44"
                                     height="44"
                                     viewBox="0 0 24 24"
-                                    stroke-width="0.8"
+                                    strokeWidth="0.8"
                                     stroke="white"
                                     fill="none"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 >
                                     <path
                                         stroke="none"
@@ -191,15 +191,15 @@ const MyPlayer = (props) => {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-brand-twitter"
+                                    className="icon icon-tabler icon-tabler-brand-twitter"
                                     width="44"
                                     height="44"
                                     viewBox="0 0 24 24"
-                                    stroke-width="0.8"
+                                    strokeWidth="0.8"
                                     stroke="white"
                                     fill="none"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 >
                                     <path
                                         stroke="none"
@@ -217,15 +217,15 @@ const MyPlayer = (props) => {
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-brand-twitch"
+                                        className="icon icon-tabler icon-tabler-brand-twitch"
                                         width="44"
                                         height="44"
                                         viewBox="0 0 24 24"
-                                        stroke-width="0.5"
+                                        strokeWidth="0.5"
                                         stroke="#ff4500"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     >
                                         <path
                                             stroke="none"
@@ -252,8 +252,8 @@ const MyPlayer = (props) => {
                                 <span>{myPlayer.Gamertag}</span>
                             </p>
                         </div>
-                        <p>Email: {props.One.email} </p>
-                        <p>Name : {props.One.name} </p>
+                        <p>Email: {email} </p>
+                        <p>Name : {name} </p>
 
                         <div className="Win">
                             <input
@@ -293,7 +293,7 @@ const MyPlayer = (props) => {
                             </p>
                         </div>
                         <div className="edit">
-                            <Link to={`/edit/${props.One._id}`}>Edit</Link>
+                            <Link to={`/edit/${Info}`}>Edit</Link>
                         </div>
                         <div className="bioCont my">
                             <div className={`bioView ${myPlayer.System}s`}>
@@ -325,14 +325,14 @@ const MyPlayer = (props) => {
             }
             return (
                 <div className="EditContainer">
-                    <form className="createPlayerCard" onSubmit={handleSubmit}>
-                        <Animation />
+                    <Animation />
 
+                    <form className="createPlayerCard" onSubmit={handleSubmit}>
                         <div className={alert}>
                             <p> {alert}</p>
                         </div>
                         <select name="Rep" onChange={SelectChange}>
-                            <option selected> Whats your rep?</option>
+                            <option defaultValue> Whats your rep?</option>
                             <option> Pro </option>
                             <option> Allstar </option>
                             <option> Superstar </option>
@@ -340,7 +340,7 @@ const MyPlayer = (props) => {
                             <option> Legend </option>
                         </select>
                         <select name="Type" onChange={SelectChange}>
-                            <option selected>
+                            <option defaultValue>
                                 {' '}
                                 What kind of player are you?{' '}
                             </option>

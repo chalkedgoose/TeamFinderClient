@@ -26,7 +26,6 @@ const Reset = (props) => {
         axiosWithAuth()
             .get('login/verify')
             .then((res) => {
-                console.log(res)
                 setAlert(res.data)
                 setExpired(res.data)
             })
@@ -44,16 +43,12 @@ const Reset = (props) => {
                 password: password,
             })
             .then((res) => {
-                console.log(res)
                 window.location.replace('/find')
                 setSuccess('Sucessfully Updated reset')
             })
-            .catch((err) => {
-                console.log(err)
-            })
+            .catch((err) => {})
     }
 
-    console.log(props.match.params.token)
     return (
         <div className="forgotCont">
             <div className="forgot">

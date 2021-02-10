@@ -291,7 +291,8 @@ const PlayerCard = (props) => {
                 </svg>
 
                 <input
-                    className="search"
+                    className="searcha"
+                    id="system"
                     placeholder="System"
                     onChange={Change7}
                     value={searchQuery7}

@@ -949,6 +949,9 @@ form input {
     background-repeat: no-repeat;
     border-radius: 10px;
 }
+.navCont{
+    z-index: 9000;
+}
 
 @media (max-width: 1300px) {
     input {
@@ -965,26 +968,42 @@ form input {
         justify-content: center;
     }
     .SearchInput input {
-        color: white;
+        color: rgb(0, 0, 0);
         display: flex;
         flex-direction: column;
         position: relative;
         right: 1rem;
         width: 8rem;
-        background-color: rgb(17, 17, 17);
+        background-color: rgb(24, 24, 24);
+        padding:15px;
+        border: 2px solid rgb(29, 29, 29);
     }
+
+    .SearchInput input:nth-child(4) {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 12.5rem;
+        width: 19.5rem;
+        padding:15px;
+        text-align: center;
+    }
+
+
     .SearchInput {
         height: 17rem;
         width: 11.5rem;
         position: relative;
         color: white;
         right: 0rem;
-        background-color: rgb(17, 17, 17);
+        background-color: rgb(0, 0, 0);
     }
 
     .logo {
         display: none;
     }
+    
     nav {
         position: relative;
         right: 5rem;
@@ -1352,4 +1371,7 @@ span {
 
 .navi  {
     z-index: 9000;
+}
+.searcha{
+    width:1px
 }

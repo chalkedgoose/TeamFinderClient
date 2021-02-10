@@ -155,10 +155,7 @@ const Nav = (props) => {
                         </div>
 
                         <div className="homeCont3">
-                            <a
-                                className={active2}
-                                href={`/myPlayer/${props.One._id}`}
-                            >
+                            <a className={active2} href={`/myPlayer`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="icon icon-tabler icon-tabler-user"

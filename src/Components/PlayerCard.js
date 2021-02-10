@@ -48,7 +48,6 @@ const PlayerCard = (props) => {
     }, [])
 
     const Info = window.localStorage.getItem('userInfo')
-    console.log(Info)
     useEffect(() => {
         if (token !== null && token !== '') {
             axiosWithAuth()

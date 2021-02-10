@@ -43,7 +43,6 @@ const MyPlayer = ({ One: { name, email, _id } }) => {
             })
             .catch((err) => {})
     }, [])
-    console.log(myPlayer)
 
     useEffect(() => {
         axiosWithAuth()

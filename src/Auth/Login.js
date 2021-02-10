@@ -50,7 +50,6 @@ const Login = (props) => {
             [id]: value,
         }))
     }
-    state
 
     return (
         <div className="login-cont login">

@@ -147,7 +147,7 @@ const Edit = (props) => {
                     <option> Legend </option>
                 </select>
                 <select name="Type" onChange={SelectChange}>
-                    <option defaultValue>{state.Rep} </option>
+                    <option defaultValue>{state.Type} </option>
                     <option> Casual </option>
                     <option> Competetive </option>
                 </select>

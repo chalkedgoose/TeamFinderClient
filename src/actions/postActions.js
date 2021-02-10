@@ -15,6 +15,7 @@ export const getId = () => (dispatch) => {
                 if (UserId !== null && UserId !== undefined) {
                     const u = UserId.data._id
                     window.localStorage.setItem('userInfo', u)
+                    window.localStorage.setItem('name', UserId.data.name)
                 }
             })
             .catch((error) => {

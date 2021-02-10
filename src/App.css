@@ -974,7 +974,7 @@ form input {
         position: relative;
         right: 1rem;
         width: 8rem;
-        background-color: rgb(24, 24, 24);
+        background-color: rgb(15, 15, 15);
         padding:15px;
         border: 2px solid rgb(29, 29, 29);
     }
@@ -1375,3 +1375,7 @@ span {
 .searcha{
     width:1px
 }
+
+    .searchCont {
+    z-index:9001;
+    }

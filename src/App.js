@@ -66,7 +66,6 @@ const App = (props) => {
                     <PrivateRoute path="/myPlayer" exact component={MyPlayer} />
                     <PrivateRoute path="/edit/:id" exact component={Edit} />
                     <PrivateRoute path="/find" exact component={PlayerCard} />
-                    <PrivateRoute path="/forum" exact component={Forum} />
 
                     <PrivateRoute
                         path="/badge"

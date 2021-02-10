@@ -1,189 +1,171 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap');
 nav {
-
 }
-.infos{
+.infos {
 }
-button{
+button {
     cursor: pointer;
-
 }
-.Gamertag,.Archetype,.Overall,.Position,.Winpercentage,.PlayStyle{
+.Gamertag,
+.Archetype,
+.Overall,
+.Position,
+.Winpercentage,
+.PlayStyle {
     font-family: 'Poppins', sans-serif;
 }
-.Archetype,.Overall,.Position,.Winpercentage,.PlayStyle{
+.Archetype,
+.Overall,
+.Position,
+.Winpercentage,
+.PlayStyle {
     font-family: 'Poppins', sans-serif;
 }
 
-
-
-
-
-
-
-.range{
-  overflow: hidden;
-  margin: 0;
-
+.range {
+    overflow: hidden;
+    margin: 0;
 }
 
-
-.range::-webkit-slider-thumb{
-    --webkit-appearance:none;
-width:15px;
-margin: 0;
-height: 15px;
-background-color:rgb(0, 255, 149);
-cursor: pointer;
-box-shadow: -407px 0 0 400px rgb(0, 255, 136);
+.range::-webkit-slider-thumb {
+    --webkit-appearance: none;
+    width: 15px;
+    margin: 0;
+    height: 15px;
+    background-color: rgb(0, 255, 149);
+    cursor: pointer;
+    box-shadow: -407px 0 0 400px rgb(0, 255, 136);
 }
 
-
-  #rangeValue{
+#rangeValue {
     position: relative;
     display: block;
     text-align: center;
     font-size: 6em;
     color: rgb(255, 255, 255);
     font-weight: 400;
-    
-  }
-
-
+}
 
 .range {
-  -webkit-appearance: none;
-  width: 100px;
-  border-radius:20px 20px 20px 20px;
-  padding:5px;
+    -webkit-appearance: none;
+    width: 100px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 5px;
 
-  height: 10px;
-  outline: none;
-  background-color:rgb(255, 255, 255)
+    height: 10px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
 }
-
-
 
 .range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 
-
-.Overall{
-  font-size: 14px;
-  position: relative;
-  bottom: 2rem;
-
+.Overall {
+    font-size: 14px;
+    position: relative;
+    bottom: 2rem;
 }
 
-
-
-
-
-
-
-
-html,body,App {
-  background-color: #000000;
-  font-family: 'Poppins', sans-serif;
-  background-repeat:no-repeat;
-  background-size:cover;
-  color: white;
+html,
+body,
+App {
+    background-color: #000000;
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 .logo-cont {
-  display:flex;
-  justify-content:flex-start;
-  position: relative;
-  left: 320px;
-  top: 20px;
-
-
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 320px;
+    top: 20px;
 }
-.logo-cont img{
-
+.logo-cont img {
 }
 
-.logo{
-  display:flex;
-  justify-content:flex-start;
-  width:30px;
-  height: 30px;
-  position: relative;
-  top:40%;
-  right: 300px;
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 40%;
+    right: 300px;
 }
 
-.logo-cont h1{
-  position: relative;
-  top:12%;
-  font-weight:400;
-  font-family: 'Poppins', sans-serif;
-  right: 290px;
-  font-size: 20px;
-  color: rgb(0, 0, 0);
+.logo-cont h1 {
+    position: relative;
+    top: 12%;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    right: 290px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #000000;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .search::-webkit-input-placeholder {
-  color: rgb(255, 255, 255);
-  opacity: 1; /* Firefox */
-  font-size:15px;
-  font-family: 'Poppins', sans-serif;
-
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
 }
-::-webkit-input-placeholder{
-  color: rgb(255, 255, 255);
+::-webkit-input-placeholder {
+    color: rgb(255, 255, 255);
 }
 
-input{
-  outline: none;
-  border:none
+input {
+    outline: none;
+    border: none;
 }
 
 .search {
-/* position: relative;
+    /* position: relative;
 left: 0rem;
 margin:20px;
 padding:20px;
@@ -194,658 +176,597 @@ color: white;
 border:none;
 border-radius: 20px; */
 
-width:100px;
-background-color:rgb(20, 20, 20);
-border: none;
-outline: none;
-color: white;
+    width: 100px;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    outline: none;
+    color: white;
 }
 
-
-
-
-
 .system {
-  margin: 0;
-  position: relative;
-  left: 10px;
+    margin: 0;
+    position: relative;
+    left: 10px;
 }
 
 .X {
-  position: absolute;
-  left: 80%;
-  top: 11%;
+    position: absolute;
+    left: 80%;
+    top: 11%;
 }
 
 .none {
-  display: none;
+    display: none;
 }
-
 
 .offline {
-  background-color: rgb(255, 0, 0);
-  height: 20px;
-  width: 20px;
-  position: relative;
-  left: 85%;
-  bottom: 30px;
-  border-radius: 50px;
+    background-color: rgb(255, 0, 0);
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 85%;
+    bottom: 30px;
+    border-radius: 50px;
 }
 .online {
-  background-color: rgb(9, 255, 0);
-  height: 20px;
-  width: 20px;
-  position: relative;
-  left: 3rem;
-  top: 2rem;
-  border-radius: 50px;
+    background-color: rgb(9, 255, 0);
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 3rem;
+    top: 2rem;
+    border-radius: 50px;
 }
-
-
 
 .navCont {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  
-  right: -1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
 
+    right: -1rem;
 }
 nav a {
-text-decoration: none;
-color: rgb(255, 255, 255);
-position: relative;
-margin-top:40px;
-text-align: left;
-position: relative;
-left: 6rem;
-font-family: 'Poppins', sans-serif;
-width:100px;
-top: 0rem;
-z-index: 5;
-
-
-  
-}
-
-
-.welcomes{
-  position: absolute;
-  top: 6rem;
-}
-
-ul{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
     position: relative;
-  top: 200px;
+    margin-top: 40px;
+    text-align: left;
+    position: relative;
+    left: 6rem;
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    top: 0rem;
+    z-index: 5;
 }
 
+.welcomes {
+    position: absolute;
+    top: 6rem;
+}
 
+ul {
+    position: relative;
+    top: 200px;
+}
 
-
-
-
-
-  .Superstar{
+.Superstar {
     background-image: url('./images/superstar.png');
     height: 140px;
-    width: 120px;  
+    width: 120px;
     background-repeat: no-repeat;
     position: relative;
-    bottom:0rem;
-    margin-bottom:2rem;
-    background-size:100px;
-
-  }
-  .reps{
-     display: flex;
- justify-content: center ;
-  }
-.repCont{
- display: flex;
- justify-content: center ;
- position: relative;
- top: 6rem;
- width:100px;
- padding:2rem;
- border-radius: 50%;
- height: 100px;
-
+    bottom: 0rem;
+    margin-bottom: 2rem;
+    background-size: 100px;
 }
-.repCont.XBOX.ONEs{
-background:rgb(0, 197, 76)
+.reps {
+    display: flex;
+    justify-content: center;
 }
-.repCont.XBOX.SERIESs{
-background:rgb(0, 197, 76)
+.repCont {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 6rem;
+    width: 100px;
+    padding: 2rem;
+    border-radius: 50%;
+    height: 100px;
 }
-.repCont.PS5s{
-background:rgb(0, 68, 255)
+.repCont.XBOX.ONEs {
+    background: rgb(0, 197, 76);
+}
+.repCont.XBOX.SERIESs {
+    background: rgb(0, 197, 76);
+}
+.repCont.PS5s {
+    background: rgb(0, 68, 255);
 }
 
-.repCont.PS4s{
-background:rgb(0, 68, 255);
+.repCont.PS4s {
+    background: rgb(0, 68, 255);
 }
-.bioView.XBOX.ONEs{
-border:3px solid rgb(0, 197, 76)
+.bioView.XBOX.ONEs {
+    border: 3px solid rgb(0, 197, 76);
 }
-.bioView.XBOX.SERIESs{
-border:3px solid rgb(0, 197, 76)
+.bioView.XBOX.SERIESs {
+    border: 3px solid rgb(0, 197, 76);
 }
-.bioView.PS5s{
-border:3px solid rgb(0, 68, 255)
+.bioView.PS5s {
+    border: 3px solid rgb(0, 68, 255);
 }
-.bioView.PS4s{
-border:3px solid rgb(0, 68, 255)
+.bioView.PS4s {
+    border: 3px solid rgb(0, 68, 255);
 }
-    .Elite{
+.Elite {
     background-image: url('./images/Elite.png');
     height: 140px;
-    width: 120px;  
+    width: 120px;
     background-repeat: no-repeat;
     position: relative;
-    bottom:0rem;
-    margin-bottom:2rem;
-    background-size:100px;
-  }
-  input:active{
+    bottom: 0rem;
+    margin-bottom: 2rem;
+    background-size: 100px;
+}
+input:active {
     background-color: black;
-  }
+}
 
-    .Pro{
+.Pro {
     background-image: url('./images/Pro.png');
     height: 140px;
-    width: 120px;  
+    width: 120px;
     background-repeat: no-repeat;
     position: relative;
-    bottom:0rem;
-    margin-bottom:2rem;
-    background-size:100px;
-  }
+    bottom: 0rem;
+    margin-bottom: 2rem;
+    background-size: 100px;
+}
 
-
-    .Allstar{
+.Allstar {
     background-image: url('./images/Allstar.png');
     height: 140px;
-    width: 120px;  
+    width: 120px;
     background-repeat: no-repeat;
     position: relative;
-    bottom:0rem;
-    margin-bottom:2rem;
-    background-size:100px;
-  }
+    bottom: 0rem;
+    margin-bottom: 2rem;
+    background-size: 100px;
+}
 
-  
-    .Legend{
+.Legend {
     background-image: url('./images/Legend.png');
     height: 140px;
-    width: 120px;  
+    width: 120px;
     background-repeat: no-repeat;
     position: relative;
-    bottom:0rem;
-    margin-bottom:2rem;
-    background-size:100px;
-  }
+    bottom: 0rem;
+    margin-bottom: 2rem;
+    background-size: 100px;
+}
 
-
-
-   #my {
+#my {
     position: relative;
     left: 30%;
-    }
- 
-.searchCont{
-  display:flex;
-  justify-content:center;
-  flex-wrap: wrap;
-  
 }
-.getStartedCont{
-position: relative;
-top: 6rem;
-right:8rem
+
+.searchCont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-    .getStarted{
-      margin: 1rem;
-  background-color:rgb(32, 32, 32);
-  border: none;outline: none;
-  color: rgb(0, 255, 136);
-  padding: 8px;
+.getStartedCont {
+    position: relative;
+    top: 6rem;
+    right: 8rem;
+}
+.getStarted {
+    margin: 1rem;
+    background-color: rgb(32, 32, 32);
+    border: none;
+    outline: none;
+    color: rgb(0, 255, 136);
+    padding: 8px;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-      position: absolute;
-      background-color: rgb(0, 255, 136);
-      border: none;
-      width:12rem;
-      outline: none;
-      color: rgb(0, 0, 0);
-      text-align: center;
-      font-size:18px;
-      border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    background-color: rgb(0, 255, 136);
+    border: none;
+    width: 12rem;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+@media (min-width: 1300px) {
+    .blue {
+        position: relative;
+        left: 0.2rem;
+        top: 1rem;
     }
-    
+    .searchContainer {
+        display: none;
+    }
 
+    .searchCont {
+        position: fixed;
+        top: 20.5rem;
+        display: flex;
+        left: 0.5rem;
+        flex-direction: column;
+    }
 
+    .homeCont2 {
+        position: absolute;
+        right: 6rem;
+        top: 10.5rem;
+        color: rgb(0, 89, 255);
+        margin: 0;
+        padding: 0;
+    }
+    .homeCont4 {
+        position: absolute;
+        right: 7.5rem;
+        top: 18.5rem;
+        color: rgb(0, 89, 255);
+        margin: 0;
+        padding: 0;
+    }
+    .homeCont3 {
+        position: absolute;
+        right: 6.8rem;
+        top: 14.5rem;
+        color: rgb(0, 89, 255);
+        margin: 0;
+        padding: 0;
+    }
 
-@media(min-width:1300px){
+    .homeCont1 p {
+        position: relative;
+        left: 3.5rem;
+        bottom: 3rem;
+        color: white;
+    }
 
+    .homeCont2 p {
+        position: relative;
+        left: 3.5rem;
+        bottom: 3rem;
+        width: 100px;
+        color: white;
+    }
 
+    .homeCont3 p {
+        position: relative;
+        left: 4rem;
+        bottom: 3rem;
+        width: 5rem;
+        color: white;
+    }
 
-.blue{
-  position: relative;
-  left: 0.2rem;
-  top: 1rem;
+    .homeCont4 p {
+        position: relative;
+        left: 3.5rem;
+        bottom: 3rem;
+        color: white;
+    }
+
+    .homeCont1 {
+        position: absolute;
+        right: 7.5rem;
+        top: 6.5rem;
+        color: rgb(0, 89, 255);
+        margin: 0;
+        padding: 0;
+    }
+    .searchCont svg {
+        padding: 5px;
+        position: relative;
+        top: 1rem;
+        border-radius: 28%;
+    }
+    .searchimg {
+        width: 3%;
+        position: relative;
+        top: 0.5rem;
+        left: 2rem;
+        z-index: 300;
+    }
+
+    .home {
+        width: 8%;
+        position: relative;
+        left: 4rem;
+        top: 5rem;
+        z-index: 300;
+    }
+
+    .search {
+        width: 10rem;
+        height: 2rem;
+        background: #000000;
+        position: relative;
+        top: 3rem;
+        left: 3rem;
+        font-size: 20px;
+        z-index: 900;
+    }
+
+    .logo {
+        position: relative;
+        top: 1rem;
+    }
+    nav {
+        position: fixed;
+        width: 5rem;
+        height: 100rem;
+        z-index: 2;
+        left: -1px;
+    }
+    .searchCont {
+        z-index: 2;
+    }
 }
-.searchContainer{
-   display: none;
-
-}
-
-
-
-
-.searchCont{
- 
-  position: fixed;
-  top: 20.5rem;
-  display:flex;
-  left: 0.5rem;
-  flex-direction: column;
-  
-}
-
-.homeCont2{
-  position: absolute;
-  right: 6rem;
-  top: 10.5rem;
-  color: rgb(0, 89, 255);
-  margin: 0;
-  padding:0;
-}
-.homeCont4{
-  position: absolute;
-  right: 7.5rem;
-  top: 18.5rem;
-  color: rgb(0, 89, 255);
-  margin: 0;
-  padding:0;
-}
-.homeCont3{
-  position: absolute;
-  right: 6.8rem;
-  top: 14.5rem;
-  color: rgb(0, 89, 255);
-  margin: 0;
-  padding:0
-}
-
-.homeCont1 p{
-  position: relative;
-  left: 3.5rem;
-  bottom: 3rem;
-  color: white;
-}
-
-.homeCont2 p{
-  position: relative;
-  left: 3.5rem;
-  bottom: 3rem;
-  width:100px;
-  color: white;
-}
-
-.homeCont3 p{
-  position: relative;
-  left: 4rem;
-  bottom: 3rem;
-  width:5rem;
-  color: white;
-}
-
-.homeCont4 p{
-  position: relative;
-  left: 3.5rem;
-  bottom: 3rem;
-  color: white;
-}
-
-.homeCont1{
-  position: absolute;
-  right: 7.5rem;
-  top: 6.5rem;
-  color: rgb(0, 89, 255);
-  margin: 0;
-  padding:0;
-}
-.searchCont svg{
-  padding:5px;
-  position: relative;
-  top: 1rem;
-  border-radius:28%
-}
-.searchimg{ 
-  width:3%;
-position: relative;
-top:0.5rem;
-left: 2rem;
-  z-index: 300;
-}
-
-.home{
-width:8%;
-position: relative;
-left: 4rem;
-top: 5rem;
-  z-index: 300;
-} 
-
-
-.search{
-  width:10rem;
-  height: 2rem;
-  background:#000000;
-  position: relative;
-  top: 3rem;
-  left: 3rem;
-  font-size: 20px;
-  z-index: 900;
-
-}
-
-.logo{
-  position: relative;
-  top: 1rem;
-}
-nav{
-  position: fixed;
-  width:5rem;
-  height: 100rem;
-  z-index: 2;
-  left: -1px;
-}
-.searchCont{
-    z-index: 2;
-
-}
-}
-        @media(min-width:950px){
-          .mobile{
-           display:none
-           }
-
-      }
- 
-    @media(max-width:950px){
-   .login-cont.login {
-     font-size: 12px;
-     position: relative;
-     bottom:4rem;
-     width: 90%;
-     font-weight: 400;
-   }
-
-    .mobileCont{
-          display: flex;
-          justify-content:center;
-          position: absolute;
-          left: 1rem;
-          top: 20rem;
-          width:100%;
-          }
-          .mobile{
-            width:400px;
-            height: 300px;
-          }
-        }
-                                  
-.edit{
-
-height: 2rem;
-margin:0;
-position: relative;
-top: 2rem;
-padding:10px
-
-  
-}
-.edit a{
-  color: rgb(255, 255, 255);
-  font-size:25px;
-  text-decoration: none
-
+@media (min-width: 950px) {
+    .mobile {
+        display: none;
+    }
 }
 
-.find{
-  color: rgb(0, 255, 179);
+@media (max-width: 950px) {
+    .login-cont.login {
+        font-size: 12px;
+        position: relative;
+        bottom: 4rem;
+        width: 90%;
+        font-weight: 400;
+    }
+
+    .mobileCont {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 1rem;
+        top: 20rem;
+        width: 100%;
+    }
+    .mobile {
+        width: 400px;
+        height: 300px;
+    }
 }
 
-.Animation{
-  width:100vw;
-  height: 100vh;
-  position: fixed;
-  right: 0rem;
-  bottom: 0rem;
-  background-color: rgb(0, 0, 0);
-  z-index: 800;
+.edit {
+    height: 2rem;
+    margin: 0;
+    position: relative;
+    top: 2rem;
+    padding: 10px;
+}
+.edit a {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-decoration: none;
 }
 
+.find {
+    color: rgb(0, 255, 179);
+}
+
+.Animation {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    right: 0rem;
+    bottom: 0rem;
+    background-color: rgb(0, 0, 0);
+    z-index: 800;
+}
 
 .lds-dual-ring {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  position: relative;
-  top: 23rem;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 23rem;
 }
 .lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6px solid rgb(0, 255, 136);
-  border-color: rgb(0, 255, 136) transparent rgb(0, 255, 136) transparent;
-  animation: lds-dual-ring 1s linear infinite;
+    content: ' ';
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid rgb(0, 255, 136);
+    border-color: rgb(0, 255, 136) transparent rgb(0, 255, 136) transparent;
+    animation: lds-dual-ring 1s linear infinite;
 }
 @keyframes lds-dual-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000000;
+    background: #000000;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 255, 179);
+    background: rgb(0, 255, 179);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 }
-a{
-   color:white;
+a {
+    color: white;
 }
-.EditContainer{
-display: flex;
-justify-content:center;
-position: relative;
-bottom:6rem
-
-}
-
-.EditContainer form{
-  display: flex;
-  flex-direction: column;
-  width:30rem
+.EditContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 6rem;
 }
 
+.EditContainer form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
 
-.EditContainer input,select,button{
-  margin: 1rem;
-  background-color:rgb(0, 0, 0);
-  border: none;outline: none;
-  color: rgb(0, 255, 136);
-  padding: 20px;
+.EditContainer input,
+select,
+button {
+    margin: 1rem;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    color: rgb(0, 255, 136);
+    padding: 20px;
     font-family: 'Poppins', sans-serif;
-
 }
 
-.EditContainer input{
+.EditContainer input {
 }
-.EditContainer button{
-  background-color:rgb(0, 255, 149);
-  color: black;
-  font-family: Poppins;
+.EditContainer button {
+    background-color: rgb(0, 255, 149);
+    color: black;
+    font-family: Poppins;
 }
-.EditContainer .range{
-  padding:10px;
-  color: white;
-
+.EditContainer .range {
+    padding: 10px;
+    color: white;
 }
-.EditContainer .range::-webkit-slider-thumb{
-    --webkit-appearance:none;
-width:15px;
-height: 15px;
-background-color:rgb(255, 72, 0);
-cursor: pointer;
-box-shadow: -407px 0 0 400px rgb(0, 255, 149);
+.EditContainer .range::-webkit-slider-thumb {
+    --webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 72, 0);
+    cursor: pointer;
+    box-shadow: -407px 0 0 400px rgb(0, 255, 149);
 }
 
 .EditContainer {
-  padding:0;
-  color: white;
+    padding: 0;
+    color: white;
 }
-.Sucessfully.Updated{
-  background-color:rgb(0, 255, 136);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-family: 'Poppins', sans-serif;
+.Sucessfully.Updated {
+    background-color: rgb(0, 255, 136);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
-.info.validation.failed{
-    background-color:rgb(255, 0, 0);
-  color: rgb(255, 255, 255);
-  font-family: 'Poppins', sans-serif;
-}
-
-
-
-
-
-
-.auth-cont{
-  display: flex;
-  justify-content: center;
-}
-.login-cont.login{
-   
-width:100%;
-  
-  
-}
-.authSubmit{
-background-color:#00ff6a;
-color:black;
-position: relative;
-top: 0rem;
-margin: 1.5rem;
-padding:20px;
-border-radius:2%;
-cursor: pointer;
-}
-.login p{
-  text-align:left;
-  position: relative;
-  font-weight: bold;
-  font-size: 15px;
-  left: 2rem;
-}
-.login-cont.login form{
-  display: flex;
-  width: 48rem;
-  flex-direction: column;
-}
-.login-cont.login input{
-    margin:20px;
-
+.info.validation.failed {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
 }
 
-.center{
-  display: flex;
-  justify-content: center;
-  
+.auth-cont {
+    display: flex;
+    justify-content: center;
 }
-.reservee{
-  width:40rem;
-  height: 20rem;
-  position: relative;
-  top: 12rem;
+.login-cont.login {
+    width: 100%;
 }
-.reservee h1{
-  position: relative;
-  top: 5rem;
-  color: rgb(255, 255, 255);
+.authSubmit {
+    background-color: #00ff6a;
+    color: black;
+    position: relative;
+    top: 0rem;
+    margin: 1.5rem;
+    padding: 20px;
+    border-radius: 2%;
+    cursor: pointer;
 }
-.reservee p{
-  font-size:15px;
-  position: relative;
-  top: 6rem;
-  color: rgb(255, 255, 255);
+.login p {
+    text-align: left;
+    position: relative;
+    font-weight: bold;
+    font-size: 15px;
+    left: 2rem;
+}
+.login-cont.login form {
+    display: flex;
+    width: 48rem;
+    flex-direction: column;
+}
+.login-cont.login input {
+    margin: 20px;
+}
 
+.center {
+    display: flex;
+    justify-content: center;
 }
-.p2{
-}
-.Sucessfully.updated{
-  background-color:rgb(0, 255, 136);
-  color: black;
-  font-family: 'Poppins', sans-serif;
-}
-.Reserved{
-    background-color:rgb(14, 14, 14);
-  color: rgb(255, 255, 255);
-  font-family: 'Poppins', sans-serif;
-    border-radius:10px 10px 10px 10px;
+.reservee {
+    width: 40rem;
     height: 20rem;
-
+    position: relative;
+    top: 12rem;
+}
+.reservee h1 {
+    position: relative;
+    top: 5rem;
+    color: rgb(255, 255, 255);
+}
+.reservee p {
+    font-size: 15px;
+    position: relative;
+    top: 6rem;
+    color: rgb(255, 255, 255);
+}
+.p2 {
+}
+.Sucessfully.updated {
+    background-color: rgb(0, 255, 136);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+.Reserved {
+    background-color: rgb(14, 14, 14);
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px 10px 10px 10px;
+    height: 20rem;
 }
 
-
-#repImage{
-  position: relative;
-  left: 0rem;
-  margin-top:2rem
+#repImage {
+    position: relative;
+    left: 0rem;
+    margin-top: 2rem;
 }
 
-.none{
-  display: none;
+.none {
+    display: none;
 }
 
 /* Change the white to any color ;) */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
-    
 }
 /*Change text in autofill textbox*/
 input:-webkit-autofill {
-    -webkit-text-fill-color: rgb(0, 255, 106) ;
+    -webkit-text-fill-color: rgb(0, 255, 106);
 }
 
-
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -853,691 +774,582 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color:  rgb(0, 255, 106) ;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
-  transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: rgb(0, 255, 106);
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
-
-.NotFound{
-  color: white;
-  position: absolute;
-  left: 45rem;
-  top: 1rem;
+.NotFound {
+    color: white;
+    position: absolute;
+    left: 45rem;
+    top: 1rem;
 }
-.NotFound h1{
+.NotFound h1 {
     font-size: 15rem;
-
 }
-.NotFound p{
-
-
+.NotFound p {
 }
 
-@media(min-width:950px){
-
-
-
-.EditContainer form{
-  display: flex;
-  flex-direction: column;
-  width:70rem
-}
-}
-
-@media(max-width:950px){
-
-
-
-}
-
-
-
-
-    select,
-  textarea,
-  input {
-    font-size: 16px;
-  }
-
-
-
- 
-
-  
-
-    .BadgeGrindersCont{
-      position: relative;
-      top: 5rem;
-      font-size:2rem;
-      width:100%;
-      display:flex;
-      justify-content: center;
-
+@media (min-width: 950px) {
+    .EditContainer form {
+        display: flex;
+        flex-direction: column;
+        width: 70rem;
     }
-    
-        .BadgeGrindersCont h1{
-          position: absolute;
-        }
+}
 
+@media (max-width: 950px) {
+}
 
+select,
+textarea,
+input {
+    font-size: 16px;
+}
 
+.BadgeGrindersCont {
+    position: relative;
+    top: 5rem;
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-.bio{
-background-color:rgb(12, 12, 12);
-color: white;
-  margin: 1rem;
-  border: none;outline: none;
-  color: rgb(0, 255, 136);
-  padding: 20px;
+.BadgeGrindersCont h1 {
+    position: absolute;
+}
+
+.bio {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    margin: 1rem;
+    border: none;
+    outline: none;
+    color: rgb(0, 255, 136);
+    padding: 20px;
     font-family: 'Poppins', sans-serif;
-width:17rem;
-max-width:17rem ;
-min-width: 17rem;
+    width: 17rem;
+    max-width: 17rem;
+    min-width: 17rem;
 
-height:10rem;
-max-height:10rem ;
-min-height: 10rem;
-
-
+    height: 10rem;
+    max-height: 10rem;
+    min-height: 10rem;
 }
-.bioCont{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 4rem;
+.bioCont {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 4rem;
 }
-.bioView{
- height: 12rem;
- width: 80%;
- padding:10px;
-   border-radius: 5%;
-
-
-    
+.bioView {
+    height: 12rem;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5%;
 }
 
-.mediaCont{
-  position: absolute;
-  top: 6rem;
-  left: 80%;
+.mediaCont {
+    position: absolute;
+    top: 6rem;
+    left: 80%;
 }
-.icon-tabler-brand-youtube{
-  fill: red;
-  stroke: rgb(20, 20, 20);
+.icon-tabler-brand-youtube {
+    fill: red;
+    stroke: rgb(20, 20, 20);
     margin: 0.5rem;
-       position: relative;
-    bottom:0rem;
-
-
-
+    position: relative;
+    bottom: 0rem;
 }
-.icon-tabler-brand-instagram{
+.icon-tabler-brand-instagram {
     fill: rgb(255, 196, 0);
-  stroke: rgb(20, 20, 20);
+    stroke: rgb(20, 20, 20);
     margin: 0.5rem;
-       position: relative;
-    bottom:0rem;
-
+    position: relative;
+    bottom: 0rem;
 }
-.icon-tabler-brand-twitter{
-      fill: rgb(0, 140, 255);
-  stroke: rgb(20, 20, 20);
-    margin: 0.5rem;
-       position: relative;
-}
-.icon-tabler-brand-twitch{
-        fill: rgb(132, 0, 255);
-  stroke:rgb(20, 20, 20);
+.icon-tabler-brand-twitter {
+    fill: rgb(0, 140, 255);
+    stroke: rgb(20, 20, 20);
     margin: 0.5rem;
     position: relative;
 }
-.mediaCont{
-display: flex;
-flex-direction: column;
-position: absolute;
-z-index: 700;
+.icon-tabler-brand-twitch {
+    fill: rgb(132, 0, 255);
+    stroke: rgb(20, 20, 20);
+    margin: 0.5rem;
+    position: relative;
 }
-.undefined{
-  display: none;
+.mediaCont {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 700;
 }
-.noneview{
-  display:none
+.undefined {
+    display: none;
 }
-
-form{
-  position: relative;
-  top: 10rem;
-}
-form input{
-  background-color:rgb(0, 0, 0);
-  padding:10px;
-  height: 2rem;
-  border-bottom: 2px solid rgb(85, 85, 85);
-  border-radius: 0px;
-  color: white;
-}
-.expired{
-  position: absolute;
-  font-size:3rem;
-  top: 5rem;
-}
-.Sucessfully.Updated.reset{
-padding:60px;
-height: 2rem;
+.noneview {
+    display: none;
 }
 
-
-
-
-
-
-.error{
-  background-color:red;
-  padding:20px
+form {
+    position: relative;
+    top: 10rem;
+}
+form input {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    height: 2rem;
+    border-bottom: 2px solid rgb(85, 85, 85);
+    border-radius: 0px;
+    color: white;
+}
+.expired {
+    position: absolute;
+    font-size: 3rem;
+    top: 5rem;
+}
+.Sucessfully.Updated.reset {
+    padding: 60px;
+    height: 2rem;
 }
 
-.XBOX.SERIES{
-background-image:url('./images/Xboxseies.png');
-height: 5rem;
-background-repeat: no-repeat;
-border-radius: 10px
-
+.error {
+    background-color: red;
+    padding: 20px;
 }
 
-.XBOX.ONE{
-background-image:url('./images/Xboxone.png');
-height: 5rem;
-background-repeat: no-repeat;
-border-radius: 10px
-
+.XBOX.SERIES {
+    background-image: url('./images/Xboxseies.png');
+    height: 5rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
-.PS5{
-background-image:url('./images/Ps5.png');
-height: 5rem;
-background-repeat: no-repeat;
-border-radius: 10px
-
+.XBOX.ONE {
+    background-image: url('./images/Xboxone.png');
+    height: 5rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
-.PS4{
-background-image:url('./images/Ps4.png');
-height: 5rem;
-background-repeat: no-repeat;
-border-radius: 10px
+.PS5 {
+    background-image: url('./images/Ps5.png');
+    height: 5rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
-
-    @media(max-width:1300px){
-
-
-input{
-    margin: 2rem;
-
-
+.PS4 {
+    background-image: url('./images/Ps4.png');
+    height: 5rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
-.searchContainer{
-   display: flex;
-  color: white;
-  width:100%;
-  height: 13rem;
-  position: relative;
-  top: 5rem;
-  justify-content: center;
+@media (max-width: 1300px) {
+    input {
+        margin: 2rem;
+    }
 
-}
-.SearchInput input{
-  color: white;
-display: flex;
-flex-direction: column;
-position: relative;
-right: 1rem;
-width:8rem;
-  background-color:rgb(17, 17, 17)
+    .searchContainer {
+        display: flex;
+        color: white;
+        width: 100%;
+        height: 13rem;
+        position: relative;
+        top: 5rem;
+        justify-content: center;
+    }
+    .SearchInput input {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 1rem;
+        width: 8rem;
+        background-color: rgb(17, 17, 17);
+    }
+    .SearchInput {
+        height: 17rem;
+        width: 11.5rem;
+        position: relative;
+        color: white;
+        right: 0rem;
+        background-color: rgb(17, 17, 17);
+    }
 
-}
-.SearchInput{
-  height: 17rem;
-  width:11.5rem;
-  position: relative;
-  color: white;
-  right: 0rem;
-  background-color:rgb(17, 17, 17)
+    .logo {
+        display: none;
+    }
+    nav {
+        position: relative;
+        right: 5rem;
+        top: 2rem;
+    }
 
-}
-      
+    .searchCont {
+        display: none;
+    }
 
-
- 
-
-
-.logo{
-  display:none
-}
-nav{
-  position: relative;
-  right: 5rem;
-  top: 2rem;
-}
-
-
-
-.searchCont{
-  display:none
-}
-
-
-
-      .logo{
+    .logo {
         position: relative;
         right: 10rem;
-      }
-    
+    }
 
+    nav a {
+        font-size: 12px;
+        position: relative;
+        color: rgb(255, 255, 255);
+        z-index: 5;
+    }
+    .logo-cont h1 {
+        display: none;
+    }
 
-  nav a{
-font-size: 12px;
-position: relative;
-color: rgb(255, 255, 255);
-z-index: 5;
-  }
-  .logo-cont h1{
-    display:none
+    .homeCont1 {
+        position: relative;
+        right: 4rem;
+    }
 
-  }
-
-
-
-  .homeCont1{
-position: relative;
-right: 4rem;
+    .homeCont2 {
+        position: relative;
+        right: 2rem;
+    }
+    .homeCont3 {
+        position: relative;
+        right: 0.5rem;
+    }
+    .homeCont4 {
+        position: relative;
+        right: -1rem;
+    }
 }
 
-.homeCont2{
-position: relative;
-right: 2rem;
+.Passwordreset {
+    width: 100rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.homeCont3{
-position: relative;
-right: 0.5rem;
-}
-.homeCont4{
-position: relative;
-right: -1rem;
-}
-
-}
-
-
-
-
-.Passwordreset{
-  width: 100rem;
-  display: flex;
-justify-content: center;
-flex-direction:column;
-}
-.Passwordreset form{
-background-color:rgb(15, 15, 15);
-display: flex;
-flex-direction:column;
-width: 50rem;
+.Passwordreset form {
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
 }
 
 .none {
-  display: none;
+    display: none;
 }
 
-
-
-.blue{
-  color:rgb(0, 255, 106);
-  text-decoration: none;
-  position: relative;
-  right: 6rem;
-  margin-bottom: 5rem;
+.blue {
+    color: rgb(0, 255, 106);
+    text-decoration: none;
+    position: relative;
+    right: 6rem;
+    margin-bottom: 5rem;
 }
 
-.alert{
-  background-color:red;
-  padding:20px
+.alert {
+    background-color: red;
+    padding: 20px;
 }
 
-.forgotCont{
-  display: flex;
-  justify-content:center;
-
+.forgotCont {
+    display: flex;
+    justify-content: center;
 }
 
-.forgot form{
-  display: flex;
-  flex-direction: column;
+.forgot form {
+    display: flex;
+    flex-direction: column;
 }
-.forgot button{
-  color: black;
-  font-size: 1rem;
-  background-color: #00ff6a;
-}
-
-.linkSent{
-  position: relative;
-  top: 12rem;
+.forgot button {
+    color: black;
+    font-size: 1rem;
+    background-color: #00ff6a;
 }
 
-.statsCont{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
- 
+.linkSent {
+    position: relative;
+    top: 12rem;
 }
 
-span{
-font-weight: bold;
-
+.statsCont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.gameCont{
-  position: relative;
-  bottom:12rem;
-  right:0rem;
-  font-size: 1.2rem;
-  margin: 2rem;
-}
-.rangeContainer{
-  display: flex;
-  justify-content: center;
-  flex-direction:column;
-
-}
-.rangeContainer p{
-  color:rgb(160, 160, 160);
-  font-weight: bolder;
-}
-.rangeColumn{
-}
-.range{
-  width:12rem;
-  margin:0.4rem
+span {
+    font-weight: bold;
 }
 
-@media(max-width:1300px){
-
-
-
-  .navCont{
-  display:flex;
-  flex-direction: row;
-
+.gameCont {
+    position: relative;
+    bottom: 12rem;
+    right: 0rem;
+    font-size: 1.2rem;
+    margin: 2rem;
 }
-  .statsCont span{
-color: rgb(136, 135, 135);
-  font-weight:bold;
-
+.rangeContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.bioView{
-  width:54rem
+.rangeContainer p {
+    color: rgb(160, 160, 160);
+    font-weight: bolder;
 }
-
-.infoCont{
-  background-color:rgb(16, 16, 19);
-  margin-top: 5rem;
-  position: relative;
-  margin: 5rem;
-  width:100rem;
-  height: 56rem;
-  padding-bottom: 10rem;
-  top: 10rem;
-  border-radius: 5% 5% 5% 5%;
-
-
-  
+.rangeColumn {
 }
-}
-.cont{
-  display: flex;
-  justify-content:center;
-  flex-wrap: wrap;
-  width:100%
-}
-@media (min-width:1300px){
-  .statsCont span{
-color: rgb(136, 135, 135);
-  margin: 3rem;
-  font-weight:bold;
-
-}
-  .navi{
-width:16rem;
-height: 102rem;
-position: fixed;
-    background-color:rgb(16, 16, 19);
-
-
-}
+.range {
+    width: 12rem;
+    margin: 0.4rem;
 }
 
-.search{
-    background-color:rgb(16, 16, 19);
+@media (max-width: 1300px) {
+    .navCont {
+        display: flex;
+        flex-direction: row;
+    }
+    .statsCont span {
+        color: rgb(136, 135, 135);
+        font-weight: bold;
+    }
+    .bioView {
+        width: 54rem;
+    }
 
+    .infoCont {
+        background-color: rgb(16, 16, 19);
+        margin-top: 5rem;
+        position: relative;
+        margin: 5rem;
+        width: 100rem;
+        height: 56rem;
+        padding-bottom: 10rem;
+        top: 10rem;
+        border-radius: 5% 5% 5% 5%;
+    }
+}
+.cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+@media (min-width: 1300px) {
+    .statsCont span {
+        color: rgb(136, 135, 135);
+        margin: 3rem;
+        font-weight: bold;
+    }
+    .navi {
+        width: 16rem;
+        height: 102rem;
+        position: fixed;
+        background-color: rgb(16, 16, 19);
+    }
 }
 
-
-
-
-@media(min-width:1300px){
-  .infoCont{
-
-    background-color:rgb(16, 16, 19);
-  margin-top: 3rem;
-  position: relative;
-  margin: 6rem;
-  width:40rem;
-  padding-bottom: 10rem;
-  left: 10rem;
-  top: 10rem;
-  height: 45rem;
-  border-radius: 5% 5% 5% 5%;
+.search {
+    background-color: rgb(16, 16, 19);
 }
 
+@media (min-width: 1300px) {
+    .infoCont {
+        background-color: rgb(16, 16, 19);
+        margin-top: 3rem;
+        position: relative;
+        margin: 6rem;
+        width: 40rem;
+        padding-bottom: 10rem;
+        left: 10rem;
+        top: 10rem;
+        height: 45rem;
+        border-radius: 5% 5% 5% 5%;
+    }
 }
 
-
-
-@media(min-width:1300px){
-
-
-
-
-
-.EditContainer{
-  width:90%;
-  position: relative;
-  left: 9rem;
-}
-.createPlayerCard{
-  z-index: -2230;
-}
+@media (min-width: 1300px) {
+    .EditContainer {
+        width: 90%;
+        position: relative;
+        left: 9rem;
+    }
+    .createPlayerCard {
+        z-index: -2230;
+    }
 }
 
-.videoCont{
-  display:flex;
-  justify-content:center;
-  width:100%;
-  position: absolute;
-top: 35rem;
-
+.videoCont {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 35rem;
 }
 
-.black{
-  background-color:rgb(0, 0, 0);
-  z-index: 33333;
-  padding:12px;
-  height: 0px;
-  width:65px;
-  position: absolute;
-  top: 8rem;
+.black {
+    background-color: rgb(0, 0, 0);
+    z-index: 33333;
+    padding: 12px;
+    height: 0px;
+    width: 65px;
+    position: absolute;
+    top: 8rem;
 }
-  .video{
-position: absolute;
-width:15rem;
-left:1rem;
-height:20rem;
-display:none
+.video {
+    position: absolute;
+    width: 15rem;
+    left: 1rem;
+    height: 20rem;
+    display: none;
 }
-.EditContainer,.cont.my{
-  z-index: 2900;
-}
-
-
-
-
-@media(max-width:1300px){
-.statsCont{
-  display: flex;
-  flex-direction: column;
+.EditContainer,
+.cont.my {
+    z-index: 2900;
 }
 
+@media (max-width: 1300px) {
+    .statsCont {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .bioView{
-  width:100%;
+    .bioView {
+        width: 100%;
+    }
 }
-}
-@media(max-width:700px){
-    .bioView{
-  width:21rem;
-}
-}
-
-.container{
-  position: absolute;
-  left:2rem;
-  z-index: 2222;
-  background-color:white;
-  color: black;
+@media (max-width: 700px) {
+    .bioView {
+        width: 21rem;
+    }
 }
 
+.container {
+    position: absolute;
+    left: 2rem;
+    z-index: 2222;
+    background-color: white;
+    color: black;
+}
 
-
-.bioView p{
+.bioView p {
     font-family: 'Poppins', sans-serif;
-    line-height:2;
-    background-color:rgb(20, 20, 20);
-    height:100%;
-    padding:2px;
+    line-height: 2;
+    background-color: rgb(20, 20, 20);
+    height: 100%;
+    padding: 2px;
     border-radius: 5%;
     position: relative;
-    bottom:1.2rem
+    bottom: 1.2rem;
 }
 
-@media(min-width:1300px){
-
-    .rangeContainer{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-
+@media (min-width: 1300px) {
+    .rangeContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .rangeColumn {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
 }
-.rangeColumn{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+.heroCont {
 }
-
-}
-            .heroCont{
-
-          
-            }
-            .hero{
-            border-radius: 5%;
-            width: 60%;
-            height: auto;    
-            position: relative;
-            top: 12rem;
-
-            }
-
-.cont.my .infoCont{
-height:100%;
-
+.hero {
+    border-radius: 5%;
+    width: 60%;
+    height: auto;
+    position: relative;
+    top: 12rem;
 }
 
-
-      .featurereq a{
-text-decoration: none;
-color: rgb(0, 255, 128);
-font-size: 20px;
-position: relative;
-
-      }
-
-.featurereq svg{
-  position: relative;
-  top: 1rem;
+.cont.my .infoCont {
+    height: 100%;
 }
 
-            .featurereq{
-           width:40%;
-            position: relative;
-            top: 5rem;
-            left:35rem;
-            }
-
-            @media(max-width:1300px){
-     .welcome{
-       font-size:15px
-     }
-            .getStartedCont{
-              position: relative;
-              right:8rem
-            }
-
-                          .featurereq{
-              display:flex;
-              justify-content: center;
-              position: relative;
-              left:2rem;
-              top: 3rem;
-              width:90%
-            }
-                  .featurereq a{
-text-decoration: none;
-font-size: 15px;
-
-      }
-            }
-
-            .welcomeMain{
-            display: flex;
-            justify-content:center;
-            width:100%;
-            top: 2rem;
-            position:absolute;
-            }
-.welcome{
-  position: relative;
-  top: 5rem;
-}
-.noPlayer{
-  position: relative;
-  top: 20rem;
-}
-.messageCont{
-display: flex;
-width:100%;
-justify-content:center;
-
+.featurereq a {
+    text-decoration: none;
+    color: rgb(0, 255, 128);
+    font-size: 20px;
+    position: relative;
 }
 
-.Messages{
-  background-color:rgb(24, 24, 24);
-  height:40rem;
-display: flex;
-width:60%;
-position: relative;
-top: 2rem;
-justify-content:center;
+.featurereq svg {
+    position: relative;
+    top: 1rem;
+}
 
+.featurereq {
+    width: 40%;
+    position: relative;
+    top: 5rem;
+    left: 35rem;
+}
+
+@media (max-width: 1300px) {
+    .welcome {
+        font-size: 15px;
+    }
+    .getStartedCont {
+        position: relative;
+        right: 8rem;
+    }
+
+    .featurereq {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 2rem;
+        top: 3rem;
+        width: 90%;
+    }
+    .featurereq a {
+        text-decoration: none;
+        font-size: 15px;
+    }
+}
+
+.welcomeMain {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 2rem;
+    position: absolute;
+}
+.welcome {
+    position: relative;
+    top: 5rem;
+}
+.noPlayer {
+    position: relative;
+    top: 20rem;
+}
+.messageCont {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.Messages {
+    background-color: rgb(24, 24, 24);
+    height: 40rem;
+    display: flex;
+    width: 60%;
+    position: relative;
+    top: 2rem;
+    justify-content: center;
+}
+
+nav a {
+    z-index: 9000;
 }

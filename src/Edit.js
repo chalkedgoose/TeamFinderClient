@@ -32,11 +32,12 @@ const Edit = (props) => {
     })
 
     //   "http://https://jobs-xmmtw.ondigitalocean.app//player/{ _id: 5fd9811cc0cd184690c65f07, __v: 0 }"
+    const Info = window.localStorage.getItem('userInfo')
 
     useEffect(async () => {
         try {
             const one = await axios.get(
-                `https://jobs-xmmtw.ondigitalocean.app/player/{ _id: ${props.match.params.id}, __v: 0 }`,
+                `https://jobs-xmmtw.ondigitalocean.app/player/{ _id: ${Info}, __v: 0 }`,
                 {
                     headers: {
                         authorization: token,
@@ -44,6 +45,22 @@ const Edit = (props) => {
                 }
             )
             setMyPlayer(one.data)
+            setState((state) => ({
+                ...state,
+                Archetype: one.data.Archetype,
+                Overall: one.data.Overall,
+                Position: one.data.Position,
+                Rep: one.data.Rep,
+                System: one.data.System,
+                Type: one.data.Type,
+                Winpercentage: one.data.Winpercentage,
+                Gamertag: one.data.Gamertag,
+                Bio: one.data.Bio,
+                Youtube: one.data.Youtube,
+                Instagram: one.data.Instagram,
+                Twitter: one.data.Twitter,
+                Twitch: one.data.Twitch,
+            }))
         } catch (err) {}
     }, [])
     useEffect(() => {
@@ -122,7 +139,7 @@ const Edit = (props) => {
 
                 <Animation />
                 <select name="Rep" onChange={SelectChange}>
-                    <option selected> Whats your rep?</option>
+                    <option defaultValue>{state.Rep}</option>
                     <option> Pro </option>
                     <option> Allstar </option>
                     <option> Superstar </option>
@@ -130,7 +147,7 @@ const Edit = (props) => {
                     <option> Legend </option>
                 </select>
                 <select name="Type" onChange={SelectChange}>
-                    <option selected> What kind of player are you? </option>
+                    <option defaultValue>{state.Rep} </option>
                     <option> Casual </option>
                     <option> Competetive </option>
                 </select>

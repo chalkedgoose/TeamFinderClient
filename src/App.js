@@ -30,7 +30,7 @@ import Edit from './Edit'
 import NotFound from './NotFound'
 import BadgeGrinders from './Components/BadgeGrinders'
 import ForgotPassword from './Components/ForgotPassword'
-
+import MessageData from './Components/MessageData'
 import Reset from './Components/Reset'
 const App = (props) => {
     const token = window.localStorage.getItem('token')
@@ -66,6 +66,7 @@ const App = (props) => {
                     <PrivateRoute path="/myPlayer" exact component={MyPlayer} />
                     <PrivateRoute path="/edit/:id" exact component={Edit} />
                     <PrivateRoute path="/find" exact component={PlayerCard} />
+                    <PrivateRoute path="/forum" exact component={Forum} />
 
                     <PrivateRoute
                         path="/badge"

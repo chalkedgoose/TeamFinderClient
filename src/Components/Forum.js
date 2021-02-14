@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-const Forum = () => {
+const Forum = (props) => {
     const [messages, setMessages] = useState([])
     const [message, setMessage] = useState()
-
+    console.log(props.name)
     const [messageName, setMessageName] = useState('messagebubble')
     const name = window.localStorage.getItem('name')
     const u = window.localStorage.getItem('userInfo')
     const token = window.localStorage.getItem('token')
-
     useEffect(async () => {
         try {
             const name = await axios.get(
@@ -19,14 +18,11 @@ const Forum = () => {
                     },
                 }
             )
-            if (name.data) {
-                setMessages(name.data)
-            }
+            setMessages(name.data)
         } catch {
             console.log('failed')
         }
-    })
-
+    }, [])
     const Submit = (e) => {
         e.preventDefault()
         axios

@@ -200,22 +200,8 @@ border-radius: 20px; */
 }
 
 .offline {
-    background-color: rgb(255, 0, 0);
-    height: 20px;
-    width: 20px;
-    position: relative;
-    left: 85%;
-    bottom: 30px;
-    border-radius: 50px;
 }
 .online {
-    background-color: rgb(9, 255, 0);
-    height: 20px;
-    width: 20px;
-    position: relative;
-    left: 3rem;
-    top: 2rem;
-    border-radius: 50px;
 }
 
 .navCont {
@@ -281,11 +267,11 @@ ul {
     background: rgb(0, 197, 76);
 }
 .repCont.PS5s {
-    background: rgb(0, 68, 255);
+    background: rgb(0, 128, 255);
 }
 
 .repCont.PS4s {
-    background: rgb(0, 68, 255);
+    background: rgb(0, 128, 255);
 }
 .bioView.XBOX.ONEs {
     border: 3px solid rgb(0, 197, 76);
@@ -294,10 +280,10 @@ ul {
     border: 3px solid rgb(0, 197, 76);
 }
 .bioView.PS5s {
-    border: 3px solid rgb(0, 68, 255);
+    border: 3px solid rgb(0, 128, 255);
 }
 .bioView.PS4s {
-    border: 3px solid rgb(0, 68, 255);
+    border: 3px solid rgb(0, 128, 255);
 }
 .Elite {
     background-image: url('./images/Elite.png');
@@ -923,33 +909,41 @@ form input {
 }
 
 .XBOX.SERIES {
-    background-image: url('./images/Xboxseies.png');
-    height: 5rem;
+    background-image: url('./images/xboxseies.png');
+    height: 3rem;
     background-repeat: no-repeat;
     border-radius: 10px;
+    background-color: rgb(0, 255, 119);
+    width: 100%;
 }
 
 .XBOX.ONE {
-    background-image: url('./images/Xboxone.png');
-    height: 5rem;
+    background-image: url('./images/XBOXONE.png');
+    height: 3rem;
     background-repeat: no-repeat;
     border-radius: 10px;
+    background-color: rgb(0, 255, 119);
+    width: 100%;
 }
 
 .PS5 {
-    background-image: url('./images/Ps5.png');
-    height: 5rem;
+    background-image: url('./images/PS5.png');
+    height: 3rem;
     background-repeat: no-repeat;
     border-radius: 10px;
+    background-color: rgb(0, 128, 255);
+    width: 100%;
 }
 
 .PS4 {
-    background-image: url('./images/Ps4.png');
-    height: 5rem;
+    background-image: url('./images/PS4.png');
+    height: 3rem;
     background-repeat: no-repeat;
     border-radius: 10px;
+    background-color: rgb(0, 128, 255);
+    width: 100%;
 }
-.navCont{
+.navCont {
     z-index: 9000;
 }
 
@@ -975,7 +969,7 @@ form input {
         right: 1rem;
         width: 8rem;
         background-color: rgb(15, 15, 15);
-        padding:15px;
+        padding: 15px;
         border: 2px solid rgb(29, 29, 29);
     }
 
@@ -986,10 +980,9 @@ form input {
         position: relative;
         right: 12.5rem;
         width: 19.5rem;
-        padding:15px;
+        padding: 15px;
         text-align: center;
     }
-
 
     .SearchInput {
         height: 17rem;
@@ -1003,7 +996,7 @@ form input {
     .logo {
         display: none;
     }
-    
+
     nav {
         position: relative;
         right: 5rem;
@@ -1131,7 +1124,7 @@ span {
     margin: 0.4rem;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
     .navCont {
         display: flex;
         flex-direction: row;
@@ -1149,7 +1142,7 @@ span {
         margin-top: 5rem;
         position: relative;
         margin: 5rem;
-        width: 100rem;
+        width: 50rem;
         height: 56rem;
         padding-bottom: 10rem;
         top: 10rem;
@@ -1162,7 +1155,7 @@ span {
     flex-wrap: wrap;
     width: 100%;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1400px) {
     .statsCont span {
         color: rgb(136, 135, 135);
         margin: 3rem;
@@ -1181,17 +1174,24 @@ span {
 }
 
 @media (min-width: 1300px) {
+    .cont {
+        width: 80%;
+        margin-left: 10rem;
+        display: flex;
+        justify-content: center;
+        z-index: 33333;
+    }
     .infoCont {
         background-color: rgb(16, 16, 19);
         margin-top: 3rem;
         position: relative;
-        margin: 6rem;
+        margin: 2rem;
         width: 40rem;
         padding-bottom: 10rem;
-        left: 10rem;
         top: 10rem;
         height: 45rem;
         border-radius: 5% 5% 5% 5%;
+        left: 8rem;
     }
 }
 
@@ -1367,59 +1367,57 @@ span {
     justify-content: center;
 }
 
-.navi  {
+.navi {
     z-index: 9000;
 }
-.searcha{
-    width:1px
+.searcha {
+    width: 1px;
 }
 
-    .searchCont {
-    z-index:9001;
-    }
+.searchCont {
+    z-index: 9001;
+}
 
-    .message{
-        display: flex;
-        position: relative;
-        top: 5rem;
-        height:auto;
-    }
-        .Messages{
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(10, 10, 10);
-        padding:50px;
-        height:70vh;
-        position: relative;
-        top: 5rem;
-                overflow: scroll;
-
-
-    }
-    .name{
-        font-size:12px;
-        color: gray;
-        position: relative;
-        top: 28px;
-        left:1rem
-    }
-       .messagebubble{
-        background-color:rgb(93, 93, 93);
-        border-radius: 10px;
-        padding:20px;
-word-break: break-word; /* deprecated */
-        height:auto;
-        max-width: 20rem;
-    }
-    .mesCont{
-        display:flex;
-        justify-content: flex-end;
-    }
-    .messagebubble.me{
-        background-color:rgb(0, 132, 255);
-        border-radius: 25%;
-        padding:20px;
-        height:auto;
-        display:flex;
-        flex-direction: flex-end;
-    }
+.message {
+    display: flex;
+    position: relative;
+    top: 5rem;
+    height: auto;
+}
+.Messages {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(10, 10, 10);
+    padding: 50px;
+    height: 70vh;
+    position: relative;
+    top: 5rem;
+    overflow: scroll;
+}
+.name {
+    font-size: 12px;
+    color: gray;
+    position: relative;
+    top: 28px;
+    left: 1rem;
+}
+.messagebubble {
+    background-color: rgb(93, 93, 93);
+    border-radius: 10px;
+    padding: 20px;
+    word-break: break-word; /* deprecated */
+    height: auto;
+    max-width: 20rem;
+}
+.mesCont {
+    display: flex;
+    justify-content: flex-end;
+}
+.messagebubble.me {
+    background-color: rgb(0, 132, 255);
+    border-radius: 25%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: flex-end;
+}

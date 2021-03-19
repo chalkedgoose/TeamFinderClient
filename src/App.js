@@ -60,14 +60,13 @@ const App = (props) => {
             <BrowserRouter>
                 <Nav />
                 <Switch>
-                    <Route exact path="/" exact component={Home} />
+                    <PrivateRoute path="/find" exact component={PlayerCard} />
                     <Route path="/Login" exact component={Login} />
                     <Route exact path="/Signup" exact component={Signup} />
                     <PrivateRoute path="/myPlayer" exact component={MyPlayer} />
                     <PrivateRoute path="/edit/:id" exact component={Edit} />
-                    <PrivateRoute path="/find" exact component={PlayerCard} />
                     <PrivateRoute path="/forum" exact component={Forum} />
-
+                    <Route path="/" exact component={Home} />
                     <PrivateRoute
                         path="/badge"
                         exact

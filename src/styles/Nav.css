@@ -1,0 +1,290 @@
+.find {
+    color: rgb(0, 255, 179);
+}
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    margin-top: 40px;
+    text-align: left;
+    position: relative;
+    left: 6rem;
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    top: 0rem;
+    z-index: 5;
+}
+.navi {
+    z-index: 9000;
+}
+
+.navCont {
+    z-index: 9000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    right: -1rem;
+}
+@media (min-width: 1300px) {
+    .navi {
+        width: 16rem;
+        height: 102rem;
+        position: fixed;
+        background-color: rgb(16, 16, 19);
+    }
+}
+
+.logo-cont {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 320px;
+    top: 20px;
+}
+
+.logo-cont h1 {
+    position: relative;
+    top: 12%;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    right: 290px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.logo-cont h1 {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 40%;
+    right: 300px;
+}
+
+.logo {
+    position: relative;
+    top: 1rem;
+}
+
+@media (min-width: 1300px) {
+    .logo {
+        position: relative;
+        right: 10rem;
+    }
+    .search {
+        width: 10rem;
+        height: 2rem;
+        background: #000000;
+        position: relative;
+        top: 3rem;
+        left: 3rem;
+        font-size: 20px;
+        z-index: 900;
+    }
+
+    .searchCont {
+        z-index: 2;
+    }
+
+    .searchContainer {
+        display: none;
+    }
+
+    .searchCont {
+        position: fixed;
+        top: 20.5rem;
+        display: flex;
+        left: 0.5rem;
+        flex-direction: column;
+    }
+
+    .searchCont svg {
+        padding: 5px;
+        position: relative;
+        top: 1rem;
+        border-radius: 28%;
+    }
+    .searchimg {
+        width: 3%;
+        position: relative;
+        top: 0.5rem;
+        left: 2rem;
+        z-index: 300;
+    }
+    .homeCont2 {
+        position: absolute;
+        right: 6rem;
+        top: 10.5rem;
+        color: rgb(0, 89, 255);
+        margin: 0;
+        padding: 0;
+    }
+    .homeCont4 {
+        position: absolute;
+        right: 7.5rem;
+        top: 18.5rem;
+        color: rgb(0, 89, 255);
+        margin: 0;
+        padding: 0;
+    }
+    .homeCont3 {
+        position: absolute;
+        right: 6.8rem;
+        top: 14.5rem;
+        color: rgb(0, 89, 255);
+        margin: 0;
+        padding: 0;
+    }
+
+    .homeCont1 p {
+        position: relative;
+        left: 3.5rem;
+        bottom: 3rem;
+        color: white;
+    }
+
+    .homeCont2 p {
+        position: relative;
+        left: 3.5rem;
+        bottom: 3rem;
+        width: 100px;
+        color: white;
+    }
+
+    .homeCont3 p {
+        position: relative;
+        left: 4rem;
+        bottom: 3rem;
+        width: 5rem;
+        color: white;
+    }
+
+    .homeCont4 p {
+        position: relative;
+        left: 3.5rem;
+        bottom: 3rem;
+        color: white;
+    }
+
+    .homeCont1 {
+        position: absolute;
+        right: 7.5rem;
+        top: 6.5rem;
+        color: rgb(0, 89, 255);
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.search::-webkit-input-placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.searchCont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.searchCont {
+    z-index: 9001;
+}
+
+.search {
+    width: 100px;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.search {
+    background-color: rgb(16, 16, 19);
+}
+
+@media (max-width: 1300px) {
+    .SearchInput input:nth-child(4) {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 12.5rem;
+        width: 19.5rem;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .SearchInput {
+        height: 17rem;
+        width: 11.5rem;
+        position: relative;
+        color: white;
+        right: 0rem;
+        background-color: rgb(0, 0, 0);
+    }
+    .SearchInput input {
+        display: flex;
+
+        color: white;
+        flex-direction: column;
+        position: relative;
+        right: 1rem;
+        width: 8rem;
+        background-color: rgb(15, 15, 15);
+        padding: 15px;
+        border: 2px solid rgb(29, 29, 29);
+    }
+    .searchContainer {
+        display: flex;
+        color: white;
+        width: 100%;
+        height: 13rem;
+        position: relative;
+        top: 5rem;
+        justify-content: center;
+    }
+
+    .searchCont {
+        background-color: red;
+        display: none;
+    }
+
+    .homeCont1 {
+        position: relative;
+        right: 4rem;
+    }
+
+    .homeCont2 {
+        position: relative;
+        right: 2rem;
+    }
+    .homeCont3 {
+        position: relative;
+        right: 0.5rem;
+    }
+    .homeCont4 {
+        position: relative;
+        right: -1rem;
+    }
+
+    .logo-cont {
+        display: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    .navCont {
+        display: flex;
+        flex-direction: row;
+    }
+}

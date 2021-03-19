@@ -8,6 +8,10 @@ import search from '../images/search.png'
 import Animation from './Animation'
 import { getId } from '../actions/postActions'
 import { Redirect } from 'react-router'
+
+import '../styles/Playercard.css'
+import '../styles/Nav.css'
+
 const PlayerCard = (props) => {
     useEffect(() => {
         props.getId()
@@ -546,8 +550,9 @@ const PlayerCard = (props) => {
                                 <div className="rangeContainer">
                                     <div className="rangeColumn">
                                         <div className="rangeConnt">
-                                            <p>Overall</p>
+                                            <br></br>
                                             {info.Overall}
+                                            <p>Overall</p>
                                             <input
                                                 className="range"
                                                 type="range"
@@ -560,6 +565,8 @@ const PlayerCard = (props) => {
                                     </div>
                                     <div className="rangeColumn">
                                         <div className="rangeConnt">
+                                            <br></br>
+                                            {info.Winpercentage}
                                             <p> Winpercentage</p>
                                             <input
                                                 className="range"
@@ -568,7 +575,7 @@ const PlayerCard = (props) => {
                                                 min="0"
                                                 max="100"
                                             />{' '}
-                                            {info.Winpercentage}
+                                            <br></br>
                                         </div>
                                     </div>
                                 </div>

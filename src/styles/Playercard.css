@@ -1,0 +1,301 @@
+@media (max-width: 1300px) {
+    .statsCont {
+        display: flex;
+        flex-direction: column;
+    }
+    .infoCont {
+        background-color: rgb(16, 16, 19);
+        position: relative;
+        margin: 0.1rem;
+        margin-top: 1rem;
+        width: 50rem;
+        padding-bottom: 13rem;
+        top: 15rem;
+        height: 55rem;
+        border-radius: 5% 5% 5% 5%;
+        left: 0rem;
+    }
+
+    .featurereq {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 2rem;
+        top: 3rem;
+        width: 90%;
+    }
+    .featurereq a {
+        text-decoration: none;
+        font-size: 15px;
+    }
+}
+.featurereq a {
+    text-decoration: none;
+    color: rgb(0, 255, 128);
+    font-size: 20px;
+    position: relative;
+}
+
+.featurereq svg {
+    position: relative;
+    top: 1rem;
+}
+
+.featurereq {
+    position: relative;
+    top: 5rem;
+}
+
+@media (min-width: 1300px) {
+    .bioView {
+        height: 12rem;
+        width: 80%;
+        padding: 10px;
+        border-radius: 5%;
+    }
+
+    .cont {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .rangeContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .rangeColumn {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .infoCont {
+        background-color: rgb(16, 16, 19);
+        margin-top: 3rem;
+        position: relative;
+        margin: 2rem;
+        width: 40rem;
+        padding-bottom: 10rem;
+        top: 10rem;
+        height: 45rem;
+        border-radius: 5% 5% 5% 5%;
+        left: 18rem;
+    }
+}
+
+.EditContainer,
+.cont.my {
+    z-index: 2900;
+}
+
+.cont.my .infoCont {
+    height: 100%;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.bioView {
+    width: 54rem;
+}
+
+.statsCont span {
+    color: rgb(136, 135, 135);
+    font-weight: bold;
+}
+
+.mediaCont {
+    position: absolute;
+    top: 6rem;
+    left: 80%;
+    display: flex;
+    flex-direction: column;
+    z-index: 700;
+}
+
+.noneview {
+    display: none;
+}
+.reps {
+    display: flex;
+    justify-content: center;
+}
+
+/* Player rep styling based on console */
+.repCont {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 6rem;
+    width: 100px;
+    padding: 2rem;
+    border-radius: 50%;
+    height: 100px;
+}
+.repCont.XBOX.ONEs {
+    background: rgb(0, 197, 76);
+}
+.repCont.XBOX.SERIESs {
+    background: rgb(0, 197, 76);
+}
+.repCont.PS5s {
+    background: rgb(0, 128, 255);
+}
+
+.repCont.PS4s {
+    background: rgb(0, 128, 255);
+}
+/* end */
+
+.gameCont {
+    position: relative;
+    bottom: 12rem;
+    right: 0rem;
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+.statsCont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* sus */
+@media (min-width: 1400px) {
+    .statsCont span {
+        color: rgb(136, 135, 135);
+        margin: 3rem;
+        font-weight: bold;
+    }
+}
+
+.rangeContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.rangeContainer p {
+    color: rgb(160, 160, 160);
+    font-weight: bolder;
+}
+
+.range {
+    width: 12rem;
+    margin: 0.4rem;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* winpercentage and overall slider range */
+
+.range::-webkit-slider-thumb {
+    --webkit-appearance: none;
+    width: 15px;
+    margin: 0;
+    height: 15px;
+    background-color: rgb(0, 255, 149);
+    cursor: pointer;
+    box-shadow: -407px 0 0 400px rgb(0, 255, 136);
+}
+
+#rangeValue {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 6em;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
+.range {
+    -webkit-appearance: none;
+    width: 100px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 5px;
+
+    height: 10px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.EditContainer .range {
+    padding: 10px;
+    color: white;
+}
+.EditContainer .range::-webkit-slider-thumb {
+    --webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 72, 0);
+    cursor: pointer;
+    box-shadow: -407px 0 0 400px rgb(0, 255, 149);
+}
+
+.bioCont {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 4rem;
+}
+
+/* bio view based on console */
+
+.bioView.XBOX.ONEs {
+    border: 3px solid rgb(0, 197, 76);
+}
+.bioView.XBOX.SERIESs {
+    border: 3px solid rgb(0, 197, 76);
+}
+.bioView.PS5s {
+    border: 3px solid rgb(0, 128, 255);
+}
+.bioView.PS4s {
+    border: 3px solid rgb(0, 128, 255);
+}
+
+.bioView {
+    height: 14rem;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.bioView p {
+    font-family: 'Poppins', sans-serif;
+    line-height: 2;
+    background-color: rgb(20, 20, 20);
+    height: 100%;
+    padding: 2px;
+    border-radius: 5%;
+    position: relative;
+    bottom: 1.2rem;
+}
+
+@media (min-width: 1300px) {
+    .infoCont {
+        background-color: rgb(16, 16, 19);
+        position: relative;
+        margin: 2rem;
+        margin-top: 1rem;
+        width: 50rem;
+        padding-bottom: 13rem;
+        top: 10rem;
+        height: 55rem;
+        border-radius: 5% 5% 5% 5%;
+        left: 3rem;
+    }
+}

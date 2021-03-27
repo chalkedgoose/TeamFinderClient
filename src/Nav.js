@@ -101,6 +101,7 @@ const Nav = (props) => {
                                     strokeWidth="1"
                                     stroke={color1}
                                     fill="none"
+                                    z-index="600"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                 >
@@ -130,6 +131,7 @@ const Nav = (props) => {
                                     width="30"
                                     height="30"
                                     viewBox="0 0 24 24"
+                                    z-index="600"
                                     strokeWidth="1"
                                     stroke={color3}
                                     fill="none"
@@ -163,6 +165,7 @@ const Nav = (props) => {
                                     height="30"
                                     viewBox="0 0 24 24"
                                     strokeWidth="1"
+                                    z-index="600"
                                     stroke={color2}
                                     fill="none"
                                     strokeLinecap="round"
@@ -193,6 +196,7 @@ const Nav = (props) => {
                                     width="30"
                                     height="30"
                                     viewBox="0 0 24 24"
+                                    z-index="600"
                                     strokeWidth="1"
                                     stroke="#fff"
                                     fill="none"

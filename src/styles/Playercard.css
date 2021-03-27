@@ -70,14 +70,14 @@
     text-decoration: none;
     top: -1rem;
     background-color: var(--color-primary-900);
-    width: 100%;
+    width: 80%;
     font-size: 20px;
     padding-bottom: 0.5rem;
     padding: 2rem;
     font-weight: 600;
     border: 5% 5% 5% 5%;
     position: fixed;
-    z-index: 9922333822;
+    z-index: 600;
 }
 
 .featurereq svg {

@@ -65,14 +65,12 @@ const PlayerCard = (props) => {
                 })
                 .catch((err) => {})
         }
-    })
+    }, [])
     // (playercardcreated)
 
-    playercardcreated === false ? (
-        <Redirect to={`/myPlayer`} />
-    ) : (
-        console.log('err')
-    )
+    playercardcreated === false
+        ? window.location.replace('/myPlayer')
+        : console.log(playercardcreated)
 
     const Change = (e) => {
         setSearchQuery(e.target.value.toLowerCase())

@@ -200,7 +200,7 @@ input:active {
 
 .getStartedCont {
     position: relative;
-    top: 6rem;
+    top: 10rem;
     right: 8rem;
 }
 .getStarted {
@@ -295,7 +295,7 @@ input:active {
     right: 0rem;
     bottom: 0rem;
     background-color: rgb(0, 0, 0);
-    z-index: 800;
+    z-index: 9933800;
 }
 
 .lds-dual-ring {
@@ -707,14 +707,12 @@ span {
     color: black;
 }
 
-.heroCont {
-}
 .hero {
     border-radius: 5%;
     width: 60%;
     height: auto;
     position: relative;
-    top: 12rem;
+    top: 16rem;
 }
 
 @media (max-width: 1300px) {
@@ -726,17 +724,13 @@ span {
         right: 8rem;
     }
 }
-
 .welcomeMain {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    top: 2rem;
-    position: absolute;
+    width: 80%;
 }
 .welcome {
     position: relative;
-    top: 5rem;
+    top: 9rem;
+    width: 97%;
 }
 .noPlayer {
     position: relative;

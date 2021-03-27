@@ -7,7 +7,7 @@ import {
     Link,
     useHistory,
 } from 'react-router-dom'
-import logo from './images/Logo.png'
+import logo from './images/svg.svg'
 import { axiosWithAuth } from './Components/axiosWithAuth'
 import { getId } from './actions/postActions'
 import { connect } from 'react-redux'

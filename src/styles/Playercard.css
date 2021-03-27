@@ -3,47 +3,38 @@
         display: flex;
         flex-direction: column;
     }
+    .cont {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        top: 10rem;
+    }
     .infoCont {
-        background-color: rgb(16, 16, 19);
+        background-color: var(--color-primary-800);
         position: relative;
         margin: 0.1rem;
-        margin-top: 1rem;
+        margin-top: 12rem;
         width: 50rem;
         padding-bottom: 13rem;
-        top: 15rem;
+        top: 5rem;
         height: 55rem;
         border-radius: 5% 5% 5% 5%;
-        left: 0rem;
     }
 
     .featurereq {
         display: flex;
         justify-content: center;
         position: relative;
-        left: 2rem;
         top: 3rem;
-        width: 90%;
+        background-color: var(--color-primary-700);
+        width: 100%;
     }
     .featurereq a {
         text-decoration: none;
         font-size: 15px;
     }
-}
-.featurereq a {
-    text-decoration: none;
-    color: rgb(0, 255, 128);
-    font-size: 20px;
-    position: relative;
-}
-
-.featurereq svg {
-    position: relative;
-    top: 1rem;
-}
-
-.featurereq {
-    position: relative;
-    top: 5rem;
 }
 
 @media (min-width: 1300px) {
@@ -59,6 +50,9 @@
         justify-content: center;
         flex-wrap: wrap;
         width: 80%;
+        position: relative;
+        z-index: 600;
+        left: 18rem;
     }
     .rangeContainer {
         display: flex;
@@ -70,36 +64,40 @@
         justify-content: center;
         flex-direction: row;
     }
-    .infoCont {
-        background-color: rgb(16, 16, 19);
-        margin-top: 3rem;
-        position: relative;
-        margin: 2rem;
-        width: 40rem;
-        padding-bottom: 10rem;
-        top: 10rem;
-        height: 45rem;
-        border-radius: 5% 5% 5% 5%;
-        left: 18rem;
-    }
+}
+.featurereq {
+    position: absolute;
+    text-decoration: none;
+    top: -1rem;
+    background-color: var(--color-primary-900);
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 0.5rem;
+    padding: 2rem;
+    font-weight: 600;
+    border: 5% 5% 5% 5%;
+    position: fixed;
+    z-index: 9922333822;
 }
 
+.featurereq svg {
+    position: relative;
+    top: 0.6rem;
+}
+
+.featurereq a {
+    text-decoration: none;
+}
 .EditContainer,
 .cont.my {
     z-index: 2900;
-}
-
-.cont.my .infoCont {
     height: 100%;
 }
 
-.cont {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+.cont.my .infoCont {
+    position: relative;
+    top: -10rem;
 }
-
 .bioView {
     width: 54rem;
 }
@@ -108,14 +106,19 @@
     color: rgb(136, 135, 135);
     font-weight: bold;
 }
-
+.mediaContainer {
+    display: flex;
+    justify-content: flex-end;
+}
 .mediaCont {
     position: absolute;
-    top: 6rem;
-    left: 80%;
     display: flex;
     flex-direction: column;
-    z-index: 700;
+    margin-right: 3rem;
+
+    margin-top: 2rem;
+    justify-content: flex-end;
+    z-index: 150;
 }
 
 .noneview {
@@ -277,7 +280,7 @@
 .bioView p {
     font-family: 'Poppins', sans-serif;
     line-height: 2;
-    background-color: rgb(20, 20, 20);
+    background-color: var(--color-primary-800);
     height: 100%;
     padding: 2px;
     border-radius: 5%;
@@ -286,16 +289,98 @@
 }
 
 @media (min-width: 1300px) {
-    .infoCont {
-        background-color: rgb(16, 16, 19);
+    .cont.my .infoCont {
         position: relative;
-        margin: 2rem;
-        margin-top: 1rem;
-        width: 50rem;
+        top: 0rem;
+    }
+    .infoCont {
+        background-color: var(--color-primary-800);
+        margin: 0;
+        margin-left: 1rem;
+        margin-top: 10rem;
+        width: 40rem;
         padding-bottom: 13rem;
         top: 10rem;
-        height: 55rem;
+        height: 50rem;
         border-radius: 5% 5% 5% 5%;
-        left: 3rem;
     }
+}
+
+:root {
+    --color-button-text: #fff;
+    --color-primary-100: #151b22;
+    --color-primary-200: #b2bdcd;
+    --color-primary-300: #5d7290;
+    --color-primary-600: #323d4d;
+    --color-primary-700: #242c37;
+    --color-primary-800: #151a21;
+    --color-primary-900: #0b0e11;
+    --color-secondary-washed-out: #879eed;
+    --color-secondary: #5575e7;
+    --color-accent-glow: rgba(253, 77, 77, 0.3);
+    --color-accent: rgb(0, 255, 119);
+    --color-accent-hover: #fd6868;
+    --color-accent-disabled: #f5bfbf;
+}
+.XBOX.SERIES {
+    background-image: url('../images/xboxseries.png');
+    height: 3rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-color: rgb(0, 255, 119);
+    width: 100%;
+}
+
+.XBOX.ONE {
+    background-image: url('../images/XBOXONE.png');
+    height: 3rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-color: rgb(0, 255, 119);
+    width: 100%;
+}
+
+.PS5 {
+    background-image: url('../images/PS5.png');
+    height: 3rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-color: rgb(0, 128, 255);
+    width: 100%;
+}
+
+.PS4 {
+    background-image: url('../images/PS4.png');
+    height: 3rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-color: rgb(0, 128, 255);
+    width: 100%;
+}
+
+.icon-tabler-brand-youtube {
+    fill: red;
+    stroke: rgb(20, 20, 20);
+    margin: 0.5rem;
+    position: relative;
+    bottom: 0rem;
+}
+.icon-tabler-brand-instagram {
+    fill: rgb(255, 196, 0);
+    stroke: rgb(20, 20, 20);
+    margin: 0.5rem;
+    position: relative;
+    bottom: 0rem;
+}
+.icon-tabler-brand-twitter {
+    fill: rgb(0, 140, 255);
+    stroke: rgb(20, 20, 20);
+    margin: 0.5rem;
+    position: relative;
+}
+.icon-tabler-brand-twitch {
+    fill: rgb(132, 0, 255);
+    stroke: rgb(20, 20, 20);
+    margin: 0.5rem;
+    position: relative;
 }

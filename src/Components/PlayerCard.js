@@ -8,6 +8,7 @@ import search from '../images/search.png'
 import Animation from './Animation'
 import { getId } from '../actions/postActions'
 import { Redirect } from 'react-router'
+import ReactPaginate from 'react-paginate'
 
 import '../styles/Playercard.css'
 import '../styles/Nav.css'
@@ -29,6 +30,7 @@ const PlayerCard = (props) => {
     const [searchQuery6, setSearchQuery6] = useState([])
     const [searchQuery7, setSearchQuery7] = useState([])
     const [playercardcreated, setPlayercardcreated] = useState(true)
+
     const token = window.localStorage.getItem('token')
 
     useEffect(() => {
@@ -66,9 +68,11 @@ const PlayerCard = (props) => {
     })
     // (playercardcreated)
 
-    if (playercardcreated === false) {
-        return <Redirect to={`/myPlayer`} />
-    }
+    playercardcreated === false ? (
+        <Redirect to={`/myPlayer`} />
+    ) : (
+        console.log('err')
+    )
 
     const Change = (e) => {
         setSearchQuery(e.target.value.toLowerCase())
@@ -107,57 +111,9 @@ const PlayerCard = (props) => {
             item.System.toLowerCase().includes(searchQuery7)
     )
 
-    function shuffle(array) {
-        var currentIndex = array.length,
-            temporaryValue,
-            randomIndex
-
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-            // Pick a remaining element...
-            randomIndex = Math.floor(Math.random() * currentIndex)
-            currentIndex -= 1
-
-            // And swap it with the current element.
-            temporaryValue = array[currentIndex]
-            array[currentIndex] = array[randomIndex]
-            array[randomIndex] = temporaryValue
-        }
-
-        return array
-    }
-
-    shuffle(j)
-    let s = j.sort((a, b) => {
-        return a.Status.length - b.Status.length
-    })
-
     return (
         <div>
             <Animation />
-            <h1 className="featurereq">
-                {' '}
-                <a href="https://twitter.com/TeamFinder2K" target="_blank">
-                    {' '}
-                    Contact Me{' '}
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-mail"
-                        width="44"
-                        height="44"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="rgb(0, 255, 128)"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <rect x="3" y="5" width="18" height="14" rx="2" />
-                        <polyline points="3 7 12 13 21 7" />
-                    </svg>
-                </a>{' '}
-            </h1>
 
             <div className="searchCont">
                 <input
@@ -370,123 +326,48 @@ const PlayerCard = (props) => {
             </div>
 
             <div className="cont">
+                <h1 className="featurereq">
+                    {' '}
+                    <a href="https://twitter.com/TeamFinder2K" target="_blank">
+                        {' '}
+                        Contact Me{' '}
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="icon icon-tabler icon-tabler-mail"
+                            width="33"
+                            height="33"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1"
+                            stroke="white"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <polyline points="3 7 12 13 21 7" />
+                        </svg>
+                    </a>{' '}
+                </h1>
                 {j.map((info) => {
                     return (
                         <div key={info.id} className={`infoCont`}>
                             <div className={info.System}></div>
-
-                            <div className="mediaCont">
-                                <a
-                                    className={`noneview${info.Youtube}`}
-                                    href={info.Youtube}
-                                    target="_blank"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="icon icon-tabler icon-tabler-brand-youtube"
-                                        width="44"
-                                        height="44"
-                                        viewBox="0 0 24 24"
-                                        strokeWidth="0.8"
-                                        stroke="white"
-                                        fill="none"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path
-                                            stroke="none"
-                                            d="M0 0h24v24H0z"
-                                            fill="none"
-                                        />
-                                        <rect
-                                            x="3"
-                                            y="5"
-                                            width="18"
-                                            height="14"
-                                            rx="4"
-                                        />
-                                        <path d="M10 9l5 3l-5 3z" />
-                                    </svg>{' '}
-                                </a>
-
-                                <a
-                                    className={`noneview${info.Instagram}`}
-                                    href={info.Instagram}
-                                    target="_blank"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="icon icon-tabler icon-tabler-brand-instagram"
-                                        width="44"
-                                        height="44"
-                                        viewBox="0 0 24 24"
-                                        strokeWidth="0.8"
-                                        stroke="white"
-                                        fill="none"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path
-                                            stroke="none"
-                                            d="M0 0h24v24H0z"
-                                            fill="none"
-                                        />
-                                        <rect
-                                            x="4"
-                                            y="4"
-                                            width="16"
-                                            height="16"
-                                            rx="4"
-                                        />
-                                        <circle cx="12" cy="12" r="3" />
-                                        <line
-                                            x1="16.5"
-                                            y1="7.5"
-                                            x2="16.5"
-                                            y2="7.501"
-                                        />
-                                    </svg>
-                                </a>
-
-                                <a
-                                    className={`noneview${info.Twitter}`}
-                                    href={info.Twitter}
-                                    target="_blank"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="icon icon-tabler icon-tabler-brand-twitter"
-                                        width="44"
-                                        height="44"
-                                        viewBox="0 0 24 24"
-                                        strokeWidth="0.8"
-                                        stroke="white"
-                                        fill="none"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path
-                                            stroke="none"
-                                            d="M0 0h24v24H0z"
-                                            fill="none"
-                                        />
-                                        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
-                                    </svg>
-                                </a>
-                                <div className={view}>
+                            <div className="mediaContainer">
+                                <div className="mediaCont">
                                     <a
-                                        className={`noneview${info.Twitch}`}
-                                        href={info.Twitch}
+                                        className={`noneview${info.Youtube}`}
+                                        href={info.Youtube}
                                         target="_blank"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="icon icon-tabler icon-tabler-brand-twitch"
+                                            className="icon icon-tabler icon-tabler-brand-youtube"
                                             width="44"
                                             height="44"
                                             viewBox="0 0 24 24"
-                                            strokeWidth="0.5"
-                                            stroke="#ff4500"
+                                            strokeWidth="0.8"
+                                            stroke="white"
                                             fill="none"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
@@ -496,21 +377,120 @@ const PlayerCard = (props) => {
                                                 d="M0 0h24v24H0z"
                                                 fill="none"
                                             />
-                                            <path d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />
-                                            <line
-                                                x1="16"
-                                                y1="8"
-                                                x2="16"
-                                                y2="12"
+                                            <rect
+                                                x="3"
+                                                y="5"
+                                                width="18"
+                                                height="14"
+                                                rx="4"
                                             />
+                                            <path d="M10 9l5 3l-5 3z" />
+                                        </svg>{' '}
+                                    </a>
+
+                                    <a
+                                        className={`noneview${info.Instagram}`}
+                                        href={info.Instagram}
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="icon icon-tabler icon-tabler-brand-instagram"
+                                            width="44"
+                                            height="44"
+                                            viewBox="0 0 24 24"
+                                            strokeWidth="0.8"
+                                            stroke="white"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <path
+                                                stroke="none"
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                            />
+                                            <rect
+                                                x="4"
+                                                y="4"
+                                                width="16"
+                                                height="16"
+                                                rx="4"
+                                            />
+                                            <circle cx="12" cy="12" r="3" />
                                             <line
-                                                x1="12"
-                                                y1="8"
-                                                x2="12"
-                                                y2="12"
+                                                x1="16.5"
+                                                y1="7.5"
+                                                x2="16.5"
+                                                y2="7.501"
                                             />
                                         </svg>
                                     </a>
+
+                                    <a
+                                        className={`noneview${info.Twitter}`}
+                                        href={info.Twitter}
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="icon icon-tabler icon-tabler-brand-twitter"
+                                            width="44"
+                                            height="44"
+                                            viewBox="0 0 24 24"
+                                            strokeWidth="0.8"
+                                            stroke="white"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <path
+                                                stroke="none"
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                            />
+                                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                                        </svg>
+                                    </a>
+                                    <div className={view}>
+                                        <a
+                                            className={`noneview${info.Twitch}`}
+                                            href={info.Twitch}
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="icon icon-tabler icon-tabler-brand-twitch"
+                                                width="44"
+                                                height="44"
+                                                viewBox="0 0 24 24"
+                                                strokeWidth="0.5"
+                                                stroke="#ff4500"
+                                                fill="none"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <path
+                                                    stroke="none"
+                                                    d="M0 0h24v24H0z"
+                                                    fill="none"
+                                                />
+                                                <path d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />
+                                                <line
+                                                    x1="16"
+                                                    y1="8"
+                                                    x2="16"
+                                                    y2="12"
+                                                />
+                                                <line
+                                                    x1="12"
+                                                    y1="8"
+                                                    x2="12"
+                                                    y2="12"
+                                                />
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div className={info.Status}></div>

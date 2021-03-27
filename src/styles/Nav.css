@@ -24,15 +24,15 @@ nav a {
     justify-content: center;
     flex-direction: column;
     position: relative;
-
     right: -1rem;
 }
+
 @media (min-width: 1300px) {
     .navi {
         width: 16rem;
         height: 102rem;
         position: fixed;
-        background-color: rgb(16, 16, 19);
+        background-color: var(--color-primary-800);
     }
 }
 
@@ -57,31 +57,25 @@ nav a {
 .logo-cont h1 {
     display: none;
 }
-
 .logo {
-    display: flex;
-    justify-content: flex-start;
-    width: 30px;
-    height: 30px;
     position: relative;
-    top: 40%;
-    right: 300px;
+    right: 19.5rem;
+    width: 140px;
+    height: 70px;
+    top: 0rem;
 }
 
-.logo {
-    position: relative;
-    top: 1rem;
+@media (max-width: 1500px) {
+    .logo {
+        position: relative;
+        right: 18rem;
+    }
 }
 
 @media (min-width: 1300px) {
-    .logo {
-        position: relative;
-        right: 10rem;
-    }
     .search {
         width: 10rem;
         height: 2rem;
-        background: #000000;
         position: relative;
         top: 3rem;
         left: 3rem;
@@ -197,19 +191,16 @@ nav a {
 }
 
 .searchCont {
-    z-index: 9001;
+    z-index: 301;
 }
 
 .search {
     width: 100px;
-    background-color: rgb(20, 20, 20);
+    background-color: var(--color-primary-800);
     border: none;
     outline: none;
+    padding: 1.5px;
     color: white;
-}
-
-.search {
-    background-color: rgb(16, 16, 19);
 }
 
 @media (max-width: 1300px) {
@@ -218,19 +209,22 @@ nav a {
         display: flex;
         flex-direction: column;
         position: relative;
-        right: 12.5rem;
-        width: 19.5rem;
+        right: 11.8rem;
+        width: 17.5rem;
         padding: 15px;
         text-align: center;
     }
 
     .SearchInput {
-        height: 17rem;
-        width: 11.5rem;
+        height: 22rem;
+        width: 10.8rem;
         position: relative;
         color: white;
         right: 0rem;
+
+        z-index: 333333;
         background-color: rgb(0, 0, 0);
+        border-radius: 5% 5% 5% 5%;
     }
     .SearchInput input {
         display: flex;
@@ -238,11 +232,11 @@ nav a {
         color: white;
         flex-direction: column;
         position: relative;
-        right: 1rem;
+        right: 1.7rem;
         width: 8rem;
-        background-color: rgb(15, 15, 15);
+        background-color: var(--color-primary-800);
         padding: 15px;
-        border: 2px solid rgb(29, 29, 29);
+        border: 1px solid var(--color-primary-700);
     }
     .searchContainer {
         display: flex;
@@ -250,7 +244,7 @@ nav a {
         width: 100%;
         height: 13rem;
         position: relative;
-        top: 5rem;
+        top: 10rem;
         justify-content: center;
     }
 
@@ -286,5 +280,10 @@ nav a {
     .navCont {
         display: flex;
         flex-direction: row;
+        position: relative;
+        top: 5rem;
     }
+}
+.SearchInput {
+    background-color: var(--color-primary-800);
 }
